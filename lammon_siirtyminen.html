@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lämmön siirtyminen &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lämpösäteily" href="lamposateily.html" />
+    <link rel="prev" title="Olomuodon muutoksia" href="energia_olomuoto.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampolaajeneminen.html">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_lampotila.html">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_olomuoto.html">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ideaalikaasut.html">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasut.html">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jaahdytyskoneet.html">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/lammon_siirtyminen.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#johtuminen">
+   Johtuminen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lammon-konvektio-rajapinnoilla">
+   Lämmön konvektio rajapinnoilla
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lämmön siirtyminen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#johtuminen">
+   Johtuminen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lammon-konvektio-rajapinnoilla">
+   Lämmön konvektio rajapinnoilla
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="lammon-siirtyminen">
+<h1>Lämmön siirtyminen<a class="headerlink" href="#lammon-siirtyminen" title="Permalink to this headline">#</a></h1>
+<p>Aiemmissa luvuissa ollaan tarkasteltu tilanteita, joissa lämpöenergia siirtyy suoraan kappaleiden välillä, esimerkiksi silloin kun kahta eri lämpöistä vettä sekoitetaan. Rakennustekniikassa lämmön siirtymistä pyritään usein hillitsemään. Talon seinä eristyksineen vähentää lämpöenergian siirtymistä lämpimän sisäilman ja kylmän ulkoilman välillä.</p>
+<p>Lämpöä voi siirtyä johtumalla, virtaamalla tai säteilemällä.</p>
+<ul class="simple">
+<li><p>Johtuminen eli konduktio: lämpö siirtyy aineen sisällä tai kahden aineen kosketuksessa. Esimerkkejä: lämmön siirtyminen hirsiseinän läpi; kuuman tai kylmän metalliesineen kosketus sormella.</p></li>
+<li><p>Virtaaminen eli konvektio: lämpö siirtyy virtaavan aineen mukana. Aine voi olla nestettä tai kaasua. Virtaus voi tapahtua itsestään (esim. veto ikkunoista, maapallon sisäiset lämpövirrat, Golf-virta) tai se voidaan tuottaa pumpun tai puhaltimen avulla (esim. kiertovesijärjestelmät, kaukolämpö).</p></li>
+<li><p>Säteily: lämpö siirtyy sähkömagneettisen säteilyn muodossa. Esimerkkejä: takka, Aurinko.</p></li>
+</ul>
+<section id="johtuminen">
+<h2>Johtuminen<a class="headerlink" href="#johtuminen" title="Permalink to this headline">#</a></h2>
+<p>Lämmön johtumista tarkasteltaessa perustana on Fourierin laki: <span class="math notranslate nohighlight">\(\Phi= \lambda A \frac{dT}{dx}\)</span>, missä <span class="math notranslate nohighlight">\(\Phi\)</span> on lämpövirta watteina, <span class="math notranslate nohighlight">\(\lambda\)</span> on aineen lämmönjohtavuus (yksikkö <span class="math notranslate nohighlight">\(\text{W/(m}\cdot \text{K)}\)</span>), <span class="math notranslate nohighlight">\(dT\)</span> on lämpötilaero hyvin ohuen ainekerroksen vastakkaisten pintojen välillä, ja <span class="math notranslate nohighlight">\(dx\)</span> on hyvin ohuen ainekerroksen paksuus.</p>
+<p>Seuraavassa taulukossa on talonrakennuksessa sekä lumi- ja jäärakentamisessa käytettävien materiaalien lämmönjohtavuuksia.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aine</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\lambda~(\text{W/(m K)})\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Puu</p></td>
+<td><p>0.14</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tiili</p></td>
+<td><p>0.55</p></td>
+</tr>
+<tr class="row-even"><td><p>Mineraalivillalevy</p></td>
+<td><p>0.045</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lasivilla</p></td>
+<td><p>0.050</p></td>
+</tr>
+<tr class="row-even"><td><p>Betoni</p></td>
+<td><p>0.095</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vuorivilla</p></td>
+<td><p>0.035</p></td>
+</tr>
+<tr class="row-even"><td><p>Finnfoam-eriste</p></td>
+<td><p>0.030</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kipsilevy</p></td>
+<td><p>0.23</p></td>
+</tr>
+<tr class="row-even"><td><p>Lumi</p></td>
+<td><p>0.2 – 0.8 (uusi lumi 0.2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jää</p></td>
+<td><p>2.2</p></td>
+</tr>
+</tbody>
+</table>
+<p>Integraalilaskulla Fourierin laista saadaan seuraavaksi esiteltäviä laskukaavoja.</p>
+<p><strong>Lämpövirta tasapaksun kerroksen läpi</strong>: <span class="math notranslate nohighlight">\(\Phi= \lambda A \frac{\Delta T}{\Delta x}\)</span></p>
+<p>Kaavassa <span class="math notranslate nohighlight">\(\Delta T\)</span> on lämpötilaero kerroksen pintojen välillä, ja <span class="math notranslate nohighlight">\(\Delta x\)</span> on kerroksen paksuus. Kaavaan voidaan suoraan sijoittaa niinsanottu U-arvo, <span class="math notranslate nohighlight">\(U=\frac{\lambda}{\Delta x}\)</span>. Tällöin laskukaavaksi saadaan</p>
+<p><span class="math notranslate nohighlight">\(\Phi= UA\Delta T\)</span></p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Hirsiseinän pinta-ala on 12 neliömetriä ja paksuus 15 cm. Kuinka suuri lämpövirta kulkee seinän läpi, kun sisäpinnan lämpötila on +20 astetta ja ulkoseinän lämpötila on –20 astetta?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Sijoitetaan arvot kaavaan <span class="math notranslate nohighlight">\(\Phi= \lambda A \frac{\Delta T}{\Delta x}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Phi= 0.14~\frac{\text{W}}{\text{m}\cdot\text{K}} \cdot 12~\text{m}^2 \cdot \frac{40~\text{K}}{0.15~\text{m}} = 448~\text{W}\)</span></p>
+<p>Tehtävä voidaan ratkaista myös U-arvoa käyttämällä. Kyseiselle seinälle se on</p>
+<p><span class="math notranslate nohighlight">\(U=\frac{0.14~\frac{\text{W}}{\text{m}\cdot\text{K}}}{0.15~\text{m}}=0.933~\frac{\text{W}}{\text{K}\cdot\text{m}^2}\)</span></p>
+<p>Tällöinkin lämpövirraksi saadaan</p>
+<p><span class="math notranslate nohighlight">\(\Phi=0.933~\frac{\text{W}}{\text{K}\cdot\text{m}^2} \cdot 12~\text{m}^2 \cdot 40~\text{K} = 448~\text{W}\)</span></p>
+<p>Lämpöä siirtyy seinän läpi siis noin 450 watin teholla. Tällöin huoneen pitäminen 20 lämpötilassa vuorokauden ajan vaatisi energiaa, esimerkiksi sähköä, noin 11 kWh.</p>
+</div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">U-arvon määritys</p>
+<p>Oven tai ikkunan U-arvo voidaan määrittää seuraavanlaisella kokeella:</p>
+<ol class="simple">
+<li><p>Tutkittava ovi/ikkuna asetetaan täydellisesti eristetyn kammion aukkoon. (Käytännössä eristyksen ei tarvitse olla täydellinen, vaan riittää, että seinämien-U arvot ovat tiedossa.)</p></li>
+<li><p>Mitataan oven/ikkunan pinta-ala <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Käynnistetään kammion sisällä oleva vakiotehoinen (teho <span class="math notranslate nohighlight">\(P\)</span>) sähkövastus.</p></li>
+<li><p>Odotetaan, kunnes lämpötilan nousu kammiossa pysähtyy, ja mitataan tällöin lämpötilaero <span class="math notranslate nohighlight">\(\Delta T\)</span> kammion ja ympäristön välillä.</p></li>
+<li><p>Ratkaistaan U-arvo kaavasta <span class="math notranslate nohighlight">\(\Phi = U A \Delta T\)</span></p></li>
+</ol>
+<p>Esimerkki: Oven korkeus on 200 cm ja leveys 90 cm. Kun kammiossa on 60 W teholähde, kammion lämpötila nousee 45 astetta korkeammaksi kuin ympäristön. Mikä on oven U-arvo?</p>
+<p>Pinta-ala ok <span class="math notranslate nohighlight">\(A = 2.0~\text{m} \cdot 0.9~\text{m} = 1.8~\text{m}^2\)</span>, lämpövirta on yhtä suuri kuin lämmittimen teho <span class="math notranslate nohighlight">\(P\)</span> eli <span class="math notranslate nohighlight">\(\Phi = 60~\text{W}\)</span>, ja lämpötilaero on <span class="math notranslate nohighlight">\(\Delta T = 45~\text{K}\)</span>.</p>
+<p>Ratkaistaan <span class="math notranslate nohighlight">\(U=\frac{\Phi}{A \Delta T}\)</span> ja sijoitetaan lukuarvot:</p>
+<p><span class="math notranslate nohighlight">\(U = \frac{60~\text{W}}{1.8~\text{m}^2\cdot 45~\text{K}}= 0.74~\frac{\text{W}}{\text{K}\cdot\text{m}^2}\)</span></p>
+</div>
+<p><strong>Lämpövirta useasta kerroksesta muodostuvan rakenteen läpi</strong></p>
+<p>Monikerroksiselle rakenteelle lämpövirran kaavaa on helpoin soveltaa muodossa <span class="math notranslate nohighlight">\(\Phi= UA\Delta T\)</span>. Tällaisessa rakenteessa U-arvo lasketaan yksittäisten kerrosten arvoista <span class="math notranslate nohighlight">\(U_i\)</span> seuraavasti:</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{U}=\frac{1}{U_1}+\frac{1}{U_2}+\frac{1}{U_3}+ \dots\)</span></p>
+<p>eli toisin ilmaistuna: jos kerroksia on <span class="math notranslate nohighlight">\(n\)</span>, niin kaava on</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{U}=\Sigma_{i=1}^n \frac{1}{U_i}\)</span></p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Kaavan perustelu</p>
+<p>Kaikkien kerrosten läpi kulkee sama lämpövirta <span class="math notranslate nohighlight">\(\Phi\)</span>. Lämpötilaero <span class="math notranslate nohighlight">\(\Delta T\)</span> ensimmäisen ja viimeisen pinnan välillä muodostuu kerroksen eri pintojen lämpötilaeroista: <span class="math notranslate nohighlight">\(\Delta T = \Delta T_1 + \Delta T_2 + \dots\)</span>.</p>
+<p>Yksittäisten kerrosten pintojen välillä lämpötilaerot <span class="math notranslate nohighlight">\(T_i\)</span> saadaan kaavasta <span class="math notranslate nohighlight">\(\Phi= U_i A\Delta T_i\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Delta T_i = \frac{\Phi}{U_i A}\)</span></p>
+<p>Kokonaisuudessaan lämpötilaeroksi tulee siis</p>
+<p><span class="math notranslate nohighlight">\(\Delta T = \frac{\Phi}{U_1 A} + \frac{\Phi}{U_2 A} + \dots\)</span></p>
+<p>Tähän voidaan vielä sijoittaa koko rakenteen reunimmaisten pintojen välinen lämpötilaero <span class="math notranslate nohighlight">\(\Delta T= \frac{\Phi}{U A}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\frac{\Phi}{U A}=\frac{\Phi}{U_1 A} + \frac{\Phi}{U_2 A} + \dots\)</span></p>
+<p>Yhtälö voidaan nyt puolittain jakaa suureella <span class="math notranslate nohighlight">\(\Phi\)</span> ja kertoa suureella <span class="math notranslate nohighlight">\(A\)</span>, jolloin yhtälö sievenee muotoon</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{U}=\frac{1}{U_1} + \frac{1}{U_2} + \dots\)</span></p>
+</div>
+<p>Lämmön johtumista voidaan kuvailla myös lämpövastuksen <span class="math notranslate nohighlight">\(R\)</span>, siis R-arvon, avulla. Se on U-arvon käänteisluku: <span class="math notranslate nohighlight">\(R=\frac{1}{U}=\frac{\Delta x}{\lambda}\)</span>. Lämpövastuksen yksikkö on <span class="math notranslate nohighlight">\(\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>.</p>
+<p>Useasta kerroksesta koostuvalle rakenteelle kokonaisvastuus saadaan summana <span class="math notranslate nohighlight">\(R=R_1+R_2+ \dots\)</span> eli jos kerroksia on <span class="math notranslate nohighlight">\(n\)</span> kappaletta, niin <span class="math notranslate nohighlight">\(R=\Sigma_{i=1}^n R_i\)</span>. Jos lämmön johtumisen mittana käytetään R-arvoa, niin lämpövirran kaavaksi muodostuu</p>
+<p><span class="math notranslate nohighlight">\(\Phi=\frac{A \Delta T}{R}\)</span></p>
+<p><strong>Lämpövirta kaukolämpöputken läpi</strong>: <span class="math notranslate nohighlight">\(\Phi=\frac{2 \pi L}{\text{ln}\left(\frac{r_2}{r_1}\right)}\lambda \Delta T\)</span></p>
+<p>Ylläolevalla kaavalla saadaan poikkileikkaukseltaan ympyrän muotoisen putken ulkoseinän läpi johtuva lämpövirta <span class="math notranslate nohighlight">\(\Phi\)</span>, kun putken pituus on <span class="math notranslate nohighlight">\(L\)</span>, sisäsäde <span class="math notranslate nohighlight">\(r_1\)</span> ja ulkosäde <span class="math notranslate nohighlight">\(r_2\)</span>. Kaavassa vakio <span class="math notranslate nohighlight">\(\lambda\)</span> tarkoittaa putken sisä- ja ulkoseinän välisen eristeen lämmönjohtavuutta. Kaavassa oletetaan, että putken sisä- ja ulkoseinä itsessään eivät eristä lämpöä. Lämpötilaero <span class="math notranslate nohighlight">\(\Delta T\)</span> mitataan putken sisällä kulkevan aineen ja ulkopuolella olevan aineen välillä.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Esim. Kaukolämpöputkessa virtaa 98-asteista vettä. Putken sisäsäde on 5 cm ja ulkosäde 15 cm. Eristeen lämmönjohtavuus on 0.035 W/(mK). Laske 100 m pitkästä putkesta seinämän läpi karkaava lämpövirta. Putken ulkopinnan lämpötila on +4 astetta.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Lämpötilaero on nyt <span class="math notranslate nohighlight">\(\Delta T=(98-4)~\text{K}=94~\text{K}\)</span>. Putken mitat voi laittaa yhtälöön senttimetreinä, sillä logaritmi lasketaan ulko- ja sisäsäteen suhteesta, joka on sama riippumatta siitä, missä yksikössä mitat ilmoitetaan. Lämpövirta on siis</p>
+<p><span class="math notranslate nohighlight">\(\Phi=\frac{2 \pi \cdot 100~\text{m}}{\text{ln}\left(\frac{15~\text{cm}}{5~\text{cm}}\right)}\cdot 0.035~\frac{\text{W}}{\text{m}\cdot\text{K}} \cdot 94~\text{K} = 1881~\text{W} \approx 1.9~\text{kW}\)</span></p>
+</div>
+</div>
+</section>
+<section id="lammon-konvektio-rajapinnoilla">
+<h2>Lämmön konvektio rajapinnoilla<a class="headerlink" href="#lammon-konvektio-rajapinnoilla" title="Permalink to this headline">#</a></h2>
+<p>Konvektio tarkoittaa lämmön siirtymistä virtaavaan nesteen tai kaasun mukana. Konvektiota voi tapahtua seuraavien rajapintojen välillä:</p>
+<ul class="simple">
+<li><p>kiinteä ja neste</p></li>
+<li><p>kiinteä ja kaasu</p></li>
+<li><p>neste ja kaasu</p></li>
+</ul>
+<p>Nestettä tai kaasua kutsutaan yleisnimellä fluidi. Konvektiossa fluidin liike voi olla joko lämpövirran aiheuttaman lämpötilan ja sitä kautta tiheyden muutoksen aiheuttamaa (luonnollinen konvektio), tai keinotekoisesti esimerkiksi puhaltimella tai pumpulla tuotettua (pakotettu konvektio).</p>
+<p>Konvektiossa siirtymä lämpövirta on <span class="math notranslate nohighlight">\(\Phi=h A (T_p-T_{\infty})\)</span>, missä <span class="math notranslate nohighlight">\(h\)</span> on nimeltään konvektiivinen lämmönsiirtokerroin, <span class="math notranslate nohighlight">\(A\)</span> on pinta-ala, <span class="math notranslate nohighlight">\(T_p\)</span> on pinnan lämpötila ja <span class="math notranslate nohighlight">\(T_{\infty}\)</span> on fluidin lämpötila kaukana pinnasta.</p>
+<p><strong>Eristävät ilmakerrokset</strong></p>
+<p>Tarkastellaan pääasiassa rakennuksen ulkoseinästä ulkoilmaan tapahtuvaa konvektiota. Pelkästään lämmön johtumisen tarkastelu esimerkiksi seinien ja ikkunoiden läpi menevän lämpövirran laskemisessa antaa virheellisiä tuloksia. Todellisuudessa seinien tai ikkunoiden pinnoille muodostuu eristävä ilmakerros, joka pienentää lämpövirtaa. Ilmakerroksen eristyskyky riippuu ilmavirtauksista, esim. tuulen voimakkuudesta.</p>
+<p>Edellisessä kaavassa esiintyvä konvektiivinen lämmönsiirtokerroin <span class="math notranslate nohighlight">\(h\)</span> riippuu olosuhteista. Kokeellisia arvoja eri tuuliolosuhteissa
+löytyy rakennusmääräyskokoelmista. Ilmakerrosta voidaan käsitellä laskuissa samalla tavalla kuin mitä tahansa rakenteen kerrosta. Kerroin <span class="math notranslate nohighlight">\(h\)</span> on tällöin sama kuin ilmakerroksen U-arvo.</p>
+<p>Ilmakerroksen U-arvoista voidaan käänteislukuna laskea vastaavat R-arvot eli pintavastukset. Oheisessa kuvassa on esitetty arvoja, joita voi käyttää laskuissa (yksikkö <span class="math notranslate nohighlight">\(\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>):</p>
+<ul class="simple">
+<li><p>katossa sisäpuolella 0.1</p></li>
+<li><p>lattiassa sisäpuolella 0.17 (katonrajassa on isompia ilmavirtauksia kuin lattian tasolla)</p></li>
+<li><p>sisäseinällä 0.13</p></li>
+<li><p>kaikkien seinien ulkopuolella 0.04 (tuulen takia luku on pienempi kuin sisäseinällä)</p></li>
+</ul>
+<p><img alt="Pintavastusten arvoja" src="_images/pintavastukset.png" /></p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Tarkastellaan seinää, jonka rakenne ulkopinnalta sisälle päin on seuraavanlainen:</p>
+<ul class="simple">
+<li><p>ilmakerros ulkoseinällä (kerros 1)</p></li>
+<li><p>2 cm lautaa (kerros 2)</p></li>
+<li><p>10 cm vuorivillaa (kerros 3)</p></li>
+<li><p>2 cm kipsilevyä (kerros 4)</p></li>
+<li><p>ilmakerros sisäseinällä (kerros 5)</p></li>
+</ul>
+<p>Sisällä on 20 astetta lämmintä ja ulkona on 20 astetta pakkasta. Seinän pinta-ala on 10 neliömetriä. Laske rakenteen R-arvo, lämpövirta <span class="math notranslate nohighlight">\(\Phi\)</span>, sekä lämpötilaerot kerroksittain.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Lasketaan ensin R-arvo. Yksittäisen kerroksen lämpövastus <span class="math notranslate nohighlight">\(R\)</span> voidaan laskea lämmönjohtuvuuden <span class="math notranslate nohighlight">\(\lambda\)</span> ja kerroksen paksuuden <span class="math notranslate nohighlight">\(\Delta x\)</span> avulla:</p>
+<p><span class="math notranslate nohighlight">\(R=\frac{\Delta x}{\lambda}\)</span></p>
+<p>Eri materiaalien lämmönjohtavuuden saadaan sivun yläreunan taulukosta. Seinän materiaalien lämpövastukseksi saadaan</p>
+<p><span class="math notranslate nohighlight">\(R_{\text{seinä}}=R_2+R_3+R4\)</span>, missä</p>
+<p><span class="math notranslate nohighlight">\(R_2=\frac{0.02~\text{m}}{0.14~(\text{W/(m K)})}=0.143~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(R_3=\frac{0.10~\text{m}}{0.035~(\text{W/(m K)})}=2.857~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(R_4=\frac{0.02~\text{m}}{0.23~(\text{W/(m K)})}=0.087~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>.</p>
+<p>Siis <span class="math notranslate nohighlight">\(R_{\text{seinä}} = 3.087~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
+<p>Lisätään tähän vielä seinän ulkopinnalta <span class="math notranslate nohighlight">\(R_1=0.13~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span> ja sisäpinnalta <span class="math notranslate nohighlight">\(R_5=0.04~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>. Kokonaisvastukseksi tulee</p>
+<p><span class="math notranslate nohighlight">\(R=(3.087+0.04+0.13)~\frac{\text{K}\cdot\text{m}^2}{\text{W}} = 3.257~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
+<p>Lämpövirta koko rakenteen läpi saadaan kaavalla <span class="math notranslate nohighlight">\(\Phi=\frac{A \Delta T}{R}\)</span>, siis</p>
+<p><span class="math notranslate nohighlight">\(\Phi=\frac{10~\text{m}^2\cdot 40~\text{K}}{3.257~\frac{\text{K}\cdot\text{m}^2}{\text{W}}}=123~\text{W}\)</span></p>
+<p>Lämpötilan muutos kerroksessa <span class="math notranslate nohighlight">\(i\)</span> saadaan laskemalla <span class="math notranslate nohighlight">\(\Delta T_i=\frac{\Phi R_i}{A}\)</span>.</p>
+<p>Ilmakerros ulkoseinällä: <span class="math notranslate nohighlight">\(\Delta T_1 = \frac{123~\text{W}\cdot 0.04~\frac{\text{K}\cdot\text{m}^2}{\text{W}}}{10~\text{m}^2} = 0.5~\text{K}\)</span></p>
+<p>Lautakerros: <span class="math notranslate nohighlight">\(\Delta T_2 = \frac{123~\text{W}\cdot 0.143~\frac{\text{K}\cdot\text{m}^2}{\text{W}}}{10~\text{m}^2} = 1.8~\text{K}\)</span></p>
+<p>Vuorivilla: <span class="math notranslate nohighlight">\(\Delta T_3 = \frac{123~\text{W}\cdot 2.857~\frac{\text{K}\cdot\text{m}^2}{\text{W}}}{10~\text{m}^2} = 35.1~\text{K}\)</span></p>
+<p>Kipsilevy: <span class="math notranslate nohighlight">\(\Delta T_4 = \frac{123~\text{W}\cdot 0.087~\frac{\text{K}\cdot\text{m}^2}{\text{W}}}{10~\text{m}^2} = 1.1~\text{K}\)</span></p>
+<p>Ilmakerros sisäseinällä: <span class="math notranslate nohighlight">\(\Delta T_5 = \frac{123~\text{W}\cdot 0.13~\frac{\text{K}\cdot\text{m}^2}{\text{W}}}{10~\text{m}^2} = 1.6~\text{K}\)</span></p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Seinän pinta-ala on 12 neliömetriä. Seinän rakenne on sellainen, että siinä on kahden 12 mm paksuisen lautakerroksen välissä vuorivillaa. Mikä on vuorivillakerroksen paksuuden vähintään oltava, jotta lämpövirta seinän läpi olisi enintään 200 W, kun lämpötilaero ulkoilman ja sisäilman välillä on 30 astetta? Ota laskussa huomioon myös pintavastukset seinän ja ilman rajapinnassa.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Ratkaistaan tarvittava koko seinän lämpövastus <span class="math notranslate nohighlight">\(R\)</span> yhtälöstä <span class="math notranslate nohighlight">\(\Phi=\frac{A \Delta T}{R}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(R=\frac{A \Delta T}{\Phi}\)</span></p>
+<p>Sijoitetaan suureiden arvot:</p>
+<p><span class="math notranslate nohighlight">\(R=\frac{12~\text{m}^2 \cdot 30~\text{K}}{200~\text{W}} = 1.8~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
+<p>Merkitään  vuorivillakerroksen paksuudeksi <span class="math notranslate nohighlight">\(x\)</span>. Tällöin koko seinän lämpövastus ilmakerroksineen on</p>
+<p><span class="math notranslate nohighlight">\((0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
+<p>On siis ratkaistava yhtälö</p>
+<p><span class="math notranslate nohighlight">\((0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}=1.8~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>$</p>
+<p>Yhtälön ratkaisuksi saadaan <span class="math notranslate nohighlight">\(x=0.051\)</span>, siis noin 5 cm eristekerros riittää.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Ilman lämpötila on -15 astetta. Laske jään muodostumisen nopeus (mm/h), kun jäätä on 5 cm, eikä sen päällä ole lunta. Veden lämpötila jään alla on 0 astetta. Jään lämmönjohtavuus on <span class="math notranslate nohighlight">\(2.1~\text{W/(m K)}\)</span>, ja jään tiheys on <span class="math notranslate nohighlight">\(\rho = 917~\text{kg/m}^3\)</span>.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Jääkerroksen R-arvo muodostuu jään omasta R-arvosta sekä sen päällä olevan ilmakerroksen R-arvosta. Sijoitetaan suureiden arvot:</p>
+<p><span class="math notranslate nohighlight">\(R=\frac{0.05~\text{m}}{2.1~\text{W/(m K)}}+0.04~\frac{\text{K}\cdot\text{m}^2}{\text{W}} = 0.064~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
+<p>Lämpövirta pinta-alalla <span class="math notranslate nohighlight">\(A\)</span> on <span class="math notranslate nohighlight">\(\Phi = \frac{A \Delta T}{R}\)</span>. Ajassa <span class="math notranslate nohighlight">\(t\)</span> energiaa siirtyy vedestä ilmaan <span class="math notranslate nohighlight">\(Q=\Phi t\)</span>. Toisaalta tämä on sama energiamäärä kuin se, joka vapautuu, kun massa <span class="math notranslate nohighlight">\(m\)</span> vettä jäätyy: <span class="math notranslate nohighlight">\(Q=sm\)</span>. Siis <span class="math notranslate nohighlight">\(\Phi t = sm\)</span>.</p>
+<p>Muodostuvan jään massan paikalle voidaan sijoittaa jään tiheyden <span class="math notranslate nohighlight">\(\rho\)</span> ja tilavuuden <span class="math notranslate nohighlight">\(V\)</span> tulo, siis <span class="math notranslate nohighlight">\(m=\rho V\)</span>. Edelleen jään tilavuus voidaan ilmaista muodossa <span class="math notranslate nohighlight">\(V=Ad\)</span>, missä <span class="math notranslate nohighlight">\(d\)</span> on kerroksen paksuus. Siis saadaan yhtälö</p>
+<p><span class="math notranslate nohighlight">\(\frac{A \Delta T}{R} t = s \rho A d\)</span></p>
+<p>Pinta-ala voidaan supistaa pois, ja tällöin ratkeaa kerroksen paksuus</p>
+<p><span class="math notranslate nohighlight">\(d=\frac{\Delta T \cdot t}{R \cdot r \cdot \rho}\)</span></p>
+<p>Sijoitetaan ajan <span class="math notranslate nohighlight">\(t\)</span> paikalle yksi tunti eli 3600 sekuntia, ja saadaan</p>
+<p><span class="math notranslate nohighlight">\(d=\frac{15~\text{K} \cdot 3600~\text{s}} {0.64~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\cdot 333000~\frac{\text{J}}{\text{kg}}\cdot 917~\frac{\text{kg}}{\text{m}^3}}\)</span></p>
+<p>Tulokseksi saadaan <span class="math notranslate nohighlight">\(d=0.003~\text{m}\)</span>, eli tunnissa jäätä muodostuu noin 3 mm. Jään muodostumisnopeus ei tietenkään pysy vakiona, sillä jääkerroksen paksuus kasvaa koko ajan.</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="energia_olomuoto.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Olomuodon muutoksia</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="lamposateily.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lämpösäteily</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

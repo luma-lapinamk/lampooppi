@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lämpölaajeneminen &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lämpötilan muutoksen energia" href="energia_lampotila.html" />
+    <link rel="prev" title="Lämpötila" href="lampotila.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_lampotila.html">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_olomuoto.html">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lammon_siirtyminen.html">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ideaalikaasut.html">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasut.html">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jaahdytyskoneet.html">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/lampolaajeneminen.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kiinteat-aineet">
+   Kiinteät aineet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nesteet">
+   Nesteet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaasut">
+   Kaasut
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lämpölaajeneminen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kiinteat-aineet">
+   Kiinteät aineet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nesteet">
+   Nesteet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaasut">
+   Kaasut
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="lampolaajeneminen">
+<h1>Lämpölaajeneminen<a class="headerlink" href="#lampolaajeneminen" title="Permalink to this headline">#</a></h1>
+<p>Lämpölaajeneminen on ilmiö, jossa kappaleen tilavuus kasvaa, kun lämpötila nousee. Kappale voi olla kiinteässä, nestemäisessä tai kaasumaisessa olomuodossa. Tarkastellaan näitä tapauksia erikseen.</p>
+<section id="kiinteat-aineet">
+<h2>Kiinteät aineet<a class="headerlink" href="#kiinteat-aineet" title="Permalink to this headline">#</a></h2>
+<p>Kiinteiden aineiden lämpölaajeneminen täytyy huomioida erityisesti metallirakenteiden suunnittelussa. Kiinteän aineen mittojen muutosta kuvaa lämpölaajenemiskerroin <span class="math notranslate nohighlight">\(\alpha\)</span>. Kertoimet ovat varsin pieniä, esimerkiksi betonille <span class="math notranslate nohighlight">\(\alpha=12\cdot 10^{-6}~\frac{1}{K}\)</span>. Lämpötilakertoimia löytyy esimerkiksi <a class="reference external" href="https://www.taulukot.com/fysiikka/mekaniikka_termodynamiikka/#muiden_kiinteiden_aineiden_ominaisuuksia">taulukot.com</a>-sivustolta.</p>
+<p>Jos kappaleen pituus alkuperäisessä lämpötilassa on <span class="math notranslate nohighlight">\(l_0\)</span>, niin pituus lämpötilan muutoksen <span class="math notranslate nohighlight">\(\Delta T\)</span> jälkeen on</p>
+<p><span class="math notranslate nohighlight">\(l=l_0(1+\alpha \Delta T)\)</span></p>
+<p>Tarvittaessa voidaan laskea myös pituuden muutos <span class="math notranslate nohighlight">\(\Delta l\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Delta l = \alpha l_0 \Delta T\)</span></p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kuinka pitkäksi muuttuu 100 m teräksinen mittanauha, kun lämpötila nousee <span class="math notranslate nohighlight">\(20^{\circ}\)</span> Celsius-asteesta <span class="math notranslate nohighlight">\(50^{\circ}\)</span> Celsius-asteeseen? Teräksen lämpölaajenemiskerroin on <span class="math notranslate nohighlight">\(\alpha=12\cdot 10^{-6} \frac{1}{K}\)</span> (sama kuin betonin).</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Sijoitetaan suureiden arvot laskukaavaan <span class="math notranslate nohighlight">\(l=l_0(1+\alpha \Delta T)\)</span>.</p>
+<p>Lämpötilan muutos <span class="math notranslate nohighlight">\(50^{\circ}~\text{C}-20^{\circ}~\text{C}=30^{\circ}~\text{C}\)</span> on yhtä suuri Kelvineinä, siis <span class="math notranslate nohighlight">\(\Delta T = 30\)</span> K.</p>
+<p><span class="math notranslate nohighlight">\(l=100~\text{m} (1+12\cdot 10^{-6}~\frac{1}{K} \cdot 30~\text{K}) = 100.036~\text{m}\)</span></p>
+<p>Muutos on siis 3.6 cm. Mittanauha näyttää väärin, koska nyt sen merkkiviivat ovat jakaantuneet liian pitkälle matkalle. Matkat ovat siis oikeasti pitempiä kuin mittanauhalla mitatut lukemat.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Teräksisen mittanauhan kalibrointilämpötila on <span class="math notranslate nohighlight">\(20^{\circ}~\text{C}\)</span>. Mittanauhalla mitattiin <span class="math notranslate nohighlight">\(35^{\circ}~\text{C}\)</span> helteellä moukarinheittotulos <span class="math notranslate nohighlight">\(60.54~\text{m}\)</span>. Mikä oli oikea tulos?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Lasketaan pituuden muutos kaavalla <span class="math notranslate nohighlight">\(\Delta l = \alpha l_0 \Delta T\)</span>. Lämpötilojen erotus on <span class="math notranslate nohighlight">\(\Delta T = 15~\text{K}\)</span>. Sijoitetaan tämä ja muut arvot kaavaan:</p>
+<p><span class="math notranslate nohighlight">\(\Delta l = 12\cdot 10^{-6}~\frac{1}{K}\cdot 100~\text{m}~\cdot 15~\text{K} = 0.01~\text{m}\)</span></p>
+<p>Pituus poikkeaa siis 1 cm verran oikeasta. Koska mittanauha on venynyt, niin sen lukemat ovat liian harvassa. Oikea tulos olisi <span class="math notranslate nohighlight">\(60.54~\text{m} + 0.01~\text{m} = 60.55~\text{m}\)</span>.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Pajassa sorvataan teräksinen tappi (halkaisija 30.00 mm) pyöreään reikään (halkaisija 29.97 mm). Kuinka paljon teräksistä levyä on lämmitettävä, jotta tappi mahtuisi reikään?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Reiän halkaisija pitäisi saada kasvatettua yhtä suureksi kuin tapin. Ratkaistaan lämpötilan muutos <span class="math notranslate nohighlight">\(\Delta T\)</span> yhtälöstä <span class="math notranslate nohighlight">\(l=l_0(1+\alpha \Delta T)\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Delta T=\frac{l-l_0}{l_0 \alpha} = \frac{30.00~\text{mm}-29.97~\text{mm}}{29.97~\text{mm}\cdot 12\cdot 10^{-6}~\frac{1}{K}} \approx 83.4~\text{K}\)</span></p>
+<p>Lämpötilan muutos on yhtä suuri Celsius- ja Kelvin-asteikoilla. Niinpä levyä pitäisi lämmittää noin 84 astetta.</p>
+</div>
+</div>
+<p>Pinta-alan muutosta <span class="math notranslate nohighlight">\(\Delta A\)</span> vastaava laajenemiskerroin on <span class="math notranslate nohighlight">\(\beta=2\alpha\)</span>, ja tilavuuden muutosta <span class="math notranslate nohighlight">\(\Delta V\)</span> vastaava kerroin on <span class="math notranslate nohighlight">\(\gamma=3\alpha\)</span>. Kun kappaleen alkuperäinen pinta-ala on <span class="math notranslate nohighlight">\(A\)</span> ja tilavuus <span class="math notranslate nohighlight">\(V\)</span>, niin saadaan seuraavat laskukaavat:</p>
+<p><span class="math notranslate nohighlight">\(\Delta A = A \beta \Delta T = 2A \alpha \Delta T\)</span>, <span class="math notranslate nohighlight">\(\Delta V = V \gamma \Delta T = 3V \alpha \Delta T\)</span></p>
+</section>
+<section id="nesteet">
+<h2>Nesteet<a class="headerlink" href="#nesteet" title="Permalink to this headline">#</a></h2>
+<p>Nesteillä ainoa oleellinen lämpölaajenemisen muoto on tilavuuden muutos. Ilmiötä voidaan hyödyntää lämpötilan mittauksessa. Nestelämpömittareissa asteikko on suoraan verrannollinen mittarin sisällä olevan nestepatsaan korkeuteen. Mittari toimii, koska mitä lämpimämpää on, sitä nopeammin nesteen molekyylit liikkuvat ja sitä suuremman tilan ne vaativat.</p>
+<p>Nesteille on taulukoitu tilavuuden lämpölaajenemiskertoimet suoraan. Tällöin tilavuuden muutos saadaan kaavalla <span class="math notranslate nohighlight">\(\Delta V = V \gamma \Delta T\)</span>.</p>
+<p>Yleensä nesteen tilavuus on sitä suurempi, mitä korkeampi on nesteen lämpötila. Vesi poikkeaa tästä säännöstä. Veden lämpötilakerroin on negatiivinen, kun veden lämpötila on välillä <span class="math notranslate nohighlight">\(0^{\circ}~\text{C} \dots 4^{\circ}~\text{C}\)</span>, ja positiivinen, kun lämpötila on enemmän kuin <span class="math notranslate nohighlight">\(4^{\circ}~\text{C}\)</span>. Vesi kutistuu, kun se lämpenee nollasta asteesta, ja saavuttaa pienimmän tilavuutensa neljässä asteessa. Kun lämpötila nousee siitä, veden tilavuus alkaa jälleen kasvaa.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Keskuslämmitysjärjestelmässä kiertää 300 litraa vettä. Veden lämpötila nousee 15 asteesta 80 asteeseen. Miten paljon vettä virtaa paisuntasäiliöön? Oletetaan, että veden laajenemisen lämpötilakerroin on <span class="math notranslate nohighlight">\(0.000207~\frac{1}{\text{K}}\)</span>. Verkoston lämpölaajenemista ei tarvitse ottaa huomioon.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p><span class="math notranslate nohighlight">\(\Delta V = 300~\text{l} \cdot 0.000207~\frac{1}{\text{K}} ~\cdot (80-15)~\text{K} \approx 4.0~\text{l}\)</span>.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Teräksinen 1500 litran öljysäiliö täytetään aivan täyteen. Öljyn ja säiliön lämpötila on täyttöhetkellä -20 astetta. Myöhemmin lämpötila nousee +20 asteeseen. Öljyn tilavuuden lämpötilakerroin on <span class="math notranslate nohighlight">\(0.0009~\frac{1}{\text{K}}\)</span>.</p>
+<p>a) Kuinka paljon säiliön tilavuus kasvaa?</p>
+<p>b) Kuinka paljon öljyn tilavuus kasvaa säiliössä?</p>
+<p>c) Kuinka paljon öljyä vuotaa yli säiliöstä?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) Säiliön tilavuuden muutokseen tarvitaan laskukaavaa <span class="math notranslate nohighlight">\(\Delta V = 3V \alpha \Delta T\)</span>. Kaavassa tarvittava lämpötilaero on <span class="math notranslate nohighlight">\(\Delta T = (20-(-20))~\text{K}=40~\text{K}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\Delta V = 3\cdot 1500~\text{l}\cdot 12\cdot 10^{-6} \frac{1}{K} \cdot 40~\text{K} = 2.2~\text{l}\)</span></p>
+<p>b) Öljyn tilavuuden muutos lasketaan kaavalla <span class="math notranslate nohighlight">\(\Delta V = V \gamma \Delta T \)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Delta V = 1500~\text{l}\cdot 0.0009 \frac{1}{K} \cdot 40~\text{K} = 54~\text{l}\)</span></p>
+<p>c) Öljyn tilavuus muuttuu huomattavasti enemmän kuin säiliön. Yli vuotava määrä on <span class="math notranslate nohighlight">\(54~\text{l}-2.2~\text{l}=51.8~\text{l}\)</span> eli noin 52 litraa.</p>
+</div>
+</div>
+</section>
+<section id="kaasut">
+<h2>Kaasut<a class="headerlink" href="#kaasut" title="Permalink to this headline">#</a></h2>
+<p>Kaasumaisten aineiden lämpölaajeneminen on paljon voimakkaampaa kuin kiinteiden tai nestemäisten aineiden. Jälleen riittää tarkastella pelkästään tilavuuden muutosta. Laskukaava on kuitenkin toinen. Kaasuille ei ole olemassa erillisiä lämpölaajenemiskertoimia, vaan kaikkien kaasujen ajatellaan käyttäytyvän kuten niinsanottu ideaalikaasu.</p>
+<p>Ideaalikaasun ominaisuudet ovat seuraavat:</p>
+<ul class="simple">
+<li><p>kaikki rakenneosat ovat keskenään samanlaisia ja kooltaan äärettömän pieniä</p></li>
+<li><p>rakenneosat liikkuvat tasaisella nopeudella ja suoraviivaisia reittejä</p></li>
+<li><p>rakenneosat vuorovaikuttavat toistensa kanssa vain törmätessään, ja törmäykset ovat täysin kimmoisia</p></li>
+</ul>
+<p>Mikään kaasu ei oikeasti toimi kuten ideaalikaasu. Kemian perusasioihin kuuluu, että molekyylien välillä on pieniä sähköisiä vuorovaikutuksia (van der Waalsin voima), vaikka aine olisikin kaasumaista. Lisäksi ilmassa on monia erilaisia molekyylejä, esimerkiksi happi- ja typpimolekyylejä. Kuitenkin kaasujen tilavuuden muutosta lämpötilan muuttuessa voidaan riittävällä tarkkuudella mallintaa seuraavalla laskukaavalla:</p>
+<p><span class="math notranslate nohighlight">\(\frac{V_1}{T_1}=\frac{V_2}{T_2}\)</span></p>
+<p>Kyseisen laskukaavan nimi on Gay-Lussacin laki. Jos tiedetään, että kaasun tilavuus on <span class="math notranslate nohighlight">\(V_1\)</span> silloin, kun lämpötila on <span class="math notranslate nohighlight">\(T_1\)</span>, niin voidaan laskea kaasun tilavuus <span class="math notranslate nohighlight">\(V_2\)</span> jossakin muussa lämpötilasssa <span class="math notranslate nohighlight">\(T_2\)</span>. Tähän kaavaan lämpötilat pitää sijoittaa Kelvineinä.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Saunan tilavuus on 12 kuutiometriä. Saunan lämpötila on aluksi 18 astetta, ja saunan lämmettyä 80 astetta. Kuinka paljon saunasta poistuu ilmaa?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Lämpötilat pitää muuttaa Kelvineiksi. Alkulämpötila on <span class="math notranslate nohighlight">\(T_1=(18+273.15)~\text{K}=291.15~\text{K}\)</span> ja loppulämpötila on <span class="math notranslate nohighlight">\(T_2=(80+273.15)~\text{K}=353.15~\text{K}\)</span>. Ratkaistaan Gay-Lussacin laista lopputilavuus <span class="math notranslate nohighlight">\(V_2\)</span> ja sijoitetaan suureiden arvot:</p>
+<p><span class="math notranslate nohighlight">\(V_2=V_1 \frac{T_2}{T_1} = 12~\text{m}^3\cdot \frac{353.15}{291.15} = 14.6~\text{m}^3\)</span></p>
+<p>Ilmaa poistui <span class="math notranslate nohighlight">\(V_2-V_1=2.6~\text{m}^3\)</span>.</p>
+</div>
+</div>
+<p><strong>Huom!</strong> Jos lämpötila muuttuu, mutta kaasun tilavuus ei pysty kasvamaan, niin kaasun paine kasvaa arvosta <span class="math notranslate nohighlight">\(p_1\)</span> arvoon <span class="math notranslate nohighlight">\(p_2\)</span>. Tämä tulee muistaa, jos kaasuja varastoidaan tiiviissä säiliöissä. Kaasun paineen ja lämpötilan yhteyttä kuvaa Charlesin laki, joka on seuraava:</p>
+<p><span class="math notranslate nohighlight">\(\frac{p_1}{T_1}=\frac{p_2}{T_2}\)</span></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="lampotila.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lämpötila</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="energia_lampotila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lämpötilan muutoksen energia</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

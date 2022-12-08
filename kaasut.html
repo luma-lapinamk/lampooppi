@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Kaasujen perusprosessit &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Kaasujen energian muutoksia" href="kaasujen_olk.html" />
+    <link rel="prev" title="Ideaalikaasut" href="ideaalikaasut.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampolaajeneminen.html">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_lampotila.html">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_olomuoto.html">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lammon_siirtyminen.html">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ideaalikaasut.html">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jaahdytyskoneet.html">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/kaasut.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isokoorinen-prosessi">
+   Isokoorinen prosessi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isobaarinen-prosessi">
+   Isobaarinen prosessi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isoterminen-prosessi">
+   Isoterminen prosessi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adiabaattinen-prosessi">
+   Adiabaattinen prosessi
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Kaasujen perusprosessit</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isokoorinen-prosessi">
+   Isokoorinen prosessi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isobaarinen-prosessi">
+   Isobaarinen prosessi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isoterminen-prosessi">
+   Isoterminen prosessi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adiabaattinen-prosessi">
+   Adiabaattinen prosessi
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="kaasujen-perusprosessit">
+<h1>Kaasujen perusprosessit<a class="headerlink" href="#kaasujen-perusprosessit" title="Permalink to this headline">#</a></h1>
+<p>Kaasujen perusprosessit tarkoittavat muutoksia, joissa jokin kaasulain <span class="math notranslate nohighlight">\(pV=nRT\)</span> suureista pysyy vakiona. Useat koneet (polttomoottori, kaasuturbiini, ilmastointi) perustuvat kaasuissa tapahtuviin prosesseihin. Prosessit voivat olla seuraavanlaisia:</p>
+<ol class="simple">
+<li><p>Isokoorinen prosessi: tilavuus pysyy vakiona</p></li>
+<li><p>Isobaarinen prosessi: paine pysyy vakiona</p></li>
+<li><p>Isoterminen prosessi: lämpötila pysyy vakiona</p></li>
+</ol>
+<p>Lisäksi voi tapahtua adiabaattinen prosessi: kaasun sisäenergia pysyy vakiona.</p>
+<p>Kaikissa näissä prosesseissa perustana on kaasulaki <span class="math notranslate nohighlight">\(pV=nRT\)</span>. Kaasulain voi esittää myös muodossa: <span class="math notranslate nohighlight">\(\frac{pV}{T}=nR\)</span> eli toisin sanoen suure <span class="math notranslate nohighlight">\(pV/T\)</span> on vakio. Siis jos alkutilanteessa kaasun paine on <span class="math notranslate nohighlight">\(p_1\)</span>, tilavuus <span class="math notranslate nohighlight">\(V_1\)</span> ja lämpötila <span class="math notranslate nohighlight">\(T_1\)</span>, ja lopputilanteessa vastaavat arvot ovat <span class="math notranslate nohighlight">\(p_2, V_2, T_2\)</span>, niin voimassa on kaasujen tilanyhtälö</p>
+<p><span class="math notranslate nohighlight">\(\frac{p_1 V_1}{T_1}=\frac{p_2 V_2}{T_2}\)</span></p>
+<section id="isokoorinen-prosessi">
+<h2>Isokoorinen prosessi<a class="headerlink" href="#isokoorinen-prosessi" title="Permalink to this headline">#</a></h2>
+<p>Isokoorisissa prosessissa kaasun tilavuus ei muutu. Kaasu on siis astiassa, joka ei mahdollista kaasun laajenemista. Toisaalta koska kaasu täyttää aina koko käytössään olevan tilan, niin kaasun tilavuus ei voi pienentyäkään. Kun tilavuus ei muutu, niin <span class="math notranslate nohighlight">\(V_1=V_2=V\)</span>, joten</p>
+<p><span class="math notranslate nohighlight">\(\frac{p_1 V}{T_1}=\frac{p_2 V}{T_2}\)</span></p>
+<p>Sieventämällä saadaan seuraava laskukaava eli Charlesin laki:</p>
+<p><span class="math notranslate nohighlight">\(\frac{p_1}{T_1}=\frac{p_2}{T_2}\)</span></p>
+<p>Isokoorisissa prosesseissa kaasu ei laajene, joten se ei tee mekaanista työtä. Kaasun lämmittämiseen tarvittava lämpöenergia
+lisää sisäenergiaa: <span class="math notranslate nohighlight">\(\Delta U = Q\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Auton renkaisiin laitetaan ylipaine 180 kPa (180 bar), kun pakkasta on -20 astetta. Kun autolla on ajettu puoli tuntia, renkaiden lämpötila on noussut +15 asteeseen. Mikä on rengaspaine tuolloin?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Auton renkaissa olevan ilman absoluuttinen paine on ylipaineen ja ilmanpaineen summa. Normaali ilmanpaine on 101300 Pa eli noin 101 kPa. Todellinen paine on siis <span class="math notranslate nohighlight">\(p_1=180~\text{kPa}+101~\text{kPa}=281~\text{kPa}\)</span>. Lämpötilat tulee sijoittaa kaavaan Kelvineinä. Alkulämpötila on <span class="math notranslate nohighlight">\(T_1=(-20+273)~\text{K}=253~\text{K}\)</span> ja loppulämpötila on <span class="math notranslate nohighlight">\(T_2=(15+273)=288~\text{K}\)</span>. Charlesin laista saadaan loppupaine</p>
+<p><span class="math notranslate nohighlight">\(p_2=p_1 \frac{T_2}{T_1} = 281~\text{kPa}\cdot \frac{288~\text{K}}{253\text{K}}=320~\text{kPa}\)</span></p>
+<p>Lukema vastaa normaaliin ilmanpaineeseen verrattuna ylipainetta <span class="math notranslate nohighlight">\((320-101)~\text{kPa}=219~\text{kPa}\)</span> eli noin 2.2 bar.</p>
+</div>
+</div>
+</section>
+<section id="isobaarinen-prosessi">
+<h2>Isobaarinen prosessi<a class="headerlink" href="#isobaarinen-prosessi" title="Permalink to this headline">#</a></h2>
+<p>Isobaarisissa prosesseissa kaasun paine ei muutu, eli <span class="math notranslate nohighlight">\(p_1=p_2=p\)</span>. Kaasu voi kuitenkin laajentua, esimerkiksi ilmapallon koko voi muuttua. Kun kaasujen tilanyhtälöön sijoitetaan vakiopaine <span class="math notranslate nohighlight">\(p\)</span>, saadaan seuraava laskukaava, Gay-Lussacin laki:</p>
+<p><span class="math notranslate nohighlight">\(\frac{V_1}{T_1}=\frac{V_2}{T_2}\)</span></p>
+<p>Kaasu tekee laajetessaan työn <span class="math notranslate nohighlight">\(W = p \Delta V\)</span>. Jos kaasua lämmitetään, lämpöenergia menee osittain sisäenergian nousuun, mutta tästä pitää
+vähentää kaasun tekemä työ. Siis <span class="math notranslate nohighlight">\(\Delta U = Q- p \Delta V\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Saunan ilmatilavuus on 12 kuutiometriä.</p>
+<p>a) Kuinka paljon ilmaa virtaa pois saunasta, kun sauna lämmitetään 20 asteen huoneenlämmöstä 90 asteen lämpötilaan?</p>
+<p>b) Kuinka suuren työn ilma laajetessaan tekee?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p><span class="math notranslate nohighlight">\(V_2=V_1 \frac{T_2}{T_1} = 12~\text{m}^3 \cdot \frac{(20+273)~\text{K}}{(90+273)~\text{K}} = 14.9~\text{m}^3\)</span></p>
+<p>Ilmaa poistui <span class="math notranslate nohighlight">\((14.9-12)~\text{m}^3\)</span> eli 2.9 kuutiometriä.</p>
+<p>b) Oletetaan, että saunan ilma on normaalipaineessa 1013000 Pa.</p>
+<p><span class="math notranslate nohighlight">\(W=p \Delta V = 101300~\text{Pa}\cdot 2.9~\text{m}^3 = 294~\text{kJ}\)</span></p>
+</div>
+</div>
+</section>
+<section id="isoterminen-prosessi">
+<h2>Isoterminen prosessi<a class="headerlink" href="#isoterminen-prosessi" title="Permalink to this headline">#</a></h2>
+<p>Isotermisessä prosessissa kaasun lämpötila pysyy vakiona, siis <span class="math notranslate nohighlight">\(T_1=T_2=T\)</span>. Sijoittamalla tämä kaasujen tilanyhtälöön saadaan Boylen laki:</p>
+<p><span class="math notranslate nohighlight">\(p_1 V_1=p_2 V_2\)</span></p>
+<p>Laajetessaan kaasu tekee työtä, mutta koska painekin muuttuu, niin kaasun tekemän työn laskemiseen tarvittaisiin integraalilaskentaa.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Auton vararenkaassa on ylipaine 1.9 bar eli 190 kPa. Renkaan sisätilavuus on 95 litraa. Kuinka paljon ilmaa virtaa ulos normaalipaineeseen,
+kun venttiili menee epäkuntoon ja koko ylipaine purkautuu? Oletetaan, että renkaan muoto säilyy muuttumattomana ja että kaasu virtaa ulos niin hitaasti, että sen lämpötila ei muutu.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Alkuperäinen paine on <span class="math notranslate nohighlight">\(p_1=(190+101)~\text{kPa}=291~\text{kPa}\)</span>, ja uusi paine on normaalipaine <span class="math notranslate nohighlight">\(p_2=101~\text{kPa}\)</span>. Ratkaistaan uusi tilavuus <span class="math notranslate nohighlight">\(V_2\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(V_2=V_1 \frac{p_1}{p_2} = 95~\text{l}\cdot \frac{291~\text{kPa}}{101~\text{kPa}}=274~\text{l}\)</span></p>
+<p>Ulos virtaa siis määrä <span class="math notranslate nohighlight">\(\Delta V = (274-95)~\text{l}=179~\text{l}\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="adiabaattinen-prosessi">
+<h2>Adiabaattinen prosessi<a class="headerlink" href="#adiabaattinen-prosessi" title="Permalink to this headline">#</a></h2>
+<p>Adiabaattinen prosessi on prosessi, jossa kaasun ja ympäristön välillä ei siirry lämpöenergiaa <span class="math notranslate nohighlight">\(Q\)</span>. Tyypillinen esimerkki adiabaattisesta
+prosessista on nopea kaasun tilavuuden muutos, jossa lämpöenergiaa ei ehdi siirtyä esim. sylinterin seinämän läpi. Tällaisia prosesseja tapahtuu ainakin bensiinimoottoreissa.</p>
+<p>Laskukaava on melkein sama kuin isotermisessä prosessissa:</p>
+<p><span class="math notranslate nohighlight">\(p_1 V_1 ^{\gamma} = p_2 V_2 ^{\gamma}\)</span></p>
+<p>missä <span class="math notranslate nohighlight">\(\gamma=\frac{C_p}{C_V}\)</span>, <span class="math notranslate nohighlight">\(C_p\)</span> on kaasun ominaislämpökapasiteetti vakiopaineessa ja <span class="math notranslate nohighlight">\(C_V\)</span> on kaasun ominaislämpökapasiteetti vakiotilavuudessa. Suureen <span class="math notranslate nohighlight">\(\gamma\)</span> nimi on adiabaattivakio. Kaksiatomisten kaasujen (esim. happi, typpi) ja ilman adiabaattivakio on <span class="math notranslate nohighlight">\(\gamma=1.4\)</span>.</p>
+<p>Kaava voidaan esittää myös seuraavassa muodossa:</p>
+<p><span class="math notranslate nohighlight">\(T_1 V_1 ^{\gamma-1} = T_2 V_2 ^{\gamma-1}\)</span></p>
+<p>Perustelu jälkimmäiselle muodolle on seuraava: <span class="math notranslate nohighlight">\(pV^{\gamma} = pVV^{\gamma-1} = nRT V^{\gamma-1}\)</span>. Koska <span class="math notranslate nohighlight">\(pV\)</span> on vakio, niin myös <span class="math notranslate nohighlight">\(TV^{\gamma-1}\)</span> on vakio.</p>
+<p>Koska prosesseissa ei siirry lämpöenergiaa <span class="math notranslate nohighlight">\(Q\)</span>, niin kaasun sisäenergian muutos on sama kuin kaasun tilavuuden muutokseen liittyvä työ <span class="math notranslate nohighlight">\(W\)</span>. Siis <span class="math notranslate nohighlight">\(\Delta U = W\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Bensiinimoottorin ottaa sylinteriin ulkoilmaa, jonka lämpötila on 10 astetta. Moottorin puristussuhde on 16, siis sylinteritilavuuden maksimin <span class="math notranslate nohighlight">\(V_1\)</span> ja minimin <span class="math notranslate nohighlight">\(V_2\)</span> suhde on <span class="math notranslate nohighlight">\(V_1/V_2=16\)</span>. Laske ilman lämpötila, kun ilman tilavuus on pienimmillään. Oletetaan, että puristus on adiabaattinen.
+s</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Käytetään kaavaa <span class="math notranslate nohighlight">\(T_1 V_1 ^{\gamma-1} = T_2 V_2 ^{\gamma-1}\)</span> ja ratkaistaan siitä lämpötila <span class="math notranslate nohighlight">\(T_1\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(T_2=T_1\frac{V_2 ^{\gamma-1}}{V_1 ^{\gamma-1}}=T_1 \left(\frac{V_1}{V_2}\right)^{\gamma-1}\)</span></p>
+<p>Sijoitetaan lämpötila <span class="math notranslate nohighlight">\(T_1=(10+273)~\text{K}=283~\text{K}\)</span>, puristussuhde sekä ilman adiabaattinen vakio:</p>
+<p><span class="math notranslate nohighlight">\(T_1=283~\text{K}\cdot 16^{\1.4-1} = 858~\text{K}\)</span></p>
+<p>Lämpötila on siis noin 585 Celsius-astetta.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Mihin murto-osaan ilman Kelvin-lämpötila pienenee, kun kaasu laajenee adiabaattisesti siten, että sen tilavuus 20-kertaistuu?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Nyt <span class="math notranslate nohighlight">\(V_2=20 V_1\)</span>. Uusi lämpötila on</p>
+<p><span class="math notranslate nohighlight">\(T_2 = T_1 \left(\frac{V_1}{20 V_1}\)^{\gamma-1} = T_1 \left(\frac{1}{20}\right)^{0.4} = 0.3~\text{T_1}\)</span></p>
+<p>Lämpötila laskee siis 30 prosenttiin alkuperäisestä (Kelvin-asteikolla mitattuna).</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="ideaalikaasut.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Ideaalikaasut</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="kaasujen_olk.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Kaasujen energian muutoksia</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

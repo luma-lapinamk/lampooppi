@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Olomuodon muutoksia &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lämmön siirtyminen" href="lammon_siirtyminen.html" />
+    <link rel="prev" title="Lämpötilan muutoksen energia" href="energia_lampotila.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampolaajeneminen.html">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_lampotila.html">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lammon_siirtyminen.html">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ideaalikaasut.html">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasut.html">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jaahdytyskoneet.html">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/energia_olomuoto.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoenergia-olomuodon-muutoksissa">
+   Lämpöenergia olomuodon muutoksissa
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Olomuodon muutoksia</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoenergia-olomuodon-muutoksissa">
+   Lämpöenergia olomuodon muutoksissa
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="olomuodon-muutoksia">
+<h1>Olomuodon muutoksia<a class="headerlink" href="#olomuodon-muutoksia" title="Permalink to this headline">#</a></h1>
+<p>Kun aineeseen tuodaan lämpöenergiaa, niin aineen rakenneosien nopeus kasvaa. Tietyssä lämpötilassa nopeus kasvaa niin paljon, että rakenneosat pääsevät pois paikoiltaan tai jopa kokonaan poistumaan muiden rakenneosien luota. Kun aine jäähtyy eli menettää lämpöenergiaa, niin rakenneosien liikkumavapaus vähenee vastaavalla tavalla. Tällöin puhutaan olomuodon muutoksista: kiinteä - neste - kaasu.</p>
+<p>Eri olomuodoissa aineen rakenneosien vapaus muuttuu:</p>
+<ul class="simple">
+<li><p>Kiinteässä aineessa osat ovat kiinni toisissaan. Aineella on koko ja muoto, eikä se puristu kokoon. Aine voi olla kiteistä (rakenneosat ovat tietyssä järjestyksessä) tai amorfista. Rakenneosaset eivät ole täysin liikkumatta, vaan ne värähtelevät, mutta vain omilla paikoillaan.</p></li>
+<li><p>Nesteessä rakenneosat voivat liikkua toistensa ohi. Aine on astian muotoinen eikä juurikaan puristu kokoon.</p></li>
+<li><p>Kaasussa rakenneosat voivat liikkua vapaasti. Aine ottaa astian muodon ja tilavuuden. Ainetta voidaan puristaa kokoon.</p></li>
+</ul>
+<p>Jokaisella aineella on sulamispiste ja kiehumispiste. Sulamispisteessä aine muuttuu kiinteästä nestemäiseksi (tai toisinpäin) ja kiehumispisteessä nesteestä kaasuksi (tai toisinpäin). Joillakin aineilla nämä lämpötilat ovat sellaisia, että aine pysyy samassa olomuodossa. Esimerkiksi ilman kiehumispiste on <span class="math notranslate nohighlight">\(-196^{\circ}~\text{C}\)</span>, joten saamme koko ajan hengittää kaasumaista ilmaa. Joillakin aineilla taas sulamispiste voidaan saavuttaa kuumentamalla. Raudan sulamispiste on noin 1500 astetta, mikä mahdollistaa sen, että voimme rakentaa raudasta kiinteitä pysyviä rakenteita, mutta kuitenkin tarvittaessa sulattaakin rautaa. Vesi on erityistapaus aineiden joukossa. Vettä esiintyy maapallon olosuhteissa kaikissa kolmessa olomuodossa.</p>
+<p>Energian suunta aineeseen tai aineesta poispäin riippuu siitä, millainen olomuodon muutos on kyseessä:</p>
+<ul class="simple">
+<li><p>Höyrystyminen nesteeksi kaasuksi sitoo lämpöä.</p></li>
+<li><p>Tiivistymisessä kaasusta nesteeksi vapautuu lämpöä.</p></li>
+<li><p>Sulaminen kiinteästä aineesta nesteeksi sitoo lämpöä.</p></li>
+<li><p>Jähmettyminen nesteestä kiinteäksi aineeksi vapauttaa lämpöä.</p></li>
+</ul>
+<section id="lampoenergia-olomuodon-muutoksissa">
+<h2>Lämpöenergia olomuodon muutoksissa<a class="headerlink" href="#lampoenergia-olomuodon-muutoksissa" title="Permalink to this headline">#</a></h2>
+<p>Olomuodon muutos sitoo energiaa. Yleensä aineen lämpötila nousee, kun ainetta lämmitetään. Jos kuitenkin aine sattuu lämmityksessä saavuttamaan sen lämpötilan, jossa olomuodon muutos tapahtuu, niin kaikki aineeseen tuotava lämpöenergia kuluu olomuodon muutoksiin. Jääpala pysyy 0-asteisena, kunnes se on kokonaan sulanut, eikä kattilassa kiehuvan veden lämpötila nouse 100 asteesta.</p>
+<p>Olomuodon muutokseen tarvittava energia riippuu aineen <strong>sulamis- tai höyrystymislämmöstä</strong> ja aineen massasta <span class="math notranslate nohighlight">\(m\)</span>. Sulamislämmölle käytetään tässä merkintää <span class="math notranslate nohighlight">\(s\)</span> ja höyrystymislämmölle merkintää <span class="math notranslate nohighlight">\(r\)</span>. Tällöin sulamiseen kuluva energia on <span class="math notranslate nohighlight">\(Q=sm\)</span> ja höyrystymiseen kuluva energia on <span class="math notranslate nohighlight">\(Q=rm\)</span>.</p>
+<p>Sulamis- ja höyrystymislämmöt ovat sitä suurempia, mitä vahvemmat voimat aineet rakenneosien välillä on. Ionisidos on yleensä lujempi kuin molekyylisidos. Molekyyleistä koostuvassa aineissa molekyylien koko vaikuttaa energian määrään. Veden sulamis- ja höyrystymislämmöt ovat valtavan suuria. Sulamislämpö on <span class="math notranslate nohighlight">\(s=333~\text{kJ/kg}\)</span> ja höyrystymislämpö on <span class="math notranslate nohighlight">\(s=2260~\text{kJ/kg}\)</span>. Esimerkiksi jäätyneen järven sulaminen keväällä sitoo erittäin paljon lämpöenergiaa. Sen jälkeen tarvitaan vielä paljon energiaa, ennen kuin vesi on lämmintä.</p>
+<p>Yleisesti lämpöenergiaan liittyvissä laskuissa täytyy huomioida se, sisältyykö tapahtumaan sekä lämpenemistä (tai jäähtymistä) että olomuodon muutoksia. Kaikki nämä tapahtumat pitää huomioida energiamäärän laskemisessa.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Ulkona on 18 astetta pakkasta. Tuodaan sisälle 3 kg jäätä. Jää lämpenee sulamispisteeseensä, sulaa ja sen jälkeen lämpenee huoneenlämpötilaan, 20 asteeseen. Kuinka paljon energiaa sitoutuu? Jään ominaislämpökapasiteetti on <span class="math notranslate nohighlight">\(c_{\text{jää}}=2100~\frac{\text{J}}{\text{kg}}\)</span>.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Kokonaisenergia koostuu jään lämpenemisestä nollaan asteeseen (lämpötilan muutos <span class="math notranslate nohighlight">\(\Delta T_1\)</span>), jään sulamisesta vedeksi, ja veden lämpenemisestä 20 asteeseen (lämpötilan muutos <span class="math notranslate nohighlight">\(\Delta T_2\)</span>). Veden sulamislämpö on <span class="math notranslate nohighlight">\(s=333~\text{kJ/kg}\)</span> ja veden ominaislämpökapasiteetti on <span class="math notranslate nohighlight">\(c_{\text{vesi}}=4190~\frac{\text{J}}{\text{kg}}\)</span>. Massana käytetään <span class="math notranslate nohighlight">\(m=3~\text{kg}\)</span>. Laskukaava on siis</p>
+<p><span class="math notranslate nohighlight">\(Q=c_{\text{jää}} m \Delta T_1 + sm + c_{\text{vesi}} m \Delta T_2\)</span></p>
+<p>eli</p>
+<p><span class="math notranslate nohighlight">\(Q=2100~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg} \cdot 18~\text{K} + 333000\text{J/kg} \cdot 3~\text{kg} + 4190~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg}\cdot 20~\text{K} = 1 363 800~\text{J}\)</span></p>
+<p>Lämpöä sitoutuu noin 1.4 megajoulea.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Retkikeittimen teho on noin 1000 wattia. Kuinka kauan kestää valmistaa kyseisellä keittimellä 500 g kiehuvaa vettä lumesta, jonka
+lämpötila aluksi on -15 astetta? Lumen ominaislämpökapasiteetti ja sulamislämpö ovat samat kuin jään.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Samalla tavalla kuin edellisessä esimerkissä saadaan energian määräksi</p>
+<p><span class="math notranslate nohighlight">\(Q=2100~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg} \cdot 15~\text{K} + 333000\text{J/kg} \cdot 0.5~\text{kg} + 4190~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg}\cdot 100~\text{K}\)</span></p>
+<p><span class="math notranslate nohighlight">\( Q = 391 750 J~\text{J}\)</span></p>
+<p>Energia <span class="math notranslate nohighlight">\(Q\)</span>, retkikeittimen teho <span class="math notranslate nohighlight">\(P\)</span> ja tarvittava aika <span class="math notranslate nohighlight">\(t\)</span> ovat yhteydessä toisiinsa kaavalla <span class="math notranslate nohighlight">\(Q=Pt\)</span>. Ajaksi saadaan siis</p>
+<p><span class="math notranslate nohighlight">\(t=\frac{Q}{P}=\frac{391 750~\text{J}}{1000~\text{W}}=392~\text{s}\)</span></p>
+<p>Aikaa kuluu noin 6.5 minuuttia.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Terästehtaan valukoneeseen syötetään sulaa 1590-asteista terästä, joka jäähdytetään vedellä 1200-asteiseksi kiinteäksi teräkseksi. Olomuoto muuttuu 1350 asteen kohdalla. Yhdessä valussa terästä valmistuu 120 000 kg. Valu kestää 1h 15 min. Jäähdytysvesi tuodaan koneeseen 15-asteisena, ja se poistuu 35-asteisena. Laske jäähdytysveden massavirta.</p>
+<p>Tarvittavat suureet: veden ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c_v=4190~\frac{\text{J}}{\text{kg}}\)</span>, sulan teräksen ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c={t,s}=430 ~\frac{\text{J}}{\text{kg}}\)</span>, kiinteän teräksen ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c_{t,k}=470~\frac{\text{J}}{\text{kg}}\)</span>, teräksen sulamislämpö <span class="math notranslate nohighlight">\(s=270000\text{J/kg}\)</span>.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Vesi vastaanottaa lämpöenergiaa yhtä paljon kuin teräs luovuttaa sitä. Teräksen massa on <span class="math notranslate nohighlight">\(m_t=120000~\text{kg}\)</span>.</p>
+<p>Ensimmäisessä vaiheessa, kun teräs jäähtyy sulamispisteeseensä, lämpötilan muutos on <span class="math notranslate nohighlight">\(\Delta T_1 = (1590-1350)~\text{K}=240~\text{K}\)</span>. Vapautuvan energian määrä on</p>
+<p><span class="math notranslate nohighlight">\(Q_1=c_{t,s} m_t \Delta T_1 = 430 ~\frac{\text{J}}{\text{kg}}\cdot 120000~\text{kg} \cdot 240~\text{K}= 12.384~\text{GJ}\)</span></p>
+<p>Teräksen kiinteytessä vapautuu energia</p>
+<p><span class="math notranslate nohighlight">\(Q_2=sm_t = 270000\text{J/kg} \cdot 120000~\text{kg} = 32.4~\text{GJ}\)</span></p>
+<p>Kiinteän teräksen jäähtyessä lämpötilanmuutos on <span class="math notranslate nohighlight">\(\Delta T_2 = (1350-1200)~\text{K} = 150~\text{K}\)</span>, ja vapautuvan energian määrä on</p>
+<p><span class="math notranslate nohighlight">\(Q_3=c_{t,k} m_t \Delta T_2 = 470 ~\frac{\text{J}}{\text{kg}}\cdot 120000~\text{kg} \cdot 150~\text{K}= 8.46~\text{GJ}\)</span></p>
+<p>Yhteensä energiaa vapautuu <span class="math notranslate nohighlight">\(Q=Q_1+Q_2+Q_3=53.244~\text{GJ}\)</span></p>
+<p>Vesi ottaa vastaan saman energiamäärän. Tarvittava massa <span class="math notranslate nohighlight">\(m_v\)</span> saadaan yhtälöstä <span class="math notranslate nohighlight">\(Q=c_v m_v \Delta T_3\)</span>, missä <span class="math notranslate nohighlight">\(\Delta T_3 = 20~\text{K}\)</span>. Tästä ratkeaa</p>
+<p><span class="math notranslate nohighlight">\(m_v=\frac{Q}{c_v \Delta T_3} = \frac{53.244\cdot 10^9~\text{J}}{4190~\frac{\text{J}}{\text{kg}} \cdot 20~\text{K}}=635 370~\text{kg}\)</span></p>
+<p>Edellä lasketun massan pitää virrata järjestelmän läpi valuajassa 1 h 15 min eli 4500 sekunnissa. Massavirta on siis</p>
+<p><span class="math notranslate nohighlight">\(q_m = \frac{635370~\text{kg}}{4500~\text{s}} = 141~\frac{\text{kg}}{\text{s}}\)</span></p>
+<p>Tilavuusvirtana tämä vastaa 141 litraa sekunnissa.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Oletetaan, että pakastin toimii 120 W teholla, kun pakastimen sisälämpötila on -18 astetta. Toiminta perustuu kylmäaineen höyrystymiseen ja tiivistymiseen. Kylmäaineen höyrystymislämpö on <span class="math notranslate nohighlight">\(r=216~\text{kJ/kg}\)</span>. Mikä on kylmäaineen massavirta putkistossa?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Teho 120 W tarkoittaa sitä, että yhdessä sekunnissa pakastin kuluttaa 120 joulea energiaa. Kyseinen energiamäärä <span class="math notranslate nohighlight">\(Q\)</span> sitoutuu, kun massa <span class="math notranslate nohighlight">\(m\)</span> kylmäainetta höyrystyy. Yhtälöstä <span class="math notranslate nohighlight">\(Q=mr\)</span> saadaan <span class="math notranslate nohighlight">\(m=Q/r\)</span>, joten kylmäainetta tarvitaan sekunnissa</p>
+<p><span class="math notranslate nohighlight">\(m=\frac{120~\text{J}}{216000~\frac{\text{J}}{\text{kg}}}=0.000555~\text{kg}\)</span> eli noin 0.56 grammaa.</p>
+<p>Jos massavirta halutaan ilmaista yksikössä kg/min, niin tämä lukuarvo on <span class="math notranslate nohighlight">\(0.56~\frac{\text{g}}{\text{s}}\cdot 60~\frac{\text{s}}{\text{min}} = 34~\frac{\text{g}}{\text{min}}\)</span>.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Astiassa on 1000 g vettä 10 asteen lämpötilassa. Astiaan laitetaan 200 g jääpala, jonka lämpötila on 0 astetta. Mikä on seoksen loppulämpötila ja koostumus? Oletetaan, että astia on lämpöeristetyssä laatikossa, eli huoneilma ei lämmitä vettä.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Oletetaan, että jää sulaa kokonaan. Tällöin vesi luovuttaa lämpöenergiaa määrän <span class="math notranslate nohighlight">\(Q\)</span>, joka riittää jään sulattamiseen ja sulaneen veden lämmittämiseen. Sulamiseen kuluu energiaa määrä <span class="math notranslate nohighlight">\(sm_j\)</span>, missä <span class="math notranslate nohighlight">\(s=333000~\text{J/kg}\)</span> on veden sulamislämpö ja <span class="math notranslate nohighlight">\(m_j=0.2~\text{kg}\)</span> on jääpalan massa. Lämmittämiseen kuluu energia <span class="math notranslate nohighlight">\(cm\Delta T_j\)</span> missä <span class="math notranslate nohighlight">\(c=4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\)</span> on veden ominaislämpökapasiteetti ja <span class="math notranslate nohighlight">\(\Delta T_j = (T_l-0)~\text{K}=T_l~\text{K}\)</span> on jääpalasta sulaneen veden lämpötilan muutos, kun seoksen loppulämpötila on <span class="math notranslate nohighlight">\(T_l\)</span>. Siis vesi luovuttaa energian</p>
+<p><span class="math notranslate nohighlight">\(Q=sm_j+cm_j\Delta T_j\)</span></p>
+<p>Toisaalta veden luovuttama lämpöenergia voidaan ilmaista myös muodossa <span class="math notranslate nohighlight">\(Q=cm_v \Delta T_v\)</span>, missä <span class="math notranslate nohighlight">\(m_v=1~\text{kg}\)</span> on veden massa ja <span class="math notranslate nohighlight">\(\Delta T_v = (10-T_l)~\text{K}\)</span> on veden lämpötilan muutos.</p>
+<p>Saadaan siis yhtälö:</p>
+<p><span class="math notranslate nohighlight">\(sm_j+cm_j\Delta T_l=cm_v \Delta T_v\)</span></p>
+<p>Sijoitetaan lukuarvot:</p>
+<p><span class="math notranslate nohighlight">\(333000~\text{J/kg}\cdot 0.2~\text{kg}+4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 0.2~\text{kg}\cdot T_l = 4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 1~\text{kg} \cdot (10-T_l)~\text{K}\)</span></p>
+<p>Yhtälön ratkaisuksi tulee <span class="math notranslate nohighlight">\(T_l=-4.9\)</span> ja yksikkönä on Celsius-aste, koska jään ja veden alkuperäisetkin lämpötilat oli annettu Celsius-asteina. Tulos ei ole järkevä, sillä sulaneen veden lämpötila ei voi olla pakkasen puolella.</p>
+<p>Lasketaan lasku uudelleen olettaen, että astiassa olevan veden energia ei riitä koko jääpalan sulattamiseen. Jäästä sulaa massa <span class="math notranslate nohighlight">\(x\)</span>. Tällöin veden luovuttama energia on <span class="math notranslate nohighlight">\(Q=sx\)</span>. Loppulämpötilan <span class="math notranslate nohighlight">\(T_l\)</span> on oltava 0 astetta, sillä niin kauan kuin jäätä on jäljellä, kaikki lämpöenergia kuluu sen sulamiseen. Tällöin veden lämpötilan muutos on <span class="math notranslate nohighlight">\(\Delta T = 10~\text{K}\)</span>, ja yhtälöksi muodostuu</p>
+<p><span class="math notranslate nohighlight">\(sx=c m_v \Delta T\)</span>,</p>
+<p>josta ratkeaa</p>
+<p><span class="math notranslate nohighlight">\(x= \frac{c m_v \Delta T}{s} = \frac{4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 1~\text{kg}~\cdot 10~\text{K}}{333000\text{J/kg}} = 0.126~\text{kg}\)</span></p>
+<p>Jäätä sulaa siis 126 g. Jäljelle jäi 200 g- 126 g = 74 g, joten lopuksi astiassa on 1126 g vettä ja 74 g jäätä, ja seoksen lämpötila on 0 astetta.</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="energia_lampotila.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lämpötilan muutoksen energia</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="lammon_siirtyminen.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lämmön siirtyminen</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
