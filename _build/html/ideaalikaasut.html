@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ideaalikaasut &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Kaasujen perusprosessit" href="kaasut.html" />
+    <link rel="prev" title="Lämpösäteily" href="lamposateily.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampolaajeneminen.html">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_lampotila.html">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_olomuoto.html">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lammon_siirtyminen.html">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasut.html">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jaahdytyskoneet.html">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/ideaalikaasut.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ainemaara">
+   Ainemäärä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaasulain-kayttoa">
+   Kaasulain käyttöä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kineettinen-kaasuteoria">
+   Kineettinen kaasuteoria
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Ideaalikaasut</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ainemaara">
+   Ainemäärä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaasulain-kayttoa">
+   Kaasulain käyttöä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kineettinen-kaasuteoria">
+   Kineettinen kaasuteoria
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ideaalikaasut">
+<h1>Ideaalikaasut<a class="headerlink" href="#ideaalikaasut" title="Permalink to this headline">#</a></h1>
+<p>Ideaalikaasuilla tarkoitetaan kaasuja, joiden rakenneosat vuorovaikuttavat toisten kanssa vain täysin kimmoisten törmäysten yhteydessä. Lisäksi ideaalikaasun rakenneosien ajatellaan olevan äärettömän pieniä. Ideaalikaasua ei ole oikeasti olemassa, mutta useimpia kaasuja voidaan kuvailla riittävän tarkasti ideaalikaasun laskukaavoilla. Todellisista kaasuista lähimpänä ideaalikaasua ovat vety ja helium.</p>
+<p>Kaasun tilaa kuvaavat suureet:</p>
+<ul class="simple">
+<li><p>paine <span class="math notranslate nohighlight">\(p\)</span></p></li>
+<li><p>tilavuus <span class="math notranslate nohighlight">\(V\)</span></p></li>
+<li><p>lämpötila <span class="math notranslate nohighlight">\(T\)</span></p></li>
+</ul>
+<p>Kaasun tilaa kuvaavat suureet noudattavat kaasulakia:</p>
+<p><span class="math notranslate nohighlight">\(pV=nRT\)</span>,</p>
+<p>missä <span class="math notranslate nohighlight">\(R = 8.31~\text{J/(mol K)}\)</span> on kaasuvakio ja <span class="math notranslate nohighlight">\(n\)</span> on kaasun määrä mooleina.</p>
+<p>Reaalikaasuille eli todellisille kaasuille on olemassa oma tilanyhtälönsä. Se on nimeltään van der Waalsin yhtälö ja näyttää tältä:</p>
+<p><span class="math notranslate nohighlight">\(\left[p+a\left(\frac{n}{V}\right)^2\right](V-nb)=nRT\)</span>,</p>
+<p>missä <span class="math notranslate nohighlight">\(a\)</span> on kaasun molekyylien väliseen vuorovaikutukseen liittyvä kerroin, ja <span class="math notranslate nohighlight">\(b\)</span> on kaasumolekyylien kokoon liittyvä kerroin. Van der Waalsin lakia voi käyttää valmiilla <a class="reference external" href="https://www.webqc.org/van_der_waals_gas_law.html">laskurilla</a>.</p>
+<section id="ainemaara">
+<h2>Ainemäärä<a class="headerlink" href="#ainemaara" title="Permalink to this headline">#</a></h2>
+<p>Kaasulaeissa esiintyvä suure <span class="math notranslate nohighlight">\(n\)</span> on nimeltään ainemäärä. Se kertoo hiukkasten kappalemäärän. Ainemäärää käytetään suureena esimerkiksi verikokeissa (normaali kolesteriarvo on luokkaa 5 millimoolia yhdessä litrassa verta).</p>
+<p>Ainemäärän yksikkö on mooli (lyhenne mol). Yksi mooli tarkoittaa sitä, että aineen perusosasia on <span class="math notranslate nohighlight">\(6\cdot 10^{23}\)</span> kappaletta. Kappalemäärä on nimeltään Avogadron vakio <span class="math notranslate nohighlight">\(N_A\)</span>. Luku on peräisin hiilen ominaisuuksista: 1800-luvulla pystyttiin selvittämään, että 12 grammaa hiiltä sisältää yhden moolin verran hiiliatomeja.</p>
+<p>Rakenneosat, joita ainemäärässä lasketaan, ovat aineesta riippuen yksittäisiä atomeja tai useasta atomista koostuvia molekyylejä. Kukaan ei tietenkään pysty laskemaan esimerkiksi huoneilmassa olevien molekyylien lukumäärää. Ainemäärä onkin määritelty seuraavasti:</p>
+<p><span class="math notranslate nohighlight">\(n=\frac{m}{M}\)</span>,</p>
+<p>missä <span class="math notranslate nohighlight">\(m\)</span> on aineen massa, ja <span class="math notranslate nohighlight">\(M\)</span> on aineen rakenneosasen moolimassa. Luku <span class="math notranslate nohighlight">\(M\)</span> kertoo, kuinka monta grammaa painaa yksi mooli kyseistä ainetta. Moolimassat löytyvät <a class="reference external" href="https://ptable.com/?lang=fi#Ominaisuudet">jaksollisesta järjestelmästä</a>. Useasta atomista koostuvan atomin moolimassan saa siten, että laskee yhteen molekyylissä olevien atomien moolimassat.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>a) Kuinka monta moolia on 50 grammaa kultaa (Au)?</p>
+<p>b) Kuinka monta moolia on 100 grammaa vettä (<span class="math notranslate nohighlight">\(\text{H}_2\text{O}\)</span>)?</p>
+<p>c) Kuinka monta grammaa on 2 moolia rautaa (Fe)?</p>
+<p>d) Kuinka monta grammaa on 8 moolia hiilidioksidia <span class="math notranslate nohighlight">\(\text{CO}_2\)</span>?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) Kullan moolimassa on 196.97 g/mol. Ainemäärä on <span class="math notranslate nohighlight">\(n=\frac{50~\text{g}}{196.97~\text{g/mol}}=0.25~\text{mol}\)</span>.</p>
+<p>b) Vedyn (H) moolimassa on 1.008 g/mol ja hapen (O) moolimassa on 15.999 g/mol. Vesimolekyylissä on kaksi vetyatomia ja yksi happiatomi. Veden moolimassa on siis <span class="math notranslate nohighlight">\(M=(2\cdot 1.008+15.999)~\text{g/mol} = 18.015~\text{g/mol}\)</span>.</p>
+<p>Ainemäärä on <span class="math notranslate nohighlight">\(n=\frac{100~\text{g}}{18.015~\text{g/mol}}=5.6~\text{mol}\)</span>.</p>
+<p>c) Raudan moolimassa on 55.845 g/mol. Ratkaistaan ainemäärän määritelmästä massa <span class="math notranslate nohighlight">\(m\)</span> ja sijoitetaan arvot:</p>
+<p><span class="math notranslate nohighlight">\(m=nM=2~\text{mol}\cdot 55.845~\frac{\text{g}}{\text{mol}} = 112~\text{mol}\)</span></p>
+<p>d) Hiilen (C) moolimassa on 12.011 g/mol ja hapen (O) moolimassa on 15.999 g/mol. Hiilidioksidimolekyylissä on yksi hiiliatomia ja kaksi happiatomia. Sen moolimassa on siis <span class="math notranslate nohighlight">\(M=(12.011+2\cdot 15.999)~\text{g/mol} = 44.009~\text{g/mol}\)</span>. Massa on</p>
+<p><span class="math notranslate nohighlight">\(m=nM=8~\text{mol}\cdot 44.009~\frac{\text{g}}{\text{mol}} = 352~\text{mol}\)</span></p>
+</div>
+</div>
+<p>Rakennustekniikassa kaasu, jota tarkastellaan, on yleensä tavallista ilmaa. Ilman koostumus on suunnilleen seuraava:</p>
+<ul class="simple">
+<li><p>typpeä <span class="math notranslate nohighlight">\(\text{N}_2\)</span> 78 %</p></li>
+<li><p>happea <span class="math notranslate nohighlight">\(\text{O}_2\)</span> 21 %</p></li>
+<li><p>hiilidioksidia <span class="math notranslate nohighlight">\(\text{CO}_2\)</span> 0.04 %</p></li>
+<li><p>vesihöyryä <span class="math notranslate nohighlight">\(\text{H}_2\text{O}\)</span> 0-5 %</p></li>
+</ul>
+<p>Ilman komponenteista hiilidioksidilla on suurin moolimassa. Siksi hiilidioksidi painuu alimmaksi, rakennusten kellareihin. Vesihöyry on moolimassaltaan kevyintä ja nousee siksi ilmakehässä ylöpäin.</p>
+<p>Käytännössä ilman moolimassa voidaan laskea prosenttiosuuksilla painotettuna summana, ja käyttäen alkuaineiden moolimassoille pyöristettyjä arvoa, seuraavasti:</p>
+<p><span class="math notranslate nohighlight">\(M=0.78\cdot M(\text{N}_2) + 0.22\cdot M(\text{O}_2) = 0.78\cdot (2\cdot 14)~\text{g/mol}+0.22\cdot (2\cdot 16)~\text{g/mol} = 29~\text{g/mol}\)</span></p>
+</section>
+<section id="kaasulain-kayttoa">
+<h2>Kaasulain käyttöä<a class="headerlink" href="#kaasulain-kayttoa" title="Permalink to this headline">#</a></h2>
+<p>Tarkastellaan esimerkkejä kaasulain <span class="math notranslate nohighlight">\(pV=nRT\)</span> käytöstä.</p>
+<p><strong>Normaaliolosuhteet</strong></p>
+<p>Normaaliolosuhteilla tarkoitetaan olosuhteita, joissa lämpötila <span class="math notranslate nohighlight">\(T\)</span> ja paine <span class="math notranslate nohighlight">\(p\)</span> pysyvät niinsanotusti normaaleina. Normaaliolosuhteista käytetäänkin lyhennettä NTP-olosuhteet (normal temperature and pressure). On olemassa monta eri määritelmää normaaliolosuhteille (<a class="reference external" href="https://fi.wikipedia.org/wiki/NTP">Wikipedia</a>). Käytetään tällä opintojaksolla määritelmää: NTP-olosuhteissa lämpötila on <span class="math notranslate nohighlight">\(T=273.15~\text{K}\)</span> ja paine on <span class="math notranslate nohighlight">\(p=101300~\text{Pa}\)</span>.</p>
+<p>Kaasulaista <span class="math notranslate nohighlight">\(pV=nRT\)</span> voidaan ratkaista kaasun viemä tilavuus, kun olosuhteet ja ainemäärä tiedetään:</p>
+<p><span class="math notranslate nohighlight">\(V=\frac{nRT}{p}\)</span></p>
+<p>Sijoitetaan laskukaavaan normaaliolosuhteet sekä ainemäärä <span class="math notranslate nohighlight">\(n=1~\text{mol}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(V=\frac{1~\text{mol} \cdot 8.31~\text{J/(mol K)} \cdot 273.15~\text{K}}{101300~\text{Pa}} = 0.0224~\text{m}^3\)</span></p>
+<p>Toisin sanoen: yksi mooli ideaalikaasua vie NTP-olosuhteissa 22.4 litran tilavuuden. Edelleen jos kaasua on <span class="math notranslate nohighlight">\(n\)</span> moolia, saadaan tulos:</p>
+<p><span class="math notranslate nohighlight">\(V_n=n\cdot 22.4~\frac{\text{l}}{\text{mol}}\)</span></p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kuinka suuren tilavuuden vie 5000 grammaa hiilidioksidia NTP-oloissa?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Lasketaan ensin hiilidioksidin ainemäärä. Aiemmin todettiin, että hiilidioksidin moolimassa on noin 44 g/mol. Siis ainemäärä on</p>
+<p><span class="math notranslate nohighlight">\(n=\frac{5000~\text{g}}{44~\text{g/mol}} = 114~\text{mol}\)</span></p>
+<p>Tilavuus on siis</p>
+<p><span class="math notranslate nohighlight">\(V_n=114~\text{mol} \cdot 22.4~\frac{\text{l}}{\text{mol}} = 2554~\text{l}\)</span></p>
+</div>
+</div>
+<p><strong>Kaasulain käyttöä</strong></p>
+<p>Kaavaa <span class="math notranslate nohighlight">\(pV=nRT\)</span> voidaan käyttää kaikissa olosuhteissa.</p>
+<p>Voidaan esimerkiksi laskea ideaalikaasun moolitilavuus huoneenlämpötilassa (20 astetta):</p>
+<p><span class="math notranslate nohighlight">\(V=\frac{1~\text{mol} \cdot 8.31~\text{J/(mol K)} \cdot 293.15~\text{K}}{101300~\text{Pa}} = 0.0240~\text{m}^3\)</span></p>
+<p>Mikäli muiden suureiden arvot tunnetaan, niin yhtälöstä voidaan ratkaista</p>
+<ul class="simple">
+<li><p>paine <span class="math notranslate nohighlight">\(p=\frac{nRT}{V}\)</span>,</p></li>
+<li><p>ainemäärä <span class="math notranslate nohighlight">\(n=\frac{pV}{RT}\)</span>,</p></li>
+<li><p>lämpötila <span class="math notranslate nohighlight">\(T=\frac{pV}{nR}\)</span>.</p></li>
+</ul>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kuinka paljon huoneessa on ilmaa, kun huoneen mitat ovat 3.5 m, 4.0 m ja 3.0 m, ja huoneilman lämpötila on 22 astetta? Oletetaan, että paine on normaali ilmanpaine 101 300 Pa. Laske ensin ainemäärä ja sitten massa.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Nyt tiedossa on paine <span class="math notranslate nohighlight">\(p\)</span>, tilavuus <span class="math notranslate nohighlight">\(V\)</span> (koko huoneen tilavuus) ja lämpötila <span class="math notranslate nohighlight">\(T\)</span>. Myös kaasuvakio <span class="math notranslate nohighlight">\(R\)</span> on tiedossa. Ratkaistaan siis ensin ainemäärä</p>
+<p><span class="math notranslate nohighlight">\(n=\frac{101300~\text{Pa}\cdot(3.5\cdot 4.0\cdot 3.0)~\text{m}^3}{8.31~\text{J/(mol K)} \cdot (273.15+22)~\text{K}} = 1735~\text{mol}\)</span></p>
+<p>Ilman moolimassaksi laskettiin aiemmin 29 g/mol. Siispä huoneessa olevan ilman massa on</p>
+<p><span class="math notranslate nohighlight">\(m=n1735~\text{mol}\cdot 29\text{g/mol} = 50315~\text{g}\)</span> eli noin 50 kg.</p>
+</div>
+</div>
+<p><strong>Ilman tiheys</strong></p>
+<p>Ilman (ja minkä tahansa muunkin aineen) tiheys <span class="math notranslate nohighlight">\(\rho\)</span> on määritelty: <span class="math notranslate nohighlight">\(\rho=\frac{m}{V}\)</span>, eli tiheys on massa <span class="math notranslate nohighlight">\(m\)</span> jaettuna tilavuudella <span class="math notranslate nohighlight">\(V\)</span>. Toisaalta massan voi ilmaista myös ainemäärän <span class="math notranslate nohighlight">\(n\)</span> ja moolimassan <span class="math notranslate nohighlight">\(M\)</span> avulla: <span class="math notranslate nohighlight">\(m=nM\)</span>. Edelleen kaasun tilavuuksi saadaan kaasulaista <span class="math notranslate nohighlight">\(V=\frac{nRT}{p}\)</span>. Tiheydelle voidaan näin muodostaa laskukaava:</p>
+<p><span class="math notranslate nohighlight">\(\rho=\frac{nM}{\frac{nRT}{p}}\)</span> ja tämä sievenee muotoon</p>
+<p><span class="math notranslate nohighlight">\(\rho = \frac{pM}{RT}\)</span></p>
+<p>Ilman tiheys voidaan siis laskea halutussa lämpötilassa ja paineessa.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Laske ilman tiheys</p>
+<p>a) normaalipaineessa, 0 asteen lämpötilassa,</p>
+<p>b) normaalipaineessa, 30 asteen lämpötilassa,</p>
+<p>c) lentokoneen lentokorkeudella, jossa lämpötila on noin -50 astetta ja paine noin 23 000 Pa?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) <span class="math notranslate nohighlight">\(\rho=\frac{101300~\text{P}\cdot 29~\text{g/mol}}{8.31~\text{J/(mol K)} \cdot 273.15~\text{K}} = 1.29~\frac{\text{kg}}{\text{m}^3}\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(\rho=\frac{101300~\text{P}\cdot 29~\text{g/mol}}{8.31~\text{J/(mol K)} \cdot 303.15~\text{K}} = 1.17~\frac{\text{kg}}{\text{m}^3}\)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(\rho=\frac{23000~\text{P}\cdot 29~\text{g/mol}}{8.31~\text{J/(mol K)} \cdot 223.15~\text{K}} = 0.35~\frac{\text{kg}}{\text{m}^3}\)</span></p>
+</div>
+</div>
+</section>
+<section id="kineettinen-kaasuteoria">
+<h2>Kineettinen kaasuteoria<a class="headerlink" href="#kineettinen-kaasuteoria" title="Permalink to this headline">#</a></h2>
+<p>Kineettisen kaasuteorian mukaan lämpö on kaasuhiukkasten liike-energiaa. Yksittäisen kaasumolekyylin keskimääräiseksi liike-energiaksi on mahdollista johtaa kaava:</p>
+<p><span class="math notranslate nohighlight">\(E=\frac{3}{2}kT\)</span>,</p>
+<p>missä <span class="math notranslate nohighlight">\(k=\frac{R}{N_A}=1.38\cdot 10^{-23}~\frac{\text{J}}{\text{K}}\)</span> on nimeltään Boltzmannin vakio.</p>
+<p>Lämpö on siis kirjaimellisesti molekyylien liike-energiaa. Pienin mahdollinen lämpötila on 0 K, koska liike-energia ei voi olla negatiivista
+Lämpötilassa 0 K kaasumolekyylit astiassa eivät enää liikkuisi ollenkaan. Lämpötilaa 0 K on mahdoton saavuttaa, mutta Suomessakin on päästy
+hyvin lähelle (miljoonasosa-asteen päähän).</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Kaavan johtaminen</p>
+<ul class="simple">
+<li><p>Oletetaan, että kaasumolekyylin massa on <span class="math notranslate nohighlight">\(m\)</span>. Molekyyli liikkuu vaakasuuntaisella nopeudella <span class="math notranslate nohighlight">\(v_x\)</span> säiliössä, jonka pituus on <span class="math notranslate nohighlight">\(x\)</span> ja seinän pinta-ala <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Kun molekyyli törmää astian seinään, se aiheuttaa seinään paineen <span class="math notranslate nohighlight">\(p=F/A\)</span>.</p></li>
+<li><p>Paineessa esiintyvä voima <span class="math notranslate nohighlight">\(F\)</span> lasketaan törmäysliikkeessä tunnetulla impulssiperiaatteella: <span class="math notranslate nohighlight">\(2mv_x=F\Delta t\)</span>, missä <span class="math notranslate nohighlight">\(\Delta t\)</span> on kahden törmäyksen välinen aika. Impulssiperiaatteen mukaan molekyylin liikemäärän muutos on yhtä suuri kuin voiman ja törmäysajan tulo. Liikemäärä puolestaan on massan ja nopeuden tulo. Koska molekyylin nopeus muuttuu vastakkaismerkkiseksi, mutta sen suuruus ei muutu, niin liikemäärän muutos on <span class="math notranslate nohighlight">\(2mv_x\)</span>.</p></li>
+<li><p>Aikaväliksi <span class="math notranslate nohighlight">\(\Delta t\)</span> laskukaavaan laitetaan <span class="math notranslate nohighlight">\(\Delta t= \frac{2x}{v_x}\)</span>, eli kahden törmäyksen välillä kuluva aika</p></li>
+<li><p>Voimaksi saadaan siis <span class="math notranslate nohighlight">\(F=\frac{2m v_x}{\Delta t}=\frac{2 m v_x}{2x/v_x} = \frac{mv_x^2}{x}\)</span></p></li>
+<li><p>Seinään kohdistuva paine on <span class="math notranslate nohighlight">\(p=\frac{F}{A}=\frac{mv_x^2}{Ax}\)</span></p></li>
+<li><p>Säiliön tilavuus on <span class="math notranslate nohighlight">\(V=Ax\)</span>, joten <span class="math notranslate nohighlight">\(p=\frac{mv_x^2}{V}\)</span></p></li>
+<li><p>Kaasumolekyyli liikkuu kolmessa ulottuvuuksissa nopeuksilla <span class="math notranslate nohighlight">\(v_x, v_y, v_z\)</span>. Kokonaisnopeus <span class="math notranslate nohighlight">\(v\)</span> saadaan yhtälöstä <span class="math notranslate nohighlight">\(v^2=v_x^2+v_y^2+v_z^2\)</span>. Koska liikkeet kaikissa suunnissa ovat yhtä todennäköisiä, niin <span class="math notranslate nohighlight">\(v_x^2=\frac{1}{3}v^2\)</span>.</p></li>
+<li><p>Siis yhden molekyylin aiheuttamaksi paineeksi saadaan <span class="math notranslate nohighlight">\(p=\frac{mv^2}{3V}\)</span></p></li>
+<li><p>Kun molekyylejä on <span class="math notranslate nohighlight">\(N\)</span> kappaletta, niin niiden aiheuttama kokonaispaine on <span class="math notranslate nohighlight">\(p=\frac{Nmv^2}{3V}\)</span></p></li>
+<li><p>Muokataan yhtälö muotoon <span class="math notranslate nohighlight">\(pV=\frac{Nmv^2}{3}\)</span> ja verrataan sitä kaasulakiin <span class="math notranslate nohighlight">\(pV=nRT\)</span>. Koska vasemmalla puolella on molemmissa sama lauseke <span class="math notranslate nohighlight">\(pV\)</span>, niin myös oikeiden puolien pitää olla samat:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\frac{Nmv^2}{3}=nRT\)</span></p>
+<ul class="simple">
+<li><p>Ratkaistaan tästä <span class="math notranslate nohighlight">\(mv^2=\frac{3VnRT}{N}\)</span>. Mekaniikassa liike-energia on määritelty muodossa <span class="math notranslate nohighlight">\(E=\frac{1}{2}mv^2\)</span>, joten tässä tapauksessa liike-energia olisi</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(E=\frac{1}{2}\frac{3VnRT}{N}=\frac{3}{2}\frac{VnRT}{N}\)</span></p>
+<ul class="simple">
+<li><p>Ainemäärä voidaan ilmaista hiukkasmäärän <span class="math notranslate nohighlight">\(N\)</span> ja Avogadron vakion <span class="math notranslate nohighlight">\(N_A\)</span> avulla: <span class="math notranslate nohighlight">\(n=\frac{N}{N_A}\)</span>, joten <span class="math notranslate nohighlight">\(\frac{n}{N}=\frac{1}{N_A}\)</span>, jolloin liike-energian kaava sievenee muotoon</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(E=\frac{3}{2}\frac{VRT}{N_A}\)</span> eli <span class="math notranslate nohighlight">\(E=\frac{3}{2}kVT\)</span>, missä <span class="math notranslate nohighlight">\(k=\frac{R}{N_A}\)</span>.</p>
+</div>
+<p><strong>Kaasun sisäenergia</strong></p>
+<p>Yhden molekyylin liike-energia on siis <span class="math notranslate nohighlight">\(E=\frac{3}{2}kT\)</span>. Jos kaasua on <span class="math notranslate nohighlight">\(n\)</span> moolia, niin kaasuhiukkasia on <span class="math notranslate nohighlight">\(N=n N_A\)</span> kappaletta, ja tällöin koko kaasumäärän liike-energiaksi voidaan johtaa</p>
+<p><span class="math notranslate nohighlight">\(U=\frac{3}{2}nRT\)</span>.</p>
+<p>Tätä suuretta sanotaan kaasun sisäenergiaksi.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kuinka suuri sisäenergia on 1 moolilla (eli noin 22.4 litralla) ideaalikaasua NTP-olosuhteissa?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p><span class="math notranslate nohighlight">\(U = 1~\text{mol}\cdot \frac{3}{2} \cdot 8.31~\text{J/(mol K)} \cdot 273~\text{K} = 3403~\text{J} = 3.4~\text{kJ}\)</span></p>
+</div>
+</div>
+<p><strong>Kaasun tekemä työ</strong></p>
+<p>Yleisesti mekaniikassa ajatellaan, että kun voima <span class="math notranslate nohighlight">\(F\)</span> siirtää kappaletta matkan <span class="math notranslate nohighlight">\(\Delta s\)</span>, niin voima tekee työn <span class="math notranslate nohighlight">\(W=F \Delta s\)</span>. Oletetaan nyt, että kaasu on sylinterimäisessä astiassa, jossa se voi laajentua työntämällä astian kannen paikalla olevaa mäntää. Kun kaasu laajenee (lämpötilan noustessa tai paineen pienentyessä), se tällöin tekee mekaanisen työn <span class="math notranslate nohighlight">\(W=F\Delta s\)</span>, missä voiman <span class="math notranslate nohighlight">\(F\)</span> paikalle tulee nyt paineen määritelmästä <span class="math notranslate nohighlight">\(F=pA\)</span>. Siis kaasun tekemä työ on</p>
+<p><span class="math notranslate nohighlight">\(W=pA\Delta s\)</span>.</p>
+<p>Toisaalta samalla kaasun tilavuus muuttuu määrän <span class="math notranslate nohighlight">\(\Delta V=A \Delta s\)</span>. Kaasun tekemä työ voidaan siis kirjoittaa muodossa</p>
+<p><span class="math notranslate nohighlight">\(W=p \Delta V\)</span>.</p>
+<p>Energian säilymislaki koskee myös lämpöenergiaa: Systeemin sisäenergian muutos = siihen tuotu lämpöenergia + systeemiin tehty työ (esim. puristaminen). Tätä periaatetta sanotaan lämpöopin ensimmäiseksi pääsäännöksi, ja se kirjoitetaan yhtälönä muodossa</p>
+<p><span class="math notranslate nohighlight">\(\Delta U = Q + W = Q + p \Delta V\)</span></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="lamposateily.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lämpösäteily</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="kaasut.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Kaasujen perusprosessit</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

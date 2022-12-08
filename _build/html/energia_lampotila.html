@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lämpötilan muutoksen energia &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Olomuodon muutoksia" href="energia_olomuoto.html" />
+    <link rel="prev" title="Lämpölaajeneminen" href="lampolaajeneminen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampolaajeneminen.html">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_olomuoto.html">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lammon_siirtyminen.html">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ideaalikaasut.html">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasut.html">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jaahdytyskoneet.html">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/energia_lampotila.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoenergian-kasite">
+   Lämpöenergian käsite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoopin-nollas-paasaanto">
+   Lämpöopin nollas pääsääntö
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ominaislampokapasiteetti">
+   Ominaislämpökapasiteetti
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampokapasiteetti">
+   Lämpökapasiteetti
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sovelluksia">
+   Sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lämpötilan muutoksen energia</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoenergian-kasite">
+   Lämpöenergian käsite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoopin-nollas-paasaanto">
+   Lämpöopin nollas pääsääntö
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ominaislampokapasiteetti">
+   Ominaislämpökapasiteetti
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampokapasiteetti">
+   Lämpökapasiteetti
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sovelluksia">
+   Sovelluksia
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="lampotilan-muutoksen-energia">
+<h1>Lämpötilan muutoksen energia<a class="headerlink" href="#lampotilan-muutoksen-energia" title="Permalink to this headline">#</a></h1>
+<p>Aiemmin todettiin, että kappaleen lämpötila kuvaa kappaleen rakenneosien liikettä. Kun aineeseen tuodaan energiaa, niin aineen rakenneosat käyttävät tämän energian liikkumiseen, ja tällöin aineen lämpötila nousee. Tässä luvussa tarkastellaan sitä, mikä on energiamäärän ja lämpötilan yhteys.</p>
+<section id="lampoenergian-kasite">
+<h2>Lämpöenergian käsite<a class="headerlink" href="#lampoenergian-kasite" title="Permalink to this headline">#</a></h2>
+<p>Mekaniikan kurssilla tarkasteltiin mekaanista työtä <span class="math notranslate nohighlight">\(W\)</span> ja mekaanista energiaa <span class="math notranslate nohighlight">\(E\)</span>. Tällöin työllä tarkoitettiin kappaleen siirtämistä tai nostamista, ja tämän työn seurauksena kappale sai liike- tai potentiaalienergiaa. Työn ja energian yksikkö on joule (J). Työn määrää aikayksikössä kutsutaan nimellä teho, ja sen yksikkö J/s tunnetaan lyhenteellä watti (W).</p>
+<p>Lämpöopissa suureilla on hieman eri nimet ja lyhenteet:</p>
+<ul class="simple">
+<li><p>lämpömäärä <span class="math notranslate nohighlight">\(Q\)</span>, yksikkö J</p></li>
+<li><p>lämpövirta <span class="math notranslate nohighlight">\(\Phi\)</span>, yksikkö W</p></li>
+</ul>
+<p>Kappaleeseen voidaan siis tuoda tai kappaleesta voi poistua lämpöenergiaa, jonka määrää mitataan lämpömäärällä <span class="math notranslate nohighlight">\(Q\)</span>. Lämmön siirtymisen nopeutta kuvaa lämpövirta <span class="math notranslate nohighlight">\(\Phi\)</span>. Ajassa <span class="math notranslate nohighlight">\(t\)</span> siirtyvä lämpömäärä on <span class="math notranslate nohighlight">\(Q=\Phi t\)</span>.</p>
+<p>Lämpöenergiaa voi siirtyä monella eri tavalla. Auringosta tulee lämpöä säteilemällä, ja Golfvirta kuljettaa meille lämpöä veden mukana. Lämmön siirtymisen johtumalla tuntee helposti koskettamalla takan pintaa. Talvella lämmön siirtymistä toiseen suuntaan voi havainnoida koskettamalla metallista porraskaidetta paljain käsin. Näitä lämmön siirtymisen mekanismeja tarkastellaan erikseen toisaalla.</p>
+<p>Fysiikan laskuissa yksikköinä käytetään aina joulea ja wattia, sekä mahdollisesti niiden kymmenpotenssimonikertoja (esim. kilowatti). Vanha energian yksikkö kalori perustuu juuri tähän lämpöenergian aiheuttamaan lämpötilan muuttumiseen. Yksi kalori on sellainen määrä energiaa, että yksi gramma vettä lämpenee sillä yhden asteen. Yksi kilokalori (1000 cal) riittäisi siis nostamaan yhden vesilitran lämpötilaa asteella. Muunnoskerroin on 1 cal = 4.19 J.</p>
+</section>
+<section id="lampoopin-nollas-paasaanto">
+<h2>Lämpöopin nollas pääsääntö<a class="headerlink" href="#lampoopin-nollas-paasaanto" title="Permalink to this headline">#</a></h2>
+<p>Lämpöoppiin kuuluu muutamia erityisiä sääntöjä, ns. pääsääntöjä. Niiden ulkopuolelle jää tärkeä “nollas” pääsääntö: eristetty systeemi siirtyy aina kohti lämpötasapainoa, jossa systeemin sisällä ei esiinny lämpötilaeroja.</p>
+<p>Eristetty systeemi tarkoittaa sellaista systeemiä, joka ei ota ulkopuolelta vastaan energiaa eikä myöskään luovuta sitä pois. Jos meillä on ämpärillinen kylmää vettä ja sinne laitetaan kuuma kiuaskivi, niin on ajateltava, että lämpöä siirtyy vain veden ja kiven välillä, eikä siis esimerkiksi veden ja huoneilman välillä. Lähemmäs todellista eristettyä systeemiä päästäisiin, jos ämpäri olisi erimerkiksi styrox-laatikossa.</p>
+<p>Mitä sitten tarkoittaa se, että systeemi siirtyy kohti lämpötasapainoa? Jos systeemiin kuuluu osia, joilla on keskenään eri lämpötila, niin energiaa siirtyy lämpimämmästä aineesta kylmempään, kunnes kaikkien osien lämpötila on sama. Ämpärissä siirtyy lämpöenergiaa kiuaskivesta veteen niin kauan, että vesi on lämmennyt ja kiuaskivi jäähtynyt samaan lämpötilaan. Lämpöenergia siirtyy aina lämpimmästä kappaleesta kylmempään.</p>
+</section>
+<section id="ominaislampokapasiteetti">
+<h2>Ominaislämpökapasiteetti<a class="headerlink" href="#ominaislampokapasiteetti" title="Permalink to this headline">#</a></h2>
+<p>Ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c\)</span> on aineen ominaisuus. Se kertoo, kuinka paljon energiaa vaatii, kun yksi kilogramma kyseistä ainetta lämpenee yhden asteen. Ominaislämpökapasiteetin yksikkö on näin ollen <span class="math notranslate nohighlight">\([c]=\frac{\text{J}}{\text{kg}\cdot \text{K}}\)</span>.</p>
+<p>Ominaislämpökapasiteetin avulla saadaan laskukaava sille, kuinka suurella lämpömäärällä <span class="math notranslate nohighlight">\(Q\)</span> pitää lämmittää kappaletta, jonka massa on <span class="math notranslate nohighlight">\(m\)</span>, jotta saadaan aikaan lämpötilan muutos <span class="math notranslate nohighlight">\(\Delta T\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(Q=cm\Delta T\)</span></p>
+<p>Aineiden ominaislämpökapasiteetteja löytyy esimerkiksi <a class="reference external" href="https://www.taulukot.com/fysiikka/mekaniikka_termodynamiikka/">taulukot.com</a> -sivustolta. Kiinteiden aineiden ominaislämpökapasiteetit ovat suuruudeltaan muutamien satojen luokkaa:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aine</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c, \frac{\text{J}}{\text{kg}\cdot \text{K}}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>graniitti</p></td>
+<td><p>800</p></td>
+</tr>
+<tr class="row-odd"><td><p>lasi</p></td>
+<td><p>840</p></td>
+</tr>
+<tr class="row-even"><td><p>hiekka</p></td>
+<td><p>840</p></td>
+</tr>
+<tr class="row-odd"><td><p>tiili</p></td>
+<td><p>800</p></td>
+</tr>
+<tr class="row-even"><td><p>havupuu</p></td>
+<td><p>1200</p></td>
+</tr>
+<tr class="row-odd"><td><p>kupari</p></td>
+<td><p>390</p></td>
+</tr>
+<tr class="row-even"><td><p>rauta</p></td>
+<td><p>450</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ominaislämpökapasiteetti liittyy siihen, miten kylmältä tai kuumalta kappale tuntuu. Metallien ominaislämpökapasiteetti on pieni. Tällöin kappaleen lämpötila muuttuu paljon, vaikka siihen (tai siitä) virtaisi vain vähän lämpöenergiaa. Esimerkiksi kahvikupissa oleva lusikka lämpenee. Tiilen ominaislämpökapasiteetti on suuri. Siksi esimerkiksi takkaan voidaan puuta polttamalla varastoida paljonkin energiaa ilman, että takan pinta muuttuu kovinkaan kuumaksi.</p>
+<p>Nesteiden ominaislämpökapasiteetit ovat huomattavasti suurempia kuin kiinteiden aineiden. Jäähdytysnesteenä käytettävän glykolin ominaislämpökapasiteetti on <span class="math notranslate nohighlight">\(2430~\frac{\text{J}}{\text{kg}\cdot \text{K}}\)</span>.</p>
+<p>Rakennusten lämmityksessä on hyvä varastoida lämpöä veteen. Sen ominaislämpökapasiteetti on <span class="math notranslate nohighlight">\(4190~\frac{\text{J}}{\text{kg}\cdot \text{K}}\)</span>. Suuri ominaislämpökapasiteetti näkyy luonnossa siten, että vesistöjen lähellä lämpötilat ovat tasaisempia kuin kuivilla alueilla. Kesällä veteen kerääntyy valtavasti lämpöenergiaa, ja syksyllä se vapautuu hitaasti ympäristöön.</p>
+<p>Kaasujen ominaislämpökapasiteetti riippuu siitä, pidetäänkö kaasu vakiopaineessa vai vakiotilavuudessa. Vakiopaine tarkoittaa sitä, että kaasu pääsee laajentumaan vapaasti. Kaasujen tilavuushan muuttuu erittäin voimakkaasti, kun kaasua lämmitetään. Vakiotilavuus taas liittyisi tilanteeseen, jossa kaasu on tiiviissä säiliössä (tällöin kaasu kuumentuessa sen paine kasvaa). Rakennusalan sovelluksissa ajatellaan, että kaasu on vakiopaineessa, ja tällöin minkä tahansa kaasun ominaislämpökapasiteettina voidaan käyttää arvoa <span class="math notranslate nohighlight">\(1004~\frac{\text{J}}{\text{kg}\cdot \text{K}}\)</span>.</p>
+</section>
+<section id="lampokapasiteetti">
+<h2>Lämpökapasiteetti<a class="headerlink" href="#lampokapasiteetti" title="Permalink to this headline">#</a></h2>
+<p>Ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c\)</span> on aineen ominaisuus. Lämpökapasiteetti <span class="math notranslate nohighlight">\(C\)</span> on kokonaisen kappaleen ominaisuus. Se on verrannollisuuskerroin, jolla kuvataan kappaleeseen tai kappaleesta siirtyvän lämpöenergian <span class="math notranslate nohighlight">\(Q\)</span> ja koko kappaleen lämpötilan muutoksen <span class="math notranslate nohighlight">\(\Delta T\)</span> välista yhteyttä: <span class="math notranslate nohighlight">\(Q=C \Delta T\)</span>.</p>
+<p>Esimerkiksi takan lämpökapasiteetti voidaan laskea kertomalla sen massa ja takkakiven ominaislämpökapasiteetti keskenään. Takan lämpökapasiteetti kertoo yhden asteen lämpötilan nostamiseen tarvittavan energiamäärän, tai vastaavasti takan jäähtyessä
+energian, joka vapautuu kun takka jäähtyy asteen verran.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kuinka paljon vapautuu energiaa, kun takka jäähtyy 50 astetta? Takan massa on 1500 kg, josta voidaan laskea lämpökapasiteetiksi noin 1200 kJ/K.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Vapautuvan energian määrä on <span class="math notranslate nohighlight">\(Q = C \Delta T = 1200 \frac{\text{kJ}}{K}\cdot 50~\text{K} = 60000~\text{kJ} = 60~\text{MJ}\)</span>. Energiamäärä on likimain sama kuin poltettaessa 2 litraa bensiiniä.</p>
+</div>
+</div>
+</section>
+<section id="sovelluksia">
+<h2>Sovelluksia<a class="headerlink" href="#sovelluksia" title="Permalink to this headline">#</a></h2>
+<p>Lämmön siirtymiseen liittyvissä sovelluksissa laskun periaate on: luovutettu energia = vastaanotettu energia. Ominaislämpökapasiteetin kaavassa <span class="math notranslate nohighlight">\(Q=cm\Delta T\)</span> energian <span class="math notranslate nohighlight">\(Q\)</span> paikalle kirjoitettava luku tai lauseke riippuu siitä, millä tavalla energia siirtyy. Jos energia siirtyy aineesta tai esineestä 1 toiseen (aine tai esine 2), niin voidaan yhtälö kirjoittaa muodossa <span class="math notranslate nohighlight">\(c_1 m_1 \Delta T_1 = c_2 m_2 \Delta T_2\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kiuaskivien valmistaja halusi selvittää tuotteensa ominaislämpökapasiteetin. Hän lämmitti 5.0 kg kiviä kiehuvassa vedessä <span class="math notranslate nohighlight">\(100^{\circ}~\text{C}\)</span>. Lämpötilaan. Tämän jälkeen kivet siirrettiin lämpöeristettyyn astiaan, jossa oli 10 litraa <span class="math notranslate nohighlight">\(20^{\circ}\text{C}\)</span> lämpöistä vettä. Lämpötilojen tasoittumisen jälkeen mitattiin astiassa olevan veden loppulämpötilaksi <span class="math notranslate nohighlight">\(28^{\circ}\text{C}\)</span>. Laske kiuaskivien ominaislämpökapasiteetti.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Energiaperiaate: veden vastaanottama lämpöenergia = kiuaskivien luovuttama lämpöenergia. Merkitään veteen liittyviä suureita alaindeksillä <span class="math notranslate nohighlight">\(v\)</span> ja kiuaskiviin liittyviä suureita alaindeksillä <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(Q_v=Q_k\)</span></p>
+<p><span class="math notranslate nohighlight">\(c_v m_v \Delta T_v = c_k m_k \Delta T_k\)</span></p>
+<p>Ratkaistaan ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c_k\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(c_k=\frac{c_v m_v \Delta T_v}{m_k \Delta T_k}\)</span></p>
+<p>Lämpötilojen muutokset ovat vedellä <span class="math notranslate nohighlight">\(T=(28-20)~\text{K}=8~\text{K}\)</span> ja kivillä <span class="math notranslate nohighlight">\(T=(100-28)~\text{K}=72~\text{K}\)</span>.</p>
+<p>Veden massaksi voidaan laskea <span class="math notranslate nohighlight">\(m_v=10~\text{l}\cdot 1~\frac{\text{kg}}{\text{l}}=10~\text{kg}\)</span>.</p>
+<p>Sijotetaan luvut:</p>
+<p><span class="math notranslate nohighlight">\(c_k=\frac{4190~\frac{\text{J}}{\text{kg}\cdot \text{K}}\cdot 10~\text{kg} \cdot 8~\text{K}}{5~\text{kg} \cdot 72~\text{K}} \approx 0.93~\frac{\text{J}}{\text{kg}\cdot \text{K}}\)</span>.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Saunan padasta otetaan ämpäriin 2 litraa vettä, jonka lämpötila on 94 astetta. Kuinka paljon sinun pitää lisätä ämpäriin 10-asteista vettä, jotta saat pesuvedeksi 35-asteista vettä?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Energiaperiaate: Lämpimän veden luovuttama energia = kylmän vastaanottama energia. Merkitään lämpimän veden suureita alaindeksillä 1 ja kylmän veden suureita alaindeksillä 2. Ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c\)</span> on sama kylmällä ja lämpimällä vedellä, ja se supistuukin yhtälöstä pois:</p>
+<p><span class="math notranslate nohighlight">\(Q_1=Q_2\)</span></p>
+<p><span class="math notranslate nohighlight">\(c m_1 \Delta T_1 = c m_2 \Delta T_2\)</span></p>
+<p><span class="math notranslate nohighlight">\(m_1 \Delta T_1 = m_2 \Delta T_2\)</span></p>
+<p>Ratkaistaan kylmän veden massa:</p>
+<p><span class="math notranslate nohighlight">\(m_2= m_1 \frac{\Delta T_1}{\Delta T_2}\)</span></p>
+<p>Sijoitetaan lukuarvot. Massan <span class="math notranslate nohighlight">\(m_1\)</span> paikalle voidaan kirjoittaa suoraan <span class="math notranslate nohighlight">\(2~\text{kg}\)</span>, sillä veden tiheys on noin <span class="math notranslate nohighlight">\(1~\frac{\text{kg}}{\text{l}}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(m_1= 2~\text{kg}\frac{(94-35)~\text{K}}{(35-10)~\text{K}} = 4.72~\text{kg}\)</span></p>
+<p>Kylmää vettä tarvitaan siis noin 4.7 litraa.</p>
+</div>
+</div>
+<p>Usein lämmityksen energia on sähköenergiaa. Lämmityslaitteista on yleensä tiedossa teho <span class="math notranslate nohighlight">\(P\)</span> watteina. Kun laitetta käytetään <span class="math notranslate nohighlight">\(t\)</span> sekuntia, niin siirtyneen energian määrä on <span class="math notranslate nohighlight">\(Q=Pt\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>a) Kuinka kauan kestää, kun 1.0 litraa vettä lämmitetään kiehuvaksi 2000 W teenkeittimellä? Veden lämpötila on aluksi 15 astetta.</p>
+<p>b) Matti harkitsee kylpypaljun ostamista. Kylpypaljun vesitilavuus on 600 litraa, ja vesi lämmitetään 30 kW ulkoisella lämmittimellä. Kuinka kauan kestää kylpyveden lämmitys 15-asteisesta vesijohtovedestä 40 asteeseen? Paljonko lämmitys maksaa, jos sähkön hinta on 10 cnt/kWh?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Kummassakin tapauksessa sähköenergia muuttuu lämpöenergiaksi. Sähköenergia ilmaistaan tehon ja ajan tulona <span class="math notranslate nohighlight">\(Pt\)</span>. Siis <span class="math notranslate nohighlight">\(Pt=m c \Delta T\)</span>.</p>
+<p>a) Ratkaistaan yhtälöstä <span class="math notranslate nohighlight">\(Pt=m c \Delta T\)</span> aika <span class="math notranslate nohighlight">\(t\)</span> ja sijoitetaan lukuarvot:</p>
+<p><span class="math notranslate nohighlight">\(t=\frac{m c \Delta T}{P}\)</span></p>
+<p><span class="math notranslate nohighlight">\(t=\frac{1.0~\text{kg}\cdot 4190~\frac{\text{J}}{\text{kg} \cdot \text{K}} \cdot {(100-15)~\text{K}}}{2000~\text{W}} = 178~\text{s}\)</span></p>
+<p>Veden lämmitykseen kiehumispisteeseen menee siis noin 3 minuuttia.</p>
+<p>b) Vastaavalla tavalla kuin a-kohdassa:</p>
+<p><span class="math notranslate nohighlight">\(t=\frac{600~\text{kg}\cdot 4190~\frac{\text{J}}{\text{kg} \cdot \text{K}} \cdot {(40-15)~\text{K}}}{30000~\text{W}} = 2095~\text{s}\)</span></p>
+<p>Aikaa kuluu siis <span class="math notranslate nohighlight">\(\frac{2095}{60}~\text{min}\)</span> eli noin 35 minuuttia.</p>
+<p>Sähköenergiaa kuluu <span class="math notranslate nohighlight">\(Q=Pt=30~\text{kW}\cdot \frac{35}{60}~\text{h} = 17.5~\text{kWh}\)</span> ja tällöin hinta olisi 1.75 euroa.</p>
+</div>
+</div>
+<p>Kaavaan <span class="math notranslate nohighlight">\(Q=cm\Delta t\)</span> on hankalaa sijoittaa mitään selkeää massaa <span class="math notranslate nohighlight">\(m\)</span>, jos lämpöä siirtävä aine on virtaavaa vettä. Tällöin tarvitaan tilavuusvirran <span class="math notranslate nohighlight">\(q_v\)</span> ja massavirran <span class="math notranslate nohighlight">\(q_v\)</span> käsitettä.</p>
+<ul class="simple">
+<li><p>Tilavuusvirta <span class="math notranslate nohighlight">\(q_v\)</span> kertoo sen, kuinka suuri tilavuus esimerkiksi vettä kiertää lämmitysjärjestelmässä tietyssä ajassa. Tilavuusvirta pitää sijoittaa laskuihin yksikössa on <span class="math notranslate nohighlight">\(\text{m}^3/\text{s}\)</span>, mutta usein se saatetaan ilmaista lähtötietona muodossa <span class="math notranslate nohighlight">\(\text{l}/\text{min}\)</span> tai <span class="math notranslate nohighlight">\(\text{l}/\text{h}\)</span>. Muunnos onnistuu kaavoilla <span class="math notranslate nohighlight">\(1~\text{m}^3=1000~\text{l}\)</span>, <span class="math notranslate nohighlight">\(1~\text{min}=60~\text{s}\)</span> ja <span class="math notranslate nohighlight">\(1~\text{h}=3600~\text{s}\)</span>.</p></li>
+<li><p>Massavirta <span class="math notranslate nohighlight">\(q_m\)</span> vastaa tietyssä ajassa systeemin läpi virtaamaan aineen massaa. Se saadaan kertomalla tilavuusvirta <span class="math notranslate nohighlight">\(q_v\)</span> aineen tiheydellä <span class="math notranslate nohighlight">\(\rho\)</span>. Vedelle voidaan käyttää arvoa <span class="math notranslate nohighlight">\(\rho=1000~\text{kg}/\text{m}^3\)</span>.</p></li>
+</ul>
+<p>Massavirtaa voidaan käyttää laskuissa hyödyntämällä periaatetta: luovutettu lämpöteho = vastaanotettu lämpöteho, eli <span class="math notranslate nohighlight">\(\Phi = q_m c \Delta T\)</span>. Kaavan voi johtaa energian säilymislaista jakamalla yhtälön molemmat puolet ajalla <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Taloon tulee kaukolämpöverkosta 77-asteista vettä. Tilavuusvirta on <span class="math notranslate nohighlight">\(2.5~\text{m}^3\text{/h}\)</span>. Kuinka monta astetta vesi jäähtyy lämmönvaihtimessa, kun talon tehonkulutus on 2500 W?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Talo vastaanottaa vedeltä tehon <span class="math notranslate nohighlight">\(\Phi\)</span>, ja vesi luovuttaa lämpöä teholla <span class="math notranslate nohighlight">\(q_m c \Delta t\)</span>.</p>
+<p>Ratkaistaan lämpötilan muutos <span class="math notranslate nohighlight">\(\Delta T\)</span> yhtälöstä <span class="math notranslate nohighlight">\(\Phi = q_m c \Delta T\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Delta T = \frac{\Phi}{q_m c}\)</span></p>
+<p>Massavirran <span class="math notranslate nohighlight">\(q_m\)</span> saa tilavuusvirrasta <span class="math notranslate nohighlight">\(q_v\)</span>. Oletetaan veden tiheydeksi <span class="math notranslate nohighlight">\(\rho = 1000~\frac{\text{kg}}{\text{m}^3}\)</span>. Massavirta on <span class="math notranslate nohighlight">\(q_m=q_v \rho\)</span>. Massavirran sekunnissa saa jakamalla massavirran tunnissa luvulla 3600. Siis massavirta on</p>
+<p><span class="math notranslate nohighlight">\(q_m = \frac{2.5~\frac{\text{m}^3}{\text{h}} \cdot 1000~\frac{\text{kg}}{\text{m}^3}}{3600~\frac{\text{s}}{\text{h}}} = 0.694~\frac{\text{kg}}{\text{s}}\)</span>.</p>
+<p>Lämpötilan muutokseksi saadaan nyt</p>
+<p><span class="math notranslate nohighlight">\(\Delta T = \frac{2500~\text{W}}{0.694~\frac{\text{kg}}{\text{s}} \cdot 4190~\frac{\text{J}}{\text{kg} \cdot \text{K}}} = 0.86~\text{K}\)</span></p>
+<p>Vesi jäähtyy siis noin 0.9 astetta.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Vesihanan sekoittimeen tuodaan putkesta A tilavuusvirta 2.5 litraa/min 55-asteista vettä, ja
+putkesta B tilavuusvirta 4.5 litraa/min 10-asteista vettä. Määritä tilavuusvirta ja veden lämpötila sekoittimen jälkeen putkessa C.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Putkessa C tilavuusvirta on putkien A ja B tilavuusvirtojen summa, siis 7 litraa/min.</p>
+<p>Kun putkien A ja putkien B vedet sekoittuvat, niin putken A vesi luovuttaa energiaa putken B vedelle. Energiaperiaatteen mukaisesti siis</p>
+<p><span class="math notranslate nohighlight">\(q_{m,A} c \Delta T_A = q_{m,B} c \Delta T_B\)</span></p>
+<p>Kirjoitetaan massavirrat tilavuusvirtojen avulla:</p>
+<p><span class="math notranslate nohighlight">\(q_{v,A} \rho c \Delta T_A = q_{v,B} \rho c \Delta T_B\)</span></p>
+<p>Yhtälöstä supistuu pois veden tiheys <span class="math notranslate nohighlight">\(\rho\)</span> ja ominaislämpökapasiteetti <span class="math notranslate nohighlight">\(c\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(q_{v,A} \Delta T_A = q_{v,B} \Delta T_B\)</span></p>
+<p>Veden lämpötilan muutoksissa esiintyy tuntematon loppulämpötila <span class="math notranslate nohighlight">\(T\)</span>. Vesien lämpötilan muutos <span class="math notranslate nohighlight">\(\Delta T\)</span> pitää siis ilmaista alkulämpötilan ja loppulämpötilan erotuksena. Alkulämpötilat voi sijoittaa yhtälöön suoraan Celcius-asteina, sillä erotus on yhtä suuri riippumatta siitä, käytetäänkö Celsius- vai Kelvin-asteikkoa. Kun sijoitetaan yhtälöön vielä tilavuusvirrat, saadaan</p>
+<p><span class="math notranslate nohighlight">\(2.5~\frac{\text{l}}{\text{min}} (55^{\circ}~\text{C}-T) = 4.5~\frac{\text{l}}{\text{min}} (T-15^{\circ}~\text{C})\)</span></p>
+<p>Huomataan, että tilavuusvirran yksikölläkään ei ole merkitystä, koska yksikkö supistuu kuitenkin pois. Ratkaisemalla yhtälö (esimerkiksi <span class="xref myst">WolframAlphalla</span>) saadaan <span class="math notranslate nohighlight">\(T\approx 26^{\circ}~\text{C}\)</span>.</p>
+</div>
+</div>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Vedensekoittimeen tuodaan putkesta A tilavuusvirta 3.5 litraa/min 12-asteista vettä. Kuinka suuri tilavuusvirta pitää siihen sekoittaa putkesta B tulevaa 60-asteista vettä, jotta veden lämpötila sekoittimen jälkeen olisi 35 astetta?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Edellisessä esimerkissä johdettiin laskukaava <span class="math notranslate nohighlight">\(q_{v,A} \Delta T_A = q_{v,B} \Delta T_B\)</span>. Tästä saadaan ratkaistua putken B tilavuusvirta:</p>
+<p><span class="math notranslate nohighlight">\(q_{v,B}=q_{v,A}\frac{\Delta T_A}{\Delta T_B}\)</span></p>
+<p>Sijoitetaan suureiden arvot:</p>
+<p><span class="math notranslate nohighlight">\(q_{v,B}=3.5~\frac{\text{l}}{\text{min}}\frac{(35-12)^{\circ}~\text{C}}{(60-35)^{\circ}~\text{C}}=3.22~\frac{\text{l}}{\text{min}}\)</span></p>
+</div>
+</div>
+<p>Jos virtaava aine on ilmaa, niin laskukaavoihin tarvitaan ilman tiheys. Ilma on huomattavasti tiheämpää kylmänä kuin lämpimänä (kyse on lämpölaajenemisesta: kylmän ilman molekyylit liikkuvat vähemmän kuin kuuman, joten ne asettuvat lähemmäs toisiaan). Tiheys saadaan laskukaavasta <span class="math notranslate nohighlight">\(\rho=\frac{p}{RT}\)</span>, missä <span class="math notranslate nohighlight">\(p\)</span> on ilman paine ja <span class="math notranslate nohighlight">\(R\)</span> on vakio <span class="math notranslate nohighlight">\(R=287~\frac{\text{J}}{\text{kg}\cdot\text{K}}\)</span>. Ilmanpaine on rakennusten tasolla lähes vakio, ja sen paikalle voi sijoittaa niinsanotun normaalipaineen 101 325 Pa. Oheisessa kuvaajassa on edellisellä kaavalla laskettuja ilman tiheyksiä eri lämpötiloissa.</p>
+<p><img alt="Ilman tiheys eri lämpötiloissa." src="_images/ilman_tiheys.png" /></p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Ilmastointikanavassa virtaa 32-asteista ilmaa virtausnopeudella <span class="math notranslate nohighlight">\(290~\text{m}^3\text{/h}\)</span>. Millä nopeudella kanavaan on sekoitettava 5-asteista ulkoilmaa, jotta ilman lämpötilaksi tulisi 20 astetta?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Kylmällä ja lämpimällä ilmalla on eri tiheys, joten laskussa on käytettävä massavirtoja. Muutetaan ensin lämpimän ilman tilavuusvirta massavirraksi. Edellisen kuvaajan perusteella (tai laskukaavalla laskemalla) 32-asteisen ilman tiheys on noin <span class="math notranslate nohighlight">\(1.16~\text{kg/m}^3\)</span>. Lämpimän ilman massavirta on siis <span class="math notranslate nohighlight">\(1.16~\text{kg/m}^3 \cdot 290~\text{m}^3\text{/h} = 336~\text{kg/h}\)</span>. Lämpimän ilman lämpötilan muutos on 12 astetta ja kylmän ilman lämpötilan muutos on 15 astetta. Siis kylmän ilman massavirta <span class="math notranslate nohighlight">\(q_m\)</span> saadaan yhtälöstä</p>
+<p><span class="math notranslate nohighlight">\(336~\text{kg/h}\cdot c \cdot 12~\text{K} =q_m \cdot c \cdot 15~\text{K}\)</span>,</p>
+<p>missä <span class="math notranslate nohighlight">\(c\)</span> on ilman ominaislämpökapasiteetti. Suureen <span class="math notranslate nohighlight">\(c\)</span> arvo on sama kylmällä ja lämpimällä ilmalla, joten se voidaan supistaa pois yhtälöstä. Tällöin yhtälöksi tulee</p>
+<p><span class="math notranslate nohighlight">\(336~\text{kg/h} \cdot 12~\text{K} =q_m \cdot 15~\text{K}\)</span>,</p>
+<p>josta ratkeaa <span class="math notranslate nohighlight">\(q_m = 269~\text{kg/h}\)</span>.</p>
+<p>Kylmän ilman tilavuusvirta <span class="math notranslate nohighlight">\(q_v\)</span> saadaan  jakamalla massavirta <span class="math notranslate nohighlight">\(q_m\)</span> kylmän ilman tiheydellä. Kuvaajasta tai laskemalla saadaan 5-asteisen ilman tiheydelle arvo <span class="math notranslate nohighlight">\(1.27~\text{kg/m}^3\)</span>. Niinpä tilavuusvirraksi tulee</p>
+<p><span class="math notranslate nohighlight">\(q_v = \frac{269~\text{kg/h}}{1.27~\text{kg/m}^3} = 212~\text{m}^3\text{/h}\)</span>.</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="lampolaajeneminen.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lämpölaajeneminen</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="energia_olomuoto.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Olomuodon muutoksia</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

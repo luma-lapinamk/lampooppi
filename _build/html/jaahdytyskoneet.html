@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Jäähdytyskoneet &#8212; Lämpöoppi</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ilmastointi" href="ilmastointi.html" />
+    <link rel="prev" title="Lämpövoimakoneet" href="lampovoimakoneet.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lämpöoppi</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Johdanto
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämpö ja energia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampotila.html">
+   Lämpötila
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampolaajeneminen.html">
+   Lämpölaajeneminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_lampotila.html">
+   Lämpötilan muutoksen energia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energia_olomuoto.html">
+   Olomuodon muutoksia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lammon_siirtyminen.html">
+   Lämmön siirtyminen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lamposateily.html">
+   Lämpösäteily
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kaasut
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ideaalikaasut.html">
+   Ideaalikaasut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasut.html">
+   Kaasujen perusprosessit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kaasujen_olk.html">
+   Kaasujen energian muutoksia
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lämmitys, jäähdytys ja ilmastointi
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lampovoimakoneet.html">
+   Lämpövoimakoneet
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Jäähdytyskoneet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ilmastointi.html">
+   Ilmastointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mollier.html">
+   Mollier-diagrammi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://jupyterbook.org">Jupyter Book</a> voimaa
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/luma-lapinamk/minna-lampooppi"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/jaahdytyskoneet.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faasidiagrammi">
+   Faasidiagrammi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jaahdytyskoneen-toiminta">
+   Jäähdytyskoneen toiminta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoopin-toinen-paasaanto">
+   Lämpöopin toinen pääsääntö
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kylmaaineet">
+   Kylmäaineet
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Jäähdytyskoneet</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faasidiagrammi">
+   Faasidiagrammi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jaahdytyskoneen-toiminta">
+   Jäähdytyskoneen toiminta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lampoopin-toinen-paasaanto">
+   Lämpöopin toinen pääsääntö
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kylmaaineet">
+   Kylmäaineet
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="jaahdytyskoneet">
+<h1>Jäähdytyskoneet<a class="headerlink" href="#jaahdytyskoneet" title="Permalink to this headline">#</a></h1>
+<p>Jäähdytyskoneiden toiminta perustuu olomuodon muutoksiin: höyrystymiseen ja tiivistymiseen. Olomuodon muutoksia säädellään paineen avulla. Eri aineiden tutut sulamis- ja kiehumispisteet on määritelty normaalissa ilmanpaineessa. Ali- tai ylipaine normaaliin paineeseen verrattuna voi muuttaa näitä lämpötiloja merkittävästi</p>
+<section id="faasidiagrammi">
+<h2>Faasidiagrammi<a class="headerlink" href="#faasidiagrammi" title="Permalink to this headline">#</a></h2>
+<p>Lämpötilaa, jossa aine muuttaa olomuotoaan eri paineolosuhteissa, kuvataan faasidiagrammilla. Alla on esimerkkinä veden faasidiagrammi.</p>
+<p><img alt="Veden faasidagrammi" src="_images/phase_diagram_of_water.svg" />
+Kuva: Cmglee, CC BY-SA 3.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=14939155">https://commons.wikimedia.org/w/index.php?curid=14939155</a></p>
+<p>Veden faasidiagrammin oikeassa alareunassa, oranssilla värillä kuvattuna, vesi on kaasumaisessa olomuodossa. Kiehumispiste, 100 astetta, pätee vain 101325 pascalin paineessa. Mitä pienempi paine on, sitä matalammassa lämpötilassa vesi kiehuu. Veden jäätymispisteeseen paine vaikuttaa vähemmän, jos ali- tai ylipaine ei ole valtavan suuri (jäätä kuvaavan sinisen ja nestettä kuvaajan vihreän alueen raja on lähes pystysuora). Roomalaiset numerot kuvaavat jään erilaisia muotoja.</p>
+<p>Kuvaajaan on merkitty myös veden kriittinen piste (critical point). Jos aineen lämpötila on suurempi kuin sen kriittinen
+lämpötila, sitä ei voida enää nesteyttää. Lisäksi kuvassa on kolmoispiste (triple point). Kolmoispiste vastaa sellaista painetta ja lämpötilaa, jossa kaikki kolme olomuotoa ovat tasapainossa. Vedellä kolmoispiste on kohdassa jossa paine on 1 bar ja lämpötila noin 0.01 Celsius-astetta. Näissä oloissa jää, vesi ja vesihöyry voivat olla tasapainossa niin, että kunkin määrä pysyy vakiona.</p>
+</section>
+<section id="jaahdytyskoneen-toiminta">
+<h2>Jäähdytyskoneen toiminta<a class="headerlink" href="#jaahdytyskoneen-toiminta" title="Permalink to this headline">#</a></h2>
+<p>Jäähdytyskonetta voidaan kuvata piirinä, jossa jäähdytysaine kiertää putkessa, ja vuorotellen höyrystyy ja tiivistyy. Piirin osaan, jonka nimi on höyrystin, muodostetaan pumpun avulla alipaine. Se saa jäähdytysaineen eli kylmäaineen höyrystymään. Kun ainetta, jonka höyrystymislämpö on <span class="math notranslate nohighlight">\(r\)</span>, höyrystyy massa <span class="math notranslate nohighlight">\(m\)</span>, niin lämpöenergiaa sitoutuu määrä <span class="math notranslate nohighlight">\(Q=mr\)</span>. Näin esimerkiksi ilma jääkaapin sisällä jäähtyy.</p>
+<p>Piirin osaa, jossa kylmäaine tiiviistyy höyrystä nesteeksi, kutsutaan nimellä lauhdutin. Sinne luodaan kompressorilla ylipaine. Tiivistyessään aine luovuttaa saman verran lämpöä <span class="math notranslate nohighlight">\(Q=mr\)</span>, joka siihen sitoutui höyrystimessä. Lämpö siirtyy esimerkiksi jääkaapin sisältä huoneilmaan.</p>
+<p>Aiemmin tarkasteltiin lämpövoimakoneita. Lämpövoimakoneet ottavat energian <span class="math notranslate nohighlight">\(Q_H\)</span> kuumasäiliöstä, muuttavat osan siitä työksi <span class="math notranslate nohighlight">\(W\)</span> ja luovuttavat lopun energian <span class="math notranslate nohighlight">\(Q_C\)</span> kylmäsäiliöön. Koska energia säilyy, niin <span class="math notranslate nohighlight">\(Q_H=Q_C+W\)</span>. Lämpövoimakoneen hyötysuhde on</p>
+<p><span class="math notranslate nohighlight">\(\eta=\frac{W}{Q_H}=\frac{Q_H-Q_C}{Q_H}\)</span></p>
+<p>Jäähdytyskone toimii päinvastoin: se ottaa energian <span class="math notranslate nohighlight">\(Q_C\)</span> kylmäsäiliöstä, ja luovuttaa sen ulkoisen työn <span class="math notranslate nohighlight">\(W\)</span> avulla kuumasäiliöön energiana <span class="math notranslate nohighlight">\(Q_H\)</span>. Energian säilymislain mukaisesti edelleen voimassa on kaava <span class="math notranslate nohighlight">\(Q_H=Q_C+W\)</span>. Jäähdytyskoneelle määritellään hyötysuhteen sijasta niinsanottu tehokerroin <span class="math notranslate nohighlight">\(\epsilon_R\)</span>. Se kertoo, kuinka paljon energiaa kone poistaa kylmäsäiliöstä verrattuna ulkoiseen työhön:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_R=\frac{Q_C}{W}=\frac{Q_C}{Q_H-Q_C}\)</span></p>
+<p>Jäähdytyskoneen tehokerrointa kutsutaan myös nimellä kylmäkerroin. Yksinkertaisesti se kuvaa sitä, kuinka monta kilowattituntia lämpöä esimerkiksi jääkaapista poistuu yhdellä kilowattitunnilla sähköä.</p>
+<p>Lämpöpumppukin toimii ikään kuin jääkaappi. Lämpöpumpussa kylmäsäiliönä toimii ulkoilma, ja ilman höyrystymisessä sitoutunut lämpö siirretään sisäilmaan. Lämpöpumpun tehokerroin on <span class="math notranslate nohighlight">\(\epsilon_P\)</span>, ja se kuvaa lämpöpumpun kykyä siirtää huoneilmaan lämpöä:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_P=\frac{Q_H}{W}=\frac{Q_H}{Q_H-Q_C}\)</span></p>
+<p>Lämpöpumpun tehokerrointa kutsutaan nimellä lämpökerroin. Se ilmoittaa, kuinka monta kilowattituntia lämpöä se tuo huoneeseen yhdellä kilowattitunnilla sähköä.</p>
+<p>Kummastakin tehokertoimesta käytetään usein myös nimitystä COP (coefficient of performance). Laskukaavoihin voi energiasuureiden paikalle sijoittaa myös vastaavat tehosuureet:</p>
+<p><span class="math notranslate nohighlight">\(\Phi_C=P+\Phi_H\)</span>, <span class="math notranslate nohighlight">\(\epsilon_R=\frac{\Phi_C}{P}=\frac{\Phi_C}{\Phi_H-\Phi_C}\)</span>, <span class="math notranslate nohighlight">\(\epsilon_P=\frac{\Phi_H}{P}=\frac{\Phi_H}{\Phi_H-\Phi_C}\)</span></p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>a) Lämpöpumpun COP on 4.0. Se tuottaa sisäilmaan lämpöä 2000 W teholla. Mikä on laitteen sähkönkulutus, ja millä teholla lämpöä poistuu ulkoilmasta?</p>
+<p>b) Jääkaapin sähkönkulutus on 100 W, ja se lämmittää huonetta 600 W teholla. Mikä on jääkaapin COP, ja millä teholla lämpöä poistuu jääkaapista?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) Ratkaistaan teho <span class="math notranslate nohighlight">\(P\)</span> yhtälöstä <span class="math notranslate nohighlight">\(\epsilon_P=\frac{\Phi_H}{P}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(P=\frac{\Phi_H}{\epsilon_P}=\frac{2000~\text{W}}{4.0}=500~\text{W}\)</span></p>
+<p>Ulkoilmasta poistuvaksi lämpötehoksi saadaan samasta yhtälöstä</p>
+<p><span class="math notranslate nohighlight">\(\Phi_C=\Phi_H \frac{\epsilon_P-1}{\epsilon_P}=2000~\text{W}\frac{3}{4}=1500~\text{W}\)</span></p>
+<p>tai laskemalla <span class="math notranslate nohighlight">\(\Phi_C=\Phi_H-P=2000~\text{W}-500~\text{W}=1500~\text{W}\)</span></p>
+<p>b) Lasketaan ensin jääkaapista poistuva lämpöteho:</p>
+<p><span class="math notranslate nohighlight">\(\Phi_C=\Phi_H-P=600~\text{W}-100~\text{W}=500~\text{W}\)</span></p>
+<p>Tehokertoimeksi saadaan</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_R=\frac{\Phi_C}{P}=\frac{500~\text{W}}{100~\text{W}}=5.0\)</span></p>
+</div>
+</div>
+<p>Tehokertoimille voidaan laskea Carnot’n koneen mukainen teoreettinen yläraja. Jos kuumasäiliön lämpötila on <span class="math notranslate nohighlight">\(T_H\)</span> ja kylmäsäiliön lämpötila on <span class="math notranslate nohighlight">\(T_C\)</span>, niin tehokertoimien maksimiarvot määräytyvät epäyhtälöistä:</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_P \leq \frac{T_H}{T_H-T_C}, \epsilon_R \leq \frac{T_C}{T_H-T_C}\)</span></p>
+<p>Laskukaavoista nähdään, että tehokerroin on suurimmillaan silloin, kun kuuma- ja kylmäsäiliön välinen lämpötilaero on mahdollisimman pieni. Lisäksi tehokertoimille voidaan johtaa kaava <span class="math notranslate nohighlight">\(\epsilon_P=\epsilon_R+1\)</span>.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Kaavan johtaminen</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_P=\frac{Q_H}{Q_H-Q_C}=\frac{Q_C+Q_H-Q_C}{Q_H-Q_C}=\frac{Q_C}{Q_H-Q_C}+\frac{Q_H-Q_C}{Q_H-Q_C}=\epsilon_R+1\)</span></p>
+</div>
+</section>
+<section id="lampoopin-toinen-paasaanto">
+<h2>Lämpöopin toinen pääsääntö<a class="headerlink" href="#lampoopin-toinen-paasaanto" title="Permalink to this headline">#</a></h2>
+<p>Palautetaan vielä mieleen lämpöopin toinen pääsääntö: <span class="math notranslate nohighlight">\(\Delta U = Q+p\Delta V\)</span>, joka voidaan esittää myös muodossa <span class="math notranslate nohighlight">\(Q=\Delta U + p\Delta V\)</span>.</p>
+<p>Otetaan käyttöön vielä apusuure entalpia <span class="math notranslate nohighlight">\(H\)</span>. Sitä käytetään paljon mm. kemiassa laskuissa, jossa aineen lämpötila muuttuu reaktiossa. Entalpia määritellään kaasun sisäenergia <span class="math notranslate nohighlight">\(U\)</span>, paineen <span class="math notranslate nohighlight">\(p\)</span> ja tilavuuden <span class="math notranslate nohighlight">\(V\)</span> avulla seuraavasti: <span class="math notranslate nohighlight">\(H=U+pV\)</span>. Entalpiaa käytetään laskuissa silloin, kun lasku suoritetaan Mollier-diagrammin avulla.</p>
+<div class="admonition-esimerkki admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Jääkaapin höyrystimessä, jääkaapin sisäpuolella kiertävissä putkissa, lämpötila on 5 Celsius-astetta. Paine höyrystimessä on 363 kPa. Höyrystimen läpi kulkiessaan suurin osa kylmäaineesta höyrystyy siten, että kaasun tilavuus muuttuu 0.2202 kuutiometristä 0.4513 kuutiometriin. Samalla kaasun sisäenergia muuttuu arvosta 1005 kJ arvoon 1651 kJ.</p>
+<p>Lauhduttimessa lämpötila on 80 Celsius-astetta, ja paine on 2305 kPa. Kun suurin osa kaasusta nesteytyy, niin kaasun tilavuus pienenee 0.0682 kuutiometristä 0.00946 kuutiometriin, ja sen sisäenergia muuttuu 1963 kilojoulesta 1171 kilojouleen.</p>
+<p>a) Laske kaapin huoneeseen luovuttama lämpöenergia <span class="math notranslate nohighlight">\(Q_H\)</span>.</p>
+<p>b) Laske jääkaapin sisältä otettu lämpöenergia <span class="math notranslate nohighlight">\(Q_C\)</span>.</p>
+<p>c) Kuinka suuren työn <span class="math notranslate nohighlight">\(W\)</span> kompressorin moottori tekee yhden syklin aikana?</p>
+<p>d) Mikä on kaapin kylmäkerroin edellisten kohtien perusteella?</p>
+<p>e) Mikä olisi samalla lämpötilavälillä toimivan Carnot’n koneen tehokerroin?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) Lauhduttimessa huoneeseen luovutettu lämpöenergia on noin 927 kJ, joka saadaan seuraavasti:</p>
+<p><span class="math notranslate nohighlight">\(Q_H=\Delta U + p\Delta V\)</span></p>
+<p><span class="math notranslate nohighlight">\(Q_H = (1171-1963)~\text{kJ}+ ...\)</span></p>
+<p><span class="math notranslate nohighlight">\( ... 2305000~\text{Pa}\cdot(0.00946-0.0682)~\text{m}^3=-927000~\text{J}\)</span></p>
+<p>b) Höyrystimessä kaapista otettu lämpöenergia on noin 730 kJ:</p>
+<p><span class="math notranslate nohighlight">\(Q_C=\Delta U + p\Delta V \)</span></p>
+<p><span class="math notranslate nohighlight">\(Q_C = (1651-1005)~\text{kJ}+ ...\)</span></p>
+<p><span class="math notranslate nohighlight">\(... 363000~\text{Pa}\cdot(0.4513-0.2022)~\text{m}^3=730000~\text{J}\)</span></p>
+<p>c) Kompressorin tekemä työ on edellisten arvojen erotus:</p>
+<p><span class="math notranslate nohighlight">\(W=927~\text{kJ}-730~\text{kJ}=197~\text{kJ}\)</span></p>
+<p>d) Kylmäkerroin on</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_R=\frac{Q_C}{W}=\frac{730~\text{kJ}}{197~\text{kJ}}=3.696\)</span></p>
+<p>e) Teoreettinen maksimi olisi</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_R \leq \frac{(80+273)~\text{K}}{75~\text{K}}=3.71\)</span></p>
+</div>
+</div>
+</section>
+<section id="kylmaaineet">
+<h2>Kylmäaineet<a class="headerlink" href="#kylmaaineet" title="Permalink to this headline">#</a></h2>
+<p>Jäähdytyskoneissa käytetään erilaisia kylmäaineita. Niiden ympäristövaikutuksia kuvataan luvuilla ODP ja GWP.</p>
+<ul class="simple">
+<li><p>ODP (ozone depletion potential): vaikutus yläilmakehän otsonin hajoamiseen</p></li>
+<li><p>GWP (global warming potential): vaikutus ilmaston lämpenemiseen</p></li>
+</ul>
+<p>Aluksi kylmäaineina käytettiin ns. freoneja. Ne ovat aineita, jotka sisältävät klooria, fluoria ja hiiltä. Näiden aineiden englanninkielisistä nimistä (chlorine, fluorine, carbon) tulee aineryhmän toinen nimi CFC-yhdisteet. Näillä aineilla oli hyvin suuri ODP ja myös suuri GWP. Nämä aineet ovat kemiallisesti erittäin kestäviä, joten ne nousevat ilmakehässä aina vain ylemmäs ja ylemmäs ja voivat kiertää siellä vuosikymmeniä. Vasta auringon ultraviolettisäteily hajottaa näitä molekyylejä. Niiden sisältämä kloori reagoi kiivaasti yläilmankehän otsonimolekyylien <span class="math notranslate nohighlight">\(\text{O}_3\)</span> kanssa hajottaen niitä yksittäiseksi happiatomeiksi, jotka edelleen muuttuvat tavalliseksi hapeksi <span class="math notranslate nohighlight">\(\text{O}_2\)</span>. Yläilmakehän otsoni on tärkeää, sillä se suojaa maapalloa liialliselta ultraviolettisäteilyä. CFC-yhdisteiden käyttöä on rajoitettu vuodesta 1987 alkaen Montrealin sopimuksella.</p>
+<p>Toisen sukupolven kylmäaineet olivat ns. HFC-yhdisteitä, joissa CFC-yhdisteiden kloorin paikalle vaihdettiin vety (kemiallinen merkki H). Näiden aineiden ODP on nolla, mutta GWP suuri. Lämpöpumpuissa käytetään yleisesti tähän aineryhmään kuuluvaa difluorieteeniä.</p>
+<p>Nykyään on alettu käyttää kylmäaineina luonnonmukaisia hiilivetyjä, kuten etaania, propaania, butaania ja pentaania. Näiden ODP on nolla ja GWP on pieni. Lisäksi isoissa kylmälaitoksissa on jo kymmeniä vuosia käytetty yleisesti ammoniakkia, joka ei tuhoa otsonikerrosta eikä ole kasvihuonekaasukaan. Euroopan unionissa on määritetty direktiivi, jonka mukaan vuodesta 2025 alkaen kodin kylmälaitteiden suurin sallittu GWP on 2000 ja ODP:n pitää olla nolla.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="lampovoimakoneet.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lämpövoimakoneet</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ilmastointi.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ilmastointi</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LUMA-tiimi, Lapin AMK / Jouko Teeriaho ja Minna Korhonen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

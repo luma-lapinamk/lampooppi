@@ -1,0 +1,25 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Lämpö ja energia
+    chapters:
+    - file: lampotila
+    - file: lampolaajeneminen
+    - file: energia_lampotila
+    - file: energia_olomuoto
+    - file: lammon_siirtyminen
+    - file: lamposateily
+  - caption: Kaasut
+    chapters:
+    - file: ideaalikaasut
+    - file: kaasut
+    - file: kaasujen_olk
+  - caption: Lämmitys, jäähdytys ja ilmastointi
+    chapters:
+    - file: lampovoimakoneet
+    - file: jaahdytyskoneet
+    - file: ilmastointi
+    - file: mollier
