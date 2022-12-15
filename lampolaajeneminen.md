@@ -11,7 +11,7 @@ Jos kappaleen pituus alkuperäisessä lämpötilassa on $l_0$, niin pituus lämp
 
 $l=l_0(1+\alpha \Delta T)$
 
-Tarvittaessa voidaan laskea myös pituuden muutos $\Delta l$:
+Tarvittaessa voidaan laskea myös pituuden muutos $\Delta l=l-l_0$:
 
 $\Delta l = \alpha l_0 \Delta T$
 
@@ -26,7 +26,7 @@ Sijoitetaan suureiden arvot laskukaavaan $l=l_0(1+\alpha \Delta T)$.
 
 Lämpötilan muutos $50^{\circ}~\text{C}-20^{\circ}~\text{C}=30^{\circ}~\text{C}$ on yhtä suuri Kelvineinä, siis $\Delta T = 30$ K.
 
-$l=100~\text{m} (1+12\cdot 10^{-6}~\frac{1}{K} \cdot 30~\text{K}) = 100.036~\text{m}$
+$l=100~\text{m} \cdot (1+12\cdot 10^{-6}~\frac{1}{K} \cdot 30~\text{K}) = 100.036~\text{m}$
 
 Muutos on siis 3.6 cm. Mittanauha näyttää väärin, koska nyt sen merkkiviivat ovat jakaantuneet liian pitkälle matkalle. Matkat ovat siis oikeasti pitempiä kuin mittanauhalla mitatut lukemat.
 
@@ -75,7 +75,7 @@ $\Delta A = A \beta \Delta T = 2A \alpha \Delta T$, $\Delta V = V \gamma \Delta 
 
 ## Nesteet
 
-Nesteillä ainoa oleellinen lämpölaajenemisen muoto on tilavuuden muutos. Ilmiötä voidaan hyödyntää lämpötilan mittauksessa. Nestelämpömittareissa asteikko on suoraan verrannollinen mittarin sisällä olevan nestepatsaan korkeuteen. Mittari toimii, koska mitä lämpimämpää on, sitä nopeammin nesteen molekyylit liikkuvat ja sitä suuremman tilan ne vaativat. 
+Nesteillä ainoa oleellinen lämpölaajenemisen muoto on tilavuuden muutos. Ilmiötä voidaan hyödyntää lämpötilan mittauksessa. Nestelämpömittareissa asteikko on suoraan verrannollinen mittarin sisällä olevan nestepatsaan korkeuteen. Mitä lämpimämpää on, sitä nopeammin nesteen molekyylit liikkuvat ja sitä suuremman tilan ne vaativat. 
 
 Nesteille on taulukoitu tilavuuden lämpölaajenemiskertoimet suoraan. Tällöin tilavuuden muutos saadaan kaavalla $\Delta V = V \gamma \Delta T$.
 

@@ -1,6 +1,6 @@
 # Lämpövoimakoneet
 
-Lämpövoimakoneiden yleinen toimintaperiaate on seuraava: kone ottaa lämpöenergiaa $Q_H$ niinsanotusta kuumasäiliöstä (H=hot), muuttaa osan lämpöenergiasta työksi $W$, ja poistaa ylimääräinen energian $Q_C$ kylmäsäiliöön (C=cold). Energian säilymislain mukaisesti $Q_H=W+Q_C$, joten tehty työ on $W=Q_H-Q_C$.
+Lämpövoimakoneiden yleinen toimintaperiaate on seuraava: kone ottaa lämpöenergiaa $Q_H$ niinsanotusta kuumasäiliöstä (H=hot), muuttaa osan lämpöenergiasta työksi $W$, ja poistaa ylimääräisen energian $Q_C$ kylmäsäiliöön (C=cold). Energian säilymislain mukaisesti $Q_H=W+Q_C$, joten tehty työ on $W=Q_H-Q_C$.
 
 Kuumasäiliö voi sisältää esimerkiksi bensiinin palamisessa syntyvää kuumaa kaasua. Työ on käytännössä sitä, että kaasu työntää mäntää ja siten saa aikaan liikettä, joka voidaan muuttaa esimerkiksi pyörimiseksi. Kylmäsäiliön kaasut ovat pakokaasuja.
 

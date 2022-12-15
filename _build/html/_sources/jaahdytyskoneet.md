@@ -9,7 +9,7 @@ Lämpötilaa, jossa aine muuttaa olomuotoaan eri paineolosuhteissa, kuvataan faa
 ![Veden faasidagrammi](phase_diagram_of_water.svg)
 Kuva: Cmglee, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=14939155
 
-Veden faasidiagrammin oikeassa alareunassa, oranssilla värillä kuvattuna, vesi on kaasumaisessa olomuodossa. Kiehumispiste, 100 astetta, pätee vain 101325 pascalin paineessa. Mitä pienempi paine on, sitä matalammassa lämpötilassa vesi kiehuu. Veden jäätymispisteeseen paine vaikuttaa vähemmän, jos ali- tai ylipaine ei ole valtavan suuri (jäätä kuvaavan sinisen ja nestettä kuvaajan vihreän alueen raja on lähes pystysuora). Roomalaiset numerot kuvaavat jään erilaisia muotoja.
+Veden faasidiagrammin oikeassa alareunassa, oranssilla värillä kuvattuna, vesi on kaasumaisessa olomuodossa. Kiehumispiste, 100 astetta, pätee vain 101325 pascalin paineessa. Mitä pienempi paine on, sitä matalammassa lämpötilassa vesi kiehuu. Veden jäätymispisteeseen paine vaikuttaa vähemmän, jos ali- tai ylipaine ei ole valtavan suuri (jäätä kuvaavan sinisen ja nestettä kuvaavan vihreän alueen raja on lähes pystysuora). Roomalaiset numerot kuvaavat jään erilaisia muotoja.
 
 Kuvaajaan on merkitty myös veden kriittinen piste (critical point). Jos aineen lämpötila on suurempi kuin sen kriittinen
 lämpötila, sitä ei voida enää nesteyttää. Lisäksi kuvassa on kolmoispiste (triple point). Kolmoispiste vastaa sellaista painetta ja lämpötilaa, jossa kaikki kolme olomuotoa ovat tasapainossa. Vedellä kolmoispiste on kohdassa jossa paine on 1 bar ja lämpötila noin 0.01 Celsius-astetta. Näissä oloissa jää, vesi ja vesihöyry voivat olla tasapainossa niin, että kunkin määrä pysyy vakiona.
@@ -85,11 +85,17 @@ $\epsilon_P=\frac{Q_H}{Q_H-Q_C}=\frac{Q_C+Q_H-Q_C}{Q_H-Q_C}=\frac{Q_C}{Q_H-Q_C}+
 :::
 
 
-## Lämpöopin toinen pääsääntö
+## Jäähdytyskoneet ja energian säilyminen
 
-Palautetaan vielä mieleen lämpöopin toinen pääsääntö: $\Delta U = Q+p\Delta V$, joka voidaan esittää myös muodossa $Q=\Delta U + p\Delta V$. 
+Aineen sisäenergia $U$, lämpöenergia $Q$, paine $p$ ja tilavuus $V$ yhdistyvät toisiinsa seuraavan säännön mukaisesti:
 
-Otetaan käyttöön vielä apusuure entalpia $H$. Sitä käytetään paljon mm. kemiassa laskuissa, jossa aineen lämpötila muuttuu reaktiossa. Entalpia määritellään kaasun sisäenergia $U$, paineen $p$ ja tilavuuden $V$ avulla seuraavasti: $H=U+pV$. Entalpiaa käytetään laskuissa silloin, kun lasku suoritetaan Mollier-diagrammin avulla.
+$\Delta U = Q+p\Delta V$,
+
+joka voidaan esittää myös muodossa 
+
+$Q=\Delta U + p\Delta V$. 
+
+Edellisellä laskukaavalla voidaan tarkastella jäähdytyskoneiden energiankulutusta. Otetaan käyttöön vielä apusuure entalpia $H$. Sitä käytetään paljon mm. kemiassa laskuissa, jossa aineen lämpötila muuttuu reaktiossa. Entalpia määritellään kaasun sisäenergia $U$, paineen $p$ ja tilavuuden $V$ avulla seuraavasti: $H=U+pV$. Entalpiaa käytetään laskuissa silloin, kun lasku suoritetaan Mollier-diagrammin avulla.
 
 ::::{admonition} Esimerkki
 
@@ -152,4 +158,4 @@ Aluksi kylmäaineina käytettiin ns. freoneja. Ne ovat aineita, jotka sisältäv
 
 Toisen sukupolven kylmäaineet olivat ns. HFC-yhdisteitä, joissa CFC-yhdisteiden kloorin paikalle vaihdettiin vety (kemiallinen merkki H). Näiden aineiden ODP on nolla, mutta GWP suuri. Lämpöpumpuissa käytetään yleisesti tähän aineryhmään kuuluvaa difluorieteeniä.
 
-Nykyään on alettu käyttää kylmäaineina luonnonmukaisia hiilivetyjä, kuten etaania, propaania, butaania ja pentaania. Näiden ODP on nolla ja GWP on pieni. Lisäksi isoissa kylmälaitoksissa on jo kymmeniä vuosia käytetty yleisesti ammoniakkia, joka ei tuhoa otsonikerrosta eikä ole kasvihuonekaasukaan. Euroopan unionissa on määritetty direktiivi, jonka mukaan vuodesta 2025 alkaen kodin kylmälaitteiden suurin sallittu GWP on 2000 ja ODP:n pitää olla nolla.
+Nykyään on alettu käyttää kylmäaineina luonnonmukaisia hiilivetyjä, kuten etaania, propaania, butaania ja pentaania. Näiden ODP on nolla ja GWP on pieni. Lisäksi isoissa kylmälaitoksissa on jo kymmeniä vuosia käytetty yleisesti ammoniakkia, joka ei tuhoa otsonikerrosta eikä ole kasvihuonekaasukaan. Euroopan unionissa kylmälaitteiden suurimmat sallitut ODP- ja GWP-arvot on määritelty direktiiveillä.

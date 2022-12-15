@@ -4,13 +4,13 @@ Aiemmin todettiin, että kappaleen lämpötila kuvaa kappaleen rakenneosien liik
 
 ## Lämpöenergian käsite
 
-Mekaniikan kurssilla tarkasteltiin mekaanista työtä $W$ ja mekaanista energiaa $E$. Tällöin työllä tarkoitettiin kappaleen siirtämistä tai nostamista, ja tämän työn seurauksena kappale sai liike- tai potentiaalienergiaa. Työn ja energian yksikkö on joule (J). Työn määrää aikayksikössä kutsutaan nimellä teho, ja sen yksikkö J/s tunnetaan lyhenteellä watti (W). 
+Mekaniikassa on tapana tarkastella mekaanista työtä $W$ ja mekaanista energiaa $E$. Tällöin työllä tarkoitetaan kappaleen siirtämistä tai nostamista, ja tämän työn seurauksena kappale saa liike- tai potentiaalienergiaa. Työn ja energian yksikkö on joule (J). Työn määrää aikayksikössä kutsutaan nimellä teho, ja sen yksikkö J/s tunnetaan lyhenteellä watti (W). 
 
 Lämpöopissa suureilla on hieman eri nimet ja lyhenteet:
 
-- lämpömäärä $Q$, yksikkö J
+- työtä ja energiaa vastaa lämpömäärä $Q$, yksikkö J
 
-- lämpövirta $\Phi$, yksikkö W
+- tehoa vastaa lämpövirta $\Phi$, yksikkö W
 
 Kappaleeseen voidaan siis tuoda tai kappaleesta voi poistua lämpöenergiaa, jonka määrää mitataan lämpömäärällä $Q$. Lämmön siirtymisen nopeutta kuvaa lämpövirta $\Phi$. Ajassa $t$ siirtyvä lämpömäärä on $Q=\Phi t$. 
 
@@ -24,7 +24,7 @@ Lämpöoppiin kuuluu muutamia erityisiä sääntöjä, ns. pääsääntöjä. Ni
 
 Eristetty systeemi tarkoittaa sellaista systeemiä, joka ei ota ulkopuolelta vastaan energiaa eikä myöskään luovuta sitä pois. Jos meillä on ämpärillinen kylmää vettä ja sinne laitetaan kuuma kiuaskivi, niin on ajateltava, että lämpöä siirtyy vain veden ja kiven välillä, eikä siis esimerkiksi veden ja huoneilman välillä. Lähemmäs todellista eristettyä systeemiä päästäisiin, jos ämpäri olisi erimerkiksi styrox-laatikossa.
 
-Mitä sitten tarkoittaa se, että systeemi siirtyy kohti lämpötasapainoa? Jos systeemiin kuuluu osia, joilla on keskenään eri lämpötila, niin energiaa siirtyy lämpimämmästä aineesta kylmempään, kunnes kaikkien osien lämpötila on sama. Ämpärissä siirtyy lämpöenergiaa kiuaskivesta veteen niin kauan, että vesi on lämmennyt ja kiuaskivi jäähtynyt samaan lämpötilaan. Lämpöenergia siirtyy aina lämpimmästä kappaleesta kylmempään.
+Mitä sitten tarkoittaa se, että systeemi siirtyy kohti lämpötasapainoa? Jos systeemiin kuuluu osia, joilla on keskenään eri lämpötila, niin energiaa siirtyy lämpimämmästä aineesta kylmempään, kunnes kaikkien osien lämpötila on sama. Ämpärissä siirtyy lämpöenergiaa kiuaskivesta veteen niin kauan, että vesi on lämmennyt ja kiuaskivi jäähtynyt samaan lämpötilaan. Lämpöenergia siirtyy aina kuumemmasta kappaleesta kylmempään.
 
 ## Ominaislämpökapasiteetti
 
@@ -110,12 +110,12 @@ $c_k=\frac{4190~\frac{\text{J}}{\text{kg}\cdot \text{K}}\cdot 10~\text{kg} \cdot
 
 ::::{admonition} Esimerkki
 
-Saunan padasta otetaan ämpäriin 2 litraa vettä, jonka lämpötila on 94 astetta. Kuinka paljon sinun pitää lisätä ämpäriin 10-asteista vettä, jotta saat pesuvedeksi 35-asteista vettä?
+Otat saunan padasta ämpäriin 2 litraa vettä, jonka lämpötila on 94 astetta. Kuinka paljon sinun pitää lisätä ämpäriin 10-asteista vettä, jotta saat pesuvedeksi 35-asteista vettä?
 
 :::{admonition} Ratkaisu
 :class: tip, dropdown
 
-Energiaperiaate: Lämpimän veden luovuttama energia = kylmän vastaanottama energia. Merkitään lämpimän veden suureita alaindeksillä 1 ja kylmän veden suureita alaindeksillä 2. Ominaislämpökapasiteetti $c$ on sama kylmällä ja lämpimällä vedellä, ja se supistuukin yhtälöstä pois:
+Energiaperiaate: Lämpimän veden luovuttama energia = kylmän veden vastaanottama energia. Merkitään lämpimän veden suureita alaindeksillä 1 ja kylmän veden suureita alaindeksillä 2. Ominaislämpökapasiteetti $c$ on sama kylmällä ja lämpimällä vedellä, ja se supistuukin yhtälöstä pois:
 
 $Q_1=Q_2$
 
@@ -172,7 +172,7 @@ Sähköenergiaa kuluu $Q=Pt=30~\text{kW}\cdot \frac{35}{60}~\text{h} = 17.5~\tex
 
 Kaavaan $Q=cm\Delta t$ on hankalaa sijoittaa mitään selkeää massaa $m$, jos lämpöä siirtävä aine on virtaavaa vettä. Tällöin tarvitaan tilavuusvirran $q_v$ ja massavirran $q_v$ käsitettä.
 - Tilavuusvirta $q_v$ kertoo sen, kuinka suuri tilavuus esimerkiksi vettä kiertää lämmitysjärjestelmässä tietyssä ajassa. Tilavuusvirta pitää sijoittaa laskuihin yksikössa on $\text{m}^3/\text{s}$, mutta usein se saatetaan ilmaista lähtötietona muodossa $\text{l}/\text{min}$ tai $\text{l}/\text{h}$. Muunnos onnistuu kaavoilla $1~\text{m}^3=1000~\text{l}$, $1~\text{min}=60~\text{s}$ ja $1~\text{h}=3600~\text{s}$.
-- Massavirta $q_m$ vastaa tietyssä ajassa systeemin läpi virtaamaan aineen massaa. Se saadaan kertomalla tilavuusvirta $q_v$ aineen tiheydellä $\rho$. Vedelle voidaan käyttää arvoa $\rho=1000~\text{kg}/\text{m}^3$.
+- Massavirta $q_m$ vastaa tietyssä ajassa systeemin läpi virtaavan aineen massaa. Se saadaan kertomalla tilavuusvirta $q_v$ aineen tiheydellä $\rho$. Vedelle voidaan käyttää arvoa $\rho=1000~\text{kg}/\text{m}^3$.
 
 Massavirtaa voidaan käyttää laskuissa hyödyntämällä periaatetta: luovutettu lämpöteho = vastaanotettu lämpöteho, eli $\Phi = q_m c \Delta T$. Kaavan voi johtaa energian säilymislaista jakamalla yhtälön molemmat puolet ajalla $t$.
 

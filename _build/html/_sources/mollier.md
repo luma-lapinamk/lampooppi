@@ -45,7 +45,7 @@ Tehoksi saadaan
 
 $P=\frac{W}{t}=\frac{m \Delta H}{t}=\frac{12.5~\text{kg}\cdot 24000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=5000~\text{W}$
 
-Tehontarpeeksi saatiin siis sama 5 kW kuin aiemmin eri tavalla laskemalla.
+Tehontarpeeksi saatiin siis suunnilleen sama 5 kW kuin aiemmin eri tavalla laskemalla.
 
 :::
 

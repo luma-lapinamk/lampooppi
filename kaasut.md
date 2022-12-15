@@ -121,7 +121,7 @@ Koska prosesseissa ei siirry lämpöenergiaa $Q$, niin kaasun sisäenergian muut
 
 ::::{admonition} Esimerkki
 
-Bensiinimoottorin ottaa sylinteriin ulkoilmaa, jonka lämpötila on 10 astetta. Moottorin puristussuhde on 16, siis sylinteritilavuuden maksimin $V_1$ ja minimin $V_2$ suhde on $V_1/V_2=16$. Laske ilman lämpötila, kun ilman tilavuus on pienimmillään. Oletetaan, että puristus on adiabaattinen.
+Bensiinimoottori ottaa sylinteriin ulkoilmaa, jonka lämpötila on 10 astetta. Moottorin puristussuhde on 16, siis sylinteritilavuuden maksimin $V_1$ ja minimin $V_2$ suhde on $V_1/V_2=16$. Laske ilman lämpötila, kun ilman tilavuus on pienimmillään. Oletetaan, että puristus on adiabaattinen.
 s
 :::{admonition} Ratkaisu
 :class: tip, dropdown
@@ -132,7 +132,7 @@ $T_2=T_1\frac{V_2 ^{\gamma-1}}{V_1 ^{\gamma-1}}=T_1 \left(\frac{V_1}{V_2}\right)
 
 Sijoitetaan lämpötila $T_1=(10+273)~\text{K}=283~\text{K}$, puristussuhde sekä ilman adiabaattinen vakio:
 
-$T_1=283~\text{K}\cdot 16^{\1.4-1} = 858~\text{K}$
+$T_1=283~\text{K}\cdot 16^{1.4-1} = 858~\text{K}$
 
 Lämpötila on siis noin 585 Celsius-astetta.
 
@@ -149,7 +149,7 @@ Mihin murto-osaan ilman Kelvin-lämpötila pienenee, kun kaasu laajenee adiabaat
 
 Nyt $V_2=20 V_1$. Uusi lämpötila on
 
-$T_2 = T_1 \left(\frac{V_1}{20 V_1}\)^{\gamma-1} = T_1 \left(\frac{1}{20}\right)^{0.4} = 0.3~\text{T_1}$
+$T_2 = T_1 \left(\frac{V_1}{20 V_1}\right)^{\gamma-1} = T_1 \left(\frac{1}{20}\right)^{0.4} = 0.3 T_1$
 
 Lämpötila laskee siis 30 prosenttiin alkuperäisestä (Kelvin-asteikolla mitattuna).
 

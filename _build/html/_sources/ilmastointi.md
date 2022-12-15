@@ -8,9 +8,9 @@ Tässä kappaleessa tarvittavia käsitteitä ovat absoluuttinen kosteus, kylläs
 
 |Suure|Merkitys|Yksikkö|Laskukaava|
 |-----|--------|-------|----------|
-|Absoluuttinen kosteus, AH (absolute humidity)|vesihöyryn määrä $m$ ilmassa tilavuudessa $V$|$\text{g/m}^3$ tai $\text{g/kg}$|$AH=\frac{m}{V}$|
-|Kyllästyskosteus, SH (saturation humidity)| maksimimäärä vesihöyryä, jonka ilma voi sisältää tietyssä lämpötilassa|$\text{g/m}^3$ tai $\text{g/kg}$|kuvaajasta tai taulukoista|
-|Suhteellinen kosteus, RH (relative humidity)| absoluuttisen kosteuden ja kyllästyskosteuden suhde| prosentti %| $RH=\frac{AH}{SH}$|
+|absoluuttinen kosteus, AH (absolute humidity)|vesihöyryn määrä $m$ ilmassa tilavuudessa $V$|$\text{g/m}^3$ tai $\text{g/kg}$|$AH=\frac{m}{V}$|
+|kyllästyskosteus, SH (saturation humidity)| maksimimäärä vesihöyryä, jonka ilma voi sisältää tietyssä lämpötilassa|$\text{g/m}^3$ tai $\text{g/kg}$|kuvaajasta tai taulukoista|
+|suhteellinen kosteus, RH (relative humidity)| absoluuttisen kosteuden ja kyllästyskosteuden suhde| prosentti %| $RH=\frac{AH}{SH}$|
 
 Kyllästyskosteus SH riippuu voimakkaasti lämpötilasta. Kuumana kesäpäivänä ilma voi olla kosteaa, mutta yöllä, kun ilma jäähtyy, kosteus tiivistyy pisaroiksi nurmikolle. Lämpötilaa, jossa vesihöyry alkaa tiivistyä vedeksi, kutsutaan kastepisteeksi. Kastepisteessä kyllästyskosteus on sama kuin absoluuttinen kosteus. 
 
@@ -20,7 +20,7 @@ Kyllästyskosteudelle on olemassa erilaisia laskukaavoja, joista osassa huomioid
 
 ::::{admonition} Esimerkki
 
-Eräänä päivänä ulkolämpötila on 20 astetta, ja ilman suhteellinen kosteus on 60 %. 
+Eräänä päivänä ulkolämpötila on 22 astetta, ja ilman suhteellinen kosteus on 60 %. 
 
 a) Kuinka suuri on tuolloin absoluuttinen kosteus?
 
@@ -29,11 +29,11 @@ b) Mikä on kastepiste kyseisenä päivänä?
 :::{admonition} Ratkaisu
 :class: tip, dropdown
 
-a) Absoluuttinen kosteus saadaan laskemalla $AH = SH\cdot RH$. Laskuun tarvitaan suhteellinen kosteuden $RH=0.60$ lisäksi maksimikosteuden arvo SH. Luetaan se kuvaajasta: $SH = 16~\text{g/kg}$.
+a) Absoluuttinen kosteus saadaan laskemalla $AH = SH\cdot RH$. Laskuun tarvitaan suhteellinen kosteuden $RH=0.60$ lisäksi maksimikosteuden arvo SH. Luetaan se kuvaajasta: $SH = 17~\text{g/kg}$.
 
-Siis $AH = SH\cdot RH = 16~\text{g/kg}\cdot 0.60 = 9.6~\text{g/kg}$ eli noin $10~\text{g/kg}$.
+Siis $AH = SH\cdot RH = 17~\text{g/kg}\cdot 0.60 = 10.2~\text{g/kg}$ eli noin $10~\text{g/kg}$.
 
-b) Kastepiste on se lämpötila, jossa $10~\text{g/kg}$ on sama kuin kyllästyskosteus SH. Kuvaajan mukaan kastepiste on noin 11 astetta. Jos ilma jäähtyy tuohon lämpötilaan, alkaa kosteutta tiivistyä maahan.
+b) Kastepiste on se lämpötila, jossa $10~\text{g/kg}$ on sama kuin kyllästyskosteus SH. Kuvaajan mukaan kastepiste on noin 14 astetta. Jos ilma jäähtyy tuohon lämpötilaan, alkaa kosteutta tiivistyä maahan.
 
 :::
 
@@ -98,19 +98,19 @@ b) laitteen teho.
 :::{admonition} Ratkaisu
 :class: tip, dropdown
 
-Kyllästyskosteuden kuvaajasta nähdään, että 10 asteessa SH on noin $9~\text{g/kg}$. Absoluuttinen kosteus on siten $AH=0.40\cdot 9~\text{g/kg} = 3.6~\text{g/kg}.
+Kyllästyskosteuden kuvaajasta nähdään, että 10 asteessa SH on noin $7~\text{g/kg}$. Absoluuttinen kosteus on siten $AH=0.40\cdot 7~\text{g/kg} = 2.8~\text{g/kg}$.
 
-Huoneilmassa 22 asteen lämpötilassa SH on kuvaajan mukaan noin $17~\text{g/kg}$. Absoluuttisen kosteuden tulee olla 50 % tästä eli  $8.5~\text{g/kg}$. Vesihöyryä pitää siis lisätä noin $5~\text{g/kg}$. Aiemmin laskettiin, että yksi kuutiometri ulkoilmaa vastaa 12.5 kg massaa (tilavuushan muuttuu, kun ilmaa lämmitetään, mutta massa pysyy samana). Minuutissa vesihöyryä pitää siis lisätä
+Huoneilmassa 22 asteen lämpötilassa SH on kuvaajan mukaan noin $17~\text{g/kg}$. Absoluuttisen kosteuden tulee olla 50 % tästä eli  $8.5~\text{g/kg}$. Vesihöyryä pitää siis lisätä noin $6~\text{g/kg}$. Aiemmin laskettiin, että yksi kuutiometri ulkoilmaa vastaa 12.5 kg massaa (tilavuushan muuttuu, kun ilmaa lämmitetään, mutta massa pysyy samana). Minuutissa vesihöyryä pitää siis lisätä
 
-$5~\text{g/kg}^3\cdot 12.5~\text{kg}=62.5~\text{g}$.
+$6~\text{g/kg}^3\cdot 12.5~\text{kg}=75~\text{g}$.
 
 b) Lämmitystehon kulutukseksi on laskettu jo aiemmin 2.5 kW.
 
 Höyrystimen tehonkulutus saadaan kaavalla
 
-$P=\frac{mr}{t}=\frac{0.065~\text{kg}\cdot 2280000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=2470~\text{W}$
+$P=\frac{mr}{t}=\frac{0.075~\text{kg}\cdot 2280000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=2850~\text{W}$
 
-Ilman kosteuttamiseen kuluu siis suunnilleen 2.5 kW, eli saman verran kuin pelkkään lämmitykseen. Ilmastointilaitteen kokonaisteho on näin ollen noin 5 kW.
+Ilman kosteuttamiseen kuluu siis suunnilleen 2.9 kW, eli enemmän verran kuin pelkkään lämmitykseen. Ilmastointilaitteen kokonaisteho on näin ollen noin 5.4 kW.
 
 :::
 
