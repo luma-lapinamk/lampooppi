@@ -9,7 +9,7 @@ Lämpöä voi siirtyä johtumalla, virtaamalla tai säteilemällä.
 
 ## Johtuminen
 
-Lämmön johtumista tarkasteltaessa perustana on Fourierin laki: $\Phi= \lambda A \frac{dT}{dx}$, missä $\Phi$ on lämpövirta watteina, $\lambda$ on aineen lämmönjohtavuus (yksikkö $\text{W/(m}\cdot \text{K)}$), $dT$ on lämpötilaero hyvin ohuen ainekerroksen vastakkaisten pintojen välillä, ja $dx$ on hyvin ohuen ainekerroksen paksuus.
+Lämmön johtumista tarkasteltaessa perustana on Fourierin laki: $\Phi= \lambda A \frac{dT}{dx}$, missä $\Phi$ on lämpövirta watteina, $\lambda$ on aineen lämmönjohtavuus (yksikkö $\text{W/(m}\cdot \text{K)}$), $A$ on pinta-ala, $dT$ on lämpötilaero hyvin ohuen ainekerroksen vastakkaisten pintojen välillä, ja $dx$ on hyvin ohuen ainekerroksen paksuus.
 
 Seuraavassa taulukossa on talonrakennuksessa sekä lumi- ja jäärakentamisessa käytettävien materiaalien lämmönjohtavuuksia.
 
@@ -71,7 +71,7 @@ Oven tai ikkunan U-arvo voidaan määrittää seuraavanlaisella kokeella:
 
 Esimerkki: Oven korkeus on 200 cm ja leveys 90 cm. Kun kammiossa on 60 W teholähde, kammion lämpötila nousee 45 astetta korkeammaksi kuin ympäristön. Mikä on oven U-arvo?
 
-Pinta-ala ok $A = 2.0~\text{m} \cdot 0.9~\text{m} = 1.8~\text{m}^2$, lämpövirta on yhtä suuri kuin lämmittimen teho $P$ eli $\Phi = 60~\text{W}$, ja lämpötilaero on $\Delta T = 45~\text{K}$.
+Pinta-ala on $A = 2.0~\text{m} \cdot 0.9~\text{m} = 1.8~\text{m}^2$, lämpövirta on yhtä suuri kuin lämmittimen teho $P$ eli $\Phi = 60~\text{W}$, ja lämpötilaero on $\Delta T = 45~\text{K}$.
 
 Ratkaistaan $U=\frac{\Phi}{A \Delta T}$ ja sijoitetaan lukuarvot:
 
@@ -149,7 +149,7 @@ Konvektiossa siirtymä lämpövirta on $\Phi=h A (T_p-T_{\infty})$, missä $h$ o
 
 **Eristävät ilmakerrokset**
 
-Tarkastellaan pääasiassa rakennuksen ulkoseinästä ulkoilmaan tapahtuvaa konvektiota. Pelkästään lämmön johtumisen tarkastelu esimerkiksi seinien ja ikkunoiden läpi menevän lämpövirran laskemisessa antaa virheellisiä tuloksia. Todellisuudessa seinien tai ikkunoiden pinnoille muodostuu eristävä ilmakerros, joka pienentää lämpövirtaa. Ilmakerroksen eristyskyky riippuu ilmavirtauksista, esim. tuulen voimakkuudesta.
+Tarkastellaan rakennuksen ulkoseinästä ulkoilmaan tapahtuvaa konvektiota. Pelkästään lämmön johtumisen tarkastelu esimerkiksi seinien ja ikkunoiden läpi menevän lämpövirran laskemisessa antaa virheellisiä tuloksia. Todellisuudessa seinien tai ikkunoiden pinnoille muodostuu eristävä ilmakerros, joka pienentää lämpövirtaa. Ilmakerroksen eristyskyky riippuu ilmavirtauksista, esim. tuulen voimakkuudesta.
 
 Edellisessä kaavassa esiintyvä konvektiivinen lämmönsiirtokerroin $h$ riippuu olosuhteista. Kokeellisia arvoja eri tuuliolosuhteissa
 löytyy rakennusmääräyskokoelmista. Ilmakerrosta voidaan käsitellä laskuissa samalla tavalla kuin mitä tahansa rakenteen kerrosta. Kerroin $h$ on tällöin sama kuin ilmakerroksen U-arvo.
@@ -236,7 +236,7 @@ $(0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\fra
 
 On siis ratkaistava yhtälö
 
-$(0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}=1.8~\frac{\text{K}\cdot\text{m}^2}{\text{W}}$$
+$(0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}=1.8~\frac{\text{K}\cdot\text{m}^2}{\text{W}}$
 
 Yhtälön ratkaisuksi saadaan $x=0.051$, siis noin 5 cm eristekerros riittää.
 
@@ -269,7 +269,7 @@ Sijoitetaan ajan $t$ paikalle yksi tunti eli 3600 sekuntia, ja saadaan
 
 $d=\frac{15~\text{K} \cdot 3600~\text{s}} {0.64~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\cdot 333000~\frac{\text{J}}{\text{kg}}\cdot 917~\frac{\text{kg}}{\text{m}^3}}$
 
-Tulokseksi saadaan $d=0.003~\text{m}$, eli tunnissa jäätä muodostuu noin 3 mm. Jään muodostumisnopeus ei tietenkään pysy vakiona, sillä jääkerroksen paksuus kasvaa koko ajan.
+Tulokseksi saadaan $d=0.003~\text{m}$, eli tunnissa jäätä muodostuu noin 3 mm. Jään muodostumisnopeus ei tosin oikeasti pysy vakiona, sillä jääkerroksen paksuus kasvaa koko ajan.
 
 :::
 

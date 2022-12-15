@@ -21,9 +21,9 @@ missä $a$ on kaasun molekyylien väliseen vuorovaikutukseen liittyvä kerroin, 
 
 ## Ainemäärä
 
-Kaasulaeissa esiintyvä suure $n$ on nimeltään ainemäärä. Se kertoo hiukkasten kappalemäärän. Ainemäärää käytetään suureena esimerkiksi verikokeissa (normaali kolesteriarvo on luokkaa 5 millimoolia yhdessä litrassa verta).
+Kaasulaeissa esiintyvä suure $n$ on nimeltään ainemäärä. Se kertoo hiukkasten kappalemäärän, ja sen yksikkö on mooli (lyhenne mol). Ainemäärää käytetään suureena esimerkiksi verikokeissa (normaali kolesteriarvo on luokkaa 5 millimoolia yhdessä litrassa verta).
 
-Ainemäärän yksikkö on mooli (lyhenne mol). Yksi mooli tarkoittaa sitä, että aineen perusosasia on $6\cdot 10^{23}$ kappaletta. Kappalemäärä on nimeltään Avogadron vakio $N_A$. Luku on peräisin hiilen ominaisuuksista: 1800-luvulla pystyttiin selvittämään, että 12 grammaa hiiltä sisältää yhden moolin verran hiiliatomeja. 
+Yksi mooli tarkoittaa sitä, että aineen perusosasia on $6\cdot 10^{23}$ kappaletta. Kappalemäärä on nimeltään Avogadron vakio $N_A$. Luku on peräisin hiilen ominaisuuksista: 1800-luvulla pystyttiin selvittämään, että 12 grammaa hiiltä sisältää yhden moolin verran hiiliatomeja. 
 
 Rakenneosat, joita ainemäärässä lasketaan, ovat aineesta riippuen yksittäisiä atomeja tai useasta atomista koostuvia molekyylejä. Kukaan ei tietenkään pysty laskemaan esimerkiksi huoneilmassa olevien molekyylien lukumäärää. Ainemäärä onkin määritelty seuraavasti:
 
@@ -140,7 +140,7 @@ $n=\frac{101300~\text{Pa}\cdot(3.5\cdot 4.0\cdot 3.0)~\text{m}^3}{8.31~\text{J/(
 
 Ilman moolimassaksi laskettiin aiemmin 29 g/mol. Siispä huoneessa olevan ilman massa on
 
-$m=n1735~\text{mol}\cdot 29\text{g/mol} = 50315~\text{g}$ eli noin 50 kg.
+$m=1735~\text{mol}\cdot 29~\text{g/mol} = 50315~\text{g}$ eli noin 50 kg.
 
 :::
 
@@ -189,9 +189,7 @@ $E=\frac{3}{2}kT$,
 
 missä $k=\frac{R}{N_A}=1.38\cdot 10^{-23}~\frac{\text{J}}{\text{K}}$ on nimeltään Boltzmannin vakio.
 
-Lämpö on siis kirjaimellisesti molekyylien liike-energiaa. Pienin mahdollinen lämpötila on 0 K, koska liike-energia ei voi olla negatiivista
-Lämpötilassa 0 K kaasumolekyylit astiassa eivät enää liikkuisi ollenkaan. Lämpötilaa 0 K on mahdoton saavuttaa, mutta Suomessakin on päästy
-hyvin lähelle (miljoonasosa-asteen päähän).
+Lämpö on siis kirjaimellisesti molekyylien liike-energiaa. Pienin mahdollinen lämpötila on 0 K, koska liike-energia ei voi olla negatiivista. Lämpötilassa 0 K kaasumolekyylit astiassa eivät enää liikkuisi ollenkaan. Lämpötilaa 0 K on mahdoton saavuttaa, mutta Suomessakin on päästy hyvin lähelle (miljoonasosa-asteen päähän).
 
 :::{admonition} Kaavan johtaminen
 :class: tip, dropdown

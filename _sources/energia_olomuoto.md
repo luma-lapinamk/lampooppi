@@ -17,11 +17,11 @@ Energian suunta aineeseen tai aineesta poispäin riippuu siitä, millainen olomu
 
 ## Lämpöenergia olomuodon muutoksissa
 
-Olomuodon muutos sitoo energiaa. Yleensä aineen lämpötila nousee, kun ainetta lämmitetään. Jos kuitenkin aine sattuu lämmityksessä saavuttamaan sen lämpötilan, jossa olomuodon muutos tapahtuu, niin kaikki aineeseen tuotava lämpöenergia kuluu olomuodon muutoksiin. Jääpala pysyy 0-asteisena, kunnes se on kokonaan sulanut, eikä kattilassa kiehuvan veden lämpötila nouse 100 asteesta.
+Olomuodon muutos sitoo energiaa. Yleensä aineen lämpötila nousee, kun ainetta lämmitetään. Jos kuitenkin aine sattuu lämmityksessä saavuttamaan sen lämpötilan, jossa olomuodon muutos tapahtuu, niin kaikki aineeseen tuotava lämpöenergia kuluu olomuodon muutokseen. Jääpala pysyy 0-asteisena, kunnes se on kokonaan sulanut, eikä kattilassa kiehuvan veden lämpötila nouse 100 asteesta.
 
 Olomuodon muutokseen tarvittava energia riippuu aineen **sulamis- tai höyrystymislämmöstä** ja aineen massasta $m$. Sulamislämmölle käytetään tässä merkintää $s$ ja höyrystymislämmölle merkintää $r$. Tällöin sulamiseen kuluva energia on $Q=sm$ ja höyrystymiseen kuluva energia on $Q=rm$.
 
-Sulamis- ja höyrystymislämmöt ovat sitä suurempia, mitä vahvemmat voimat aineet rakenneosien välillä on. Ionisidos on yleensä lujempi kuin molekyylisidos. Molekyyleistä koostuvassa aineissa molekyylien koko vaikuttaa energian määrään. Veden sulamis- ja höyrystymislämmöt ovat valtavan suuria. Sulamislämpö on $s=333~\text{kJ/kg}$ ja höyrystymislämpö on $s=2260~\text{kJ/kg}$. Esimerkiksi jäätyneen järven sulaminen keväällä sitoo erittäin paljon lämpöenergiaa. Sen jälkeen tarvitaan vielä paljon energiaa, ennen kuin vesi on lämmintä.
+Sulamis- ja höyrystymislämmöt ovat sitä suurempia, mitä vahvemmat voimat aineen rakenneosien välillä on. Ionisidos on yleensä lujempi kuin molekyylisidos. Molekyyleistä koostuvassa aineissa molekyylien koko vaikuttaa energian määrään. Veden sulamis- ja höyrystymislämmöt ovat valtavan suuria. Sulamislämpö on $s=333~\text{kJ/kg}$ ja höyrystymislämpö on $s=2260~\text{kJ/kg}$. Esimerkiksi jäätyneen järven sulaminen keväällä sitoo erittäin paljon lämpöenergiaa. Sen jälkeen tarvitaan vielä paljon energiaa ennen kuin vesi on lämmintä.
 
 Yleisesti lämpöenergiaan liittyvissä laskuissa täytyy huomioida se, sisältyykö tapahtumaan sekä lämpenemistä (tai jäähtymistä) että olomuodon muutoksia. Kaikki nämä tapahtumat pitää huomioida energiamäärän laskemisessa.
 
@@ -38,7 +38,7 @@ $Q=c_{\text{jää}} m \Delta T_1 + sm + c_{\text{vesi}} m \Delta T_2$
 
 eli
 
-$Q=2100~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg} \cdot 18~\text{K} + 333000\text{J/kg} \cdot 3~\text{kg} + 4190~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg}\cdot 20~\text{K} = 1 363 800~\text{J}$
+$Q=2100~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg} \cdot 18~\text{K} + 333000~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg} + 4190~\frac{\text{J}}{\text{kg}} \cdot 3~\text{kg}\cdot 20~\text{K} = 1 363 800~\text{J}$
 
 Lämpöä sitoutuu noin 1.4 megajoulea.
 
@@ -56,9 +56,9 @@ lämpötila aluksi on -15 astetta? Lumen ominaislämpökapasiteetti ja sulamisl�
 
 Samalla tavalla kuin edellisessä esimerkissä saadaan energian määräksi
 
-$Q=2100~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg} \cdot 15~\text{K} + 333000\text{J/kg} \cdot 0.5~\text{kg} + 4190~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg}\cdot 100~\text{K}$
+$Q=2100~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg} \cdot 15~\text{K} + 333000~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg} + 4190~\frac{\text{J}}{\text{kg}} \cdot 0.5~\text{kg}\cdot 100~\text{K}$
 
-$ Q = 391 750 J~\text{J}$
+$ Q = 391 750~\text{J}$
 
 Energia $Q$, retkikeittimen teho $P$ ja tarvittava aika $t$ ovat yhteydessä toisiinsa kaavalla $Q=Pt$. Ajaksi saadaan siis 
 
@@ -72,9 +72,9 @@ Aikaa kuluu noin 6.5 minuuttia.
 
 ::::{admonition} Esimerkki
 
-Terästehtaan valukoneeseen syötetään sulaa 1590-asteista terästä, joka jäähdytetään vedellä 1200-asteiseksi kiinteäksi teräkseksi. Olomuoto muuttuu 1350 asteen kohdalla. Yhdessä valussa terästä valmistuu 120 000 kg. Valu kestää 1h 15 min. Jäähdytysvesi tuodaan koneeseen 15-asteisena, ja se poistuu 35-asteisena. Laske jäähdytysveden massavirta.
+Terästehtaan valukoneeseen syötetään sulaa 1590-asteista terästä, joka jäähdytetään vedellä 1200-asteiseksi kiinteäksi teräkseksi. Olomuoto muuttuu 1350 asteen kohdalla. Yhdessä valussa terästä valmistuu 120 000 kg. Valu kestää 1 h 15 min. Jäähdytysvesi tuodaan koneeseen 15-asteisena, ja se poistuu 35-asteisena. Laske jäähdytysveden massavirta.
 
-Tarvittavat suureet: veden ominaislämpökapasiteetti $c_v=4190~\frac{\text{J}}{\text{kg}}$, sulan teräksen ominaislämpökapasiteetti $c={t,s}=430 ~\frac{\text{J}}{\text{kg}}$, kiinteän teräksen ominaislämpökapasiteetti $c_{t,k}=470~\frac{\text{J}}{\text{kg}}$, teräksen sulamislämpö $s=270000\text{J/kg}$.
+Tarvittavat suureet: veden ominaislämpökapasiteetti $c_v=4190~\frac{\text{J}}{\text{kg}}$, sulan teräksen ominaislämpökapasiteetti $c_{t,s}=430 ~\frac{\text{J}}{\text{kg}}$, kiinteän teräksen ominaislämpökapasiteetti $c_{t,k}=470~\frac{\text{J}}{\text{kg}}$, teräksen sulamislämpö $s=270000~\frac{\text{J}}{\text{kg}}$$.
 
 
 :::{admonition} Ratkaisu
@@ -86,9 +86,9 @@ Ensimmäisessä vaiheessa, kun teräs jäähtyy sulamispisteeseensä, lämpötil
 
 $Q_1=c_{t,s} m_t \Delta T_1 = 430 ~\frac{\text{J}}{\text{kg}}\cdot 120000~\text{kg} \cdot 240~\text{K}= 12.384~\text{GJ}$
 
-Teräksen kiinteytessä vapautuu energia
+Teräksen jähmettyessä vapautuu energia
 
-$Q_2=sm_t = 270000\text{J/kg} \cdot 120000~\text{kg} = 32.4~\text{GJ}$
+$Q_2=sm_t = 270000~\frac{\text{J}}{\text{kg}} \cdot 120000~\text{kg} = 32.4~\text{GJ}$
 
 Kiinteän teräksen jäähtyessä lämpötilanmuutos on $\Delta T_2 = (1350-1200)~\text{K} = 150~\text{K}$, ja vapautuvan energian määrä on
 
@@ -134,7 +134,7 @@ Astiassa on 1000 g vettä 10 asteen lämpötilassa. Astiaan laitetaan 200 g jä�
 :::{admonition} Ratkaisu
 :class: tip, dropdown
 
-Oletetaan, että jää sulaa kokonaan. Tällöin vesi luovuttaa lämpöenergiaa määrän $Q$, joka riittää jään sulattamiseen ja sulaneen veden lämmittämiseen. Sulamiseen kuluu energiaa määrä $sm_j$, missä $s=333000~\text{J/kg}$ on veden sulamislämpö ja $m_j=0.2~\text{kg}$ on jääpalan massa. Lämmittämiseen kuluu energia $cm\Delta T_j$ missä $c=4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}$ on veden ominaislämpökapasiteetti ja $\Delta T_j = (T_l-0)~\text{K}=T_l~\text{K}$ on jääpalasta sulaneen veden lämpötilan muutos, kun seoksen loppulämpötila on $T_l$. Siis vesi luovuttaa energian
+Oletetaan, että jää sulaa kokonaan. Tällöin vesi luovuttaa lämpöenergiaa määrän $Q$, joka riittää jään sulattamiseen ja sulaneen veden lämmittämiseen. Sulamiseen kuluu energiaa määrä $sm_j$, missä $s=333000~\frac{\text{J}}{\text{kg}}$ on veden sulamislämpö ja $m_j=0.2~\text{kg}$ on jääpalan massa. Lämmittämiseen kuluu energia $cm\Delta T_j$ missä $c=4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}$ on veden ominaislämpökapasiteetti ja $\Delta T_j = (T_l-0)~\text{K}=T_l~\text{K}$ on jääpalasta sulaneen veden lämpötilan muutos, kun seoksen loppulämpötila on $T_l$. Siis vesi luovuttaa energian
 
 $Q=sm_j+cm_j\Delta T_j$
 
@@ -146,7 +146,7 @@ $sm_j+cm_j\Delta T_l=cm_v \Delta T_v$
 
 Sijoitetaan lukuarvot:
 
-$333000~\text{J/kg}\cdot 0.2~\text{kg}+4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 0.2~\text{kg}\cdot T_l = 4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 1~\text{kg} \cdot (10-T_l)~\text{K}$
+$333000~\frac{\text{J}}{\text{kg}}\cdot 0.2~\text{kg}+4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 0.2~\text{kg}\cdot T_l = 4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 1~\text{kg} \cdot (10-T_l)~\text{K}$
 
 Yhtälön ratkaisuksi tulee $T_l=-4.9$ ja yksikkönä on Celsius-aste, koska jään ja veden alkuperäisetkin lämpötilat oli annettu Celsius-asteina. Tulos ei ole järkevä, sillä sulaneen veden lämpötila ei voi olla pakkasen puolella.
 
@@ -158,7 +158,7 @@ josta ratkeaa
 
 $x= \frac{c m_v \Delta T}{s} = \frac{4190~\frac{\text{J}}{\text{kg}\cdot\text{K}}\cdot 1~\text{kg}~\cdot 10~\text{K}}{333000\text{J/kg}} = 0.126~\text{kg}$
 
-Jäätä sulaa siis 126 g. Jäljelle jäi 200 g- 126 g = 74 g, joten lopuksi astiassa on 1126 g vettä ja 74 g jäätä, ja seoksen lämpötila on 0 astetta.
+Jäätä sulaa siis 126 g. Jäljelle jäi 200 g-126 g = 74 g, joten lopuksi astiassa on 126 g vettä ja 74 g jäätä, ja seoksen lämpötila on 0 astetta.
 
 :::
 

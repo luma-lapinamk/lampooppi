@@ -412,7 +412,7 @@ title="Print to PDF"
 <p>Kiinteiden aineiden lämpölaajeneminen täytyy huomioida erityisesti metallirakenteiden suunnittelussa. Kiinteän aineen mittojen muutosta kuvaa lämpölaajenemiskerroin <span class="math notranslate nohighlight">\(\alpha\)</span>. Kertoimet ovat varsin pieniä, esimerkiksi betonille <span class="math notranslate nohighlight">\(\alpha=12\cdot 10^{-6}~\frac{1}{K}\)</span>. Lämpötilakertoimia löytyy esimerkiksi <a class="reference external" href="https://www.taulukot.com/fysiikka/mekaniikka_termodynamiikka/#muiden_kiinteiden_aineiden_ominaisuuksia">taulukot.com</a>-sivustolta.</p>
 <p>Jos kappaleen pituus alkuperäisessä lämpötilassa on <span class="math notranslate nohighlight">\(l_0\)</span>, niin pituus lämpötilan muutoksen <span class="math notranslate nohighlight">\(\Delta T\)</span> jälkeen on</p>
 <p><span class="math notranslate nohighlight">\(l=l_0(1+\alpha \Delta T)\)</span></p>
-<p>Tarvittaessa voidaan laskea myös pituuden muutos <span class="math notranslate nohighlight">\(\Delta l\)</span>:</p>
+<p>Tarvittaessa voidaan laskea myös pituuden muutos <span class="math notranslate nohighlight">\(\Delta l=l-l_0\)</span>:</p>
 <p><span class="math notranslate nohighlight">\(\Delta l = \alpha l_0 \Delta T\)</span></p>
 <div class="admonition-esimerkki admonition">
 <p class="admonition-title">Esimerkki</p>
@@ -421,7 +421,7 @@ title="Print to PDF"
 <p class="admonition-title">Ratkaisu</p>
 <p>Sijoitetaan suureiden arvot laskukaavaan <span class="math notranslate nohighlight">\(l=l_0(1+\alpha \Delta T)\)</span>.</p>
 <p>Lämpötilan muutos <span class="math notranslate nohighlight">\(50^{\circ}~\text{C}-20^{\circ}~\text{C}=30^{\circ}~\text{C}\)</span> on yhtä suuri Kelvineinä, siis <span class="math notranslate nohighlight">\(\Delta T = 30\)</span> K.</p>
-<p><span class="math notranslate nohighlight">\(l=100~\text{m} (1+12\cdot 10^{-6}~\frac{1}{K} \cdot 30~\text{K}) = 100.036~\text{m}\)</span></p>
+<p><span class="math notranslate nohighlight">\(l=100~\text{m} \cdot (1+12\cdot 10^{-6}~\frac{1}{K} \cdot 30~\text{K}) = 100.036~\text{m}\)</span></p>
 <p>Muutos on siis 3.6 cm. Mittanauha näyttää väärin, koska nyt sen merkkiviivat ovat jakaantuneet liian pitkälle matkalle. Matkat ovat siis oikeasti pitempiä kuin mittanauhalla mitatut lukemat.</p>
 </div>
 </div>
@@ -450,7 +450,7 @@ title="Print to PDF"
 </section>
 <section id="nesteet">
 <h2>Nesteet<a class="headerlink" href="#nesteet" title="Permalink to this headline">#</a></h2>
-<p>Nesteillä ainoa oleellinen lämpölaajenemisen muoto on tilavuuden muutos. Ilmiötä voidaan hyödyntää lämpötilan mittauksessa. Nestelämpömittareissa asteikko on suoraan verrannollinen mittarin sisällä olevan nestepatsaan korkeuteen. Mittari toimii, koska mitä lämpimämpää on, sitä nopeammin nesteen molekyylit liikkuvat ja sitä suuremman tilan ne vaativat.</p>
+<p>Nesteillä ainoa oleellinen lämpölaajenemisen muoto on tilavuuden muutos. Ilmiötä voidaan hyödyntää lämpötilan mittauksessa. Nestelämpömittareissa asteikko on suoraan verrannollinen mittarin sisällä olevan nestepatsaan korkeuteen. Mitä lämpimämpää on, sitä nopeammin nesteen molekyylit liikkuvat ja sitä suuremman tilan ne vaativat.</p>
 <p>Nesteille on taulukoitu tilavuuden lämpölaajenemiskertoimet suoraan. Tällöin tilavuuden muutos saadaan kaavalla <span class="math notranslate nohighlight">\(\Delta V = V \gamma \Delta T\)</span>.</p>
 <p>Yleensä nesteen tilavuus on sitä suurempi, mitä korkeampi on nesteen lämpötila. Vesi poikkeaa tästä säännöstä. Veden lämpötilakerroin on negatiivinen, kun veden lämpötila on välillä <span class="math notranslate nohighlight">\(0^{\circ}~\text{C} \dots 4^{\circ}~\text{C}\)</span>, ja positiivinen, kun lämpötila on enemmän kuin <span class="math notranslate nohighlight">\(4^{\circ}~\text{C}\)</span>. Vesi kutistuu, kun se lämpenee nollasta asteesta, ja saavuttaa pienimmän tilavuutensa neljässä asteessa. Kun lämpötila nousee siitä, veden tilavuus alkaa jälleen kasvaa.</p>
 <div class="admonition-esimerkki admonition">

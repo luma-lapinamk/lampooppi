@@ -405,7 +405,7 @@ title="Print to PDF"
 </ul>
 <section id="johtuminen">
 <h2>Johtuminen<a class="headerlink" href="#johtuminen" title="Permalink to this headline">#</a></h2>
-<p>Lämmön johtumista tarkasteltaessa perustana on Fourierin laki: <span class="math notranslate nohighlight">\(\Phi= \lambda A \frac{dT}{dx}\)</span>, missä <span class="math notranslate nohighlight">\(\Phi\)</span> on lämpövirta watteina, <span class="math notranslate nohighlight">\(\lambda\)</span> on aineen lämmönjohtavuus (yksikkö <span class="math notranslate nohighlight">\(\text{W/(m}\cdot \text{K)}\)</span>), <span class="math notranslate nohighlight">\(dT\)</span> on lämpötilaero hyvin ohuen ainekerroksen vastakkaisten pintojen välillä, ja <span class="math notranslate nohighlight">\(dx\)</span> on hyvin ohuen ainekerroksen paksuus.</p>
+<p>Lämmön johtumista tarkasteltaessa perustana on Fourierin laki: <span class="math notranslate nohighlight">\(\Phi= \lambda A \frac{dT}{dx}\)</span>, missä <span class="math notranslate nohighlight">\(\Phi\)</span> on lämpövirta watteina, <span class="math notranslate nohighlight">\(\lambda\)</span> on aineen lämmönjohtavuus (yksikkö <span class="math notranslate nohighlight">\(\text{W/(m}\cdot \text{K)}\)</span>), <span class="math notranslate nohighlight">\(A\)</span> on pinta-ala, <span class="math notranslate nohighlight">\(dT\)</span> on lämpötilaero hyvin ohuen ainekerroksen vastakkaisten pintojen välillä, ja <span class="math notranslate nohighlight">\(dx\)</span> on hyvin ohuen ainekerroksen paksuus.</p>
 <p>Seuraavassa taulukossa on talonrakennuksessa sekä lumi- ja jäärakentamisessa käytettävien materiaalien lämmönjohtavuuksia.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -475,7 +475,7 @@ title="Print to PDF"
 <li><p>Ratkaistaan U-arvo kaavasta <span class="math notranslate nohighlight">\(\Phi = U A \Delta T\)</span></p></li>
 </ol>
 <p>Esimerkki: Oven korkeus on 200 cm ja leveys 90 cm. Kun kammiossa on 60 W teholähde, kammion lämpötila nousee 45 astetta korkeammaksi kuin ympäristön. Mikä on oven U-arvo?</p>
-<p>Pinta-ala ok <span class="math notranslate nohighlight">\(A = 2.0~\text{m} \cdot 0.9~\text{m} = 1.8~\text{m}^2\)</span>, lämpövirta on yhtä suuri kuin lämmittimen teho <span class="math notranslate nohighlight">\(P\)</span> eli <span class="math notranslate nohighlight">\(\Phi = 60~\text{W}\)</span>, ja lämpötilaero on <span class="math notranslate nohighlight">\(\Delta T = 45~\text{K}\)</span>.</p>
+<p>Pinta-ala on <span class="math notranslate nohighlight">\(A = 2.0~\text{m} \cdot 0.9~\text{m} = 1.8~\text{m}^2\)</span>, lämpövirta on yhtä suuri kuin lämmittimen teho <span class="math notranslate nohighlight">\(P\)</span> eli <span class="math notranslate nohighlight">\(\Phi = 60~\text{W}\)</span>, ja lämpötilaero on <span class="math notranslate nohighlight">\(\Delta T = 45~\text{K}\)</span>.</p>
 <p>Ratkaistaan <span class="math notranslate nohighlight">\(U=\frac{\Phi}{A \Delta T}\)</span> ja sijoitetaan lukuarvot:</p>
 <p><span class="math notranslate nohighlight">\(U = \frac{60~\text{W}}{1.8~\text{m}^2\cdot 45~\text{K}}= 0.74~\frac{\text{W}}{\text{K}\cdot\text{m}^2}\)</span></p>
 </div>
@@ -522,7 +522,7 @@ title="Print to PDF"
 <p>Nestettä tai kaasua kutsutaan yleisnimellä fluidi. Konvektiossa fluidin liike voi olla joko lämpövirran aiheuttaman lämpötilan ja sitä kautta tiheyden muutoksen aiheuttamaa (luonnollinen konvektio), tai keinotekoisesti esimerkiksi puhaltimella tai pumpulla tuotettua (pakotettu konvektio).</p>
 <p>Konvektiossa siirtymä lämpövirta on <span class="math notranslate nohighlight">\(\Phi=h A (T_p-T_{\infty})\)</span>, missä <span class="math notranslate nohighlight">\(h\)</span> on nimeltään konvektiivinen lämmönsiirtokerroin, <span class="math notranslate nohighlight">\(A\)</span> on pinta-ala, <span class="math notranslate nohighlight">\(T_p\)</span> on pinnan lämpötila ja <span class="math notranslate nohighlight">\(T_{\infty}\)</span> on fluidin lämpötila kaukana pinnasta.</p>
 <p><strong>Eristävät ilmakerrokset</strong></p>
-<p>Tarkastellaan pääasiassa rakennuksen ulkoseinästä ulkoilmaan tapahtuvaa konvektiota. Pelkästään lämmön johtumisen tarkastelu esimerkiksi seinien ja ikkunoiden läpi menevän lämpövirran laskemisessa antaa virheellisiä tuloksia. Todellisuudessa seinien tai ikkunoiden pinnoille muodostuu eristävä ilmakerros, joka pienentää lämpövirtaa. Ilmakerroksen eristyskyky riippuu ilmavirtauksista, esim. tuulen voimakkuudesta.</p>
+<p>Tarkastellaan rakennuksen ulkoseinästä ulkoilmaan tapahtuvaa konvektiota. Pelkästään lämmön johtumisen tarkastelu esimerkiksi seinien ja ikkunoiden läpi menevän lämpövirran laskemisessa antaa virheellisiä tuloksia. Todellisuudessa seinien tai ikkunoiden pinnoille muodostuu eristävä ilmakerros, joka pienentää lämpövirtaa. Ilmakerroksen eristyskyky riippuu ilmavirtauksista, esim. tuulen voimakkuudesta.</p>
 <p>Edellisessä kaavassa esiintyvä konvektiivinen lämmönsiirtokerroin <span class="math notranslate nohighlight">\(h\)</span> riippuu olosuhteista. Kokeellisia arvoja eri tuuliolosuhteissa
 löytyy rakennusmääräyskokoelmista. Ilmakerrosta voidaan käsitellä laskuissa samalla tavalla kuin mitä tahansa rakenteen kerrosta. Kerroin <span class="math notranslate nohighlight">\(h\)</span> on tällöin sama kuin ilmakerroksen U-arvo.</p>
 <p>Ilmakerroksen U-arvoista voidaan käänteislukuna laskea vastaavat R-arvot eli pintavastukset. Oheisessa kuvassa on esitetty arvoja, joita voi käyttää laskuissa (yksikkö <span class="math notranslate nohighlight">\(\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>):</p>
@@ -578,7 +578,7 @@ löytyy rakennusmääräyskokoelmista. Ilmakerrosta voidaan käsitellä laskuiss
 <p>Merkitään  vuorivillakerroksen paksuudeksi <span class="math notranslate nohighlight">\(x\)</span>. Tällöin koko seinän lämpövastus ilmakerroksineen on</p>
 <p><span class="math notranslate nohighlight">\((0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
 <p>On siis ratkaistava yhtälö</p>
-<p><span class="math notranslate nohighlight">\((0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}=1.8~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span>$</p>
+<p><span class="math notranslate nohighlight">\((0.04 + \frac{0.012}{0.14} + \frac{x}{0.035} + \frac{0.012}{0.14} + 0.13) ~\frac{\text{K}\cdot\text{m}^2}{\text{W}}=1.8~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\)</span></p>
 <p>Yhtälön ratkaisuksi saadaan <span class="math notranslate nohighlight">\(x=0.051\)</span>, siis noin 5 cm eristekerros riittää.</p>
 </div>
 </div>
@@ -596,7 +596,7 @@ löytyy rakennusmääräyskokoelmista. Ilmakerrosta voidaan käsitellä laskuiss
 <p><span class="math notranslate nohighlight">\(d=\frac{\Delta T \cdot t}{R \cdot r \cdot \rho}\)</span></p>
 <p>Sijoitetaan ajan <span class="math notranslate nohighlight">\(t\)</span> paikalle yksi tunti eli 3600 sekuntia, ja saadaan</p>
 <p><span class="math notranslate nohighlight">\(d=\frac{15~\text{K} \cdot 3600~\text{s}} {0.64~\frac{\text{K}\cdot\text{m}^2}{\text{W}}\cdot 333000~\frac{\text{J}}{\text{kg}}\cdot 917~\frac{\text{kg}}{\text{m}^3}}\)</span></p>
-<p>Tulokseksi saadaan <span class="math notranslate nohighlight">\(d=0.003~\text{m}\)</span>, eli tunnissa jäätä muodostuu noin 3 mm. Jään muodostumisnopeus ei tietenkään pysy vakiona, sillä jääkerroksen paksuus kasvaa koko ajan.</p>
+<p>Tulokseksi saadaan <span class="math notranslate nohighlight">\(d=0.003~\text{m}\)</span>, eli tunnissa jäätä muodostuu noin 3 mm. Jään muodostumisnopeus ei tosin oikeasti pysy vakiona, sillä jääkerroksen paksuus kasvaa koko ajan.</p>
 </div>
 </div>
 </section>

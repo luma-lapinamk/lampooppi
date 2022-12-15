@@ -1,12 +1,12 @@
 # Lämpösäteily
 
-Lämpösäteilyyn liittyvät laskukaavat poikkeavat paljon johtumisen ja konvektion laskukaavoista. Kaikki kappaleet lähettävät sähkömagneettista säteilyä riippumatta siitä, ovatko ne kylmiä vai kuumia, elollisia vai elottomia. Säteilyn määrä ja laatu riippuvat kappaleen lämpötilasta seuraavassa esitettävien laskulakien mukaisesti.
+Kaikki kappaleet lähettävät sähkömagneettista säteilyä riippumatta siitä, ovatko ne kylmiä vai kuumia, elollisia vai elottomia. Lämpösäteilyyn liittyvät laskukaavat poikkeavat paljon johtumisen ja konvektion laskukaavoista. Säteilyn määrä ja laatu riippuvat kappaleen lämpötilasta seuraavassa esitettävien laskulakien mukaisesti.
 
 ## Mustan kappaleen säteily
 
-Musta kappale määritellään kappaleeksi, joka absorboi eli imee kaiken säteilyn, joka osuu siihen ympäristöstä. Mitään heijastua ei siis heijastu takaisin mustasta kappaleesta. Toisaalta musta kappale itsekin lähettää energiaa säteilynä. 
+Musta kappale määritellään kappaleeksi, joka absorboi eli imee kaiken säteilyn, joka osuu siihen ympäristöstä. Mitään säteilyä ei siis heijastu takaisin mustasta kappaleesta. Toisaalta musta kappale itsekin lähettää energiaa säteilynä. 
 
-Sähkömagneettisen säteilyn tärkeimpiin ominaisuuksiin kuuluu säteilyn aallonpituus, jota myös merkitään symbolilla $\lambda$. Tietyt aallonpituudet (noin 380-700 nm) näkyvät ihmisille eri väreinä. Lyhempiaaltoinen säteily voi olla esimerkiksi ultraviolettisäteilyä. Pitempiaaltoinen säteily on esimerkiksi lämpöä tai radioaaltoja. Mitä lyhyempi on aallonpituus, sitä enemmän säteily sisältää energiaa. Tämän takia esimerkiksi ultraviolettiaallot ovat ihmiselle haitallisia, mutta radioaallot eivät ole.
+Sähkömagneettisen säteilyn tärkeimpiin ominaisuuksiin kuuluu säteilyn aallonpituus, jota merkitään symbolilla $\lambda$. Tietyt aallonpituudet (noin 380-700 nm) näkyvät ihmisille eri väreinä. Lyhempiaaltoinen säteily voi olla esimerkiksi ultraviolettisäteilyä. Pitempiaaltoinen säteily on esimerkiksi lämpöä tai radioaaltoja. Mitä lyhyempi on aallonpituus, sitä enemmän säteily sisältää energiaa. Tämän takia esimerkiksi ultraviolettiaallot ovat ihmiselle haitallisia, mutta radioaallot eivät ole.
 
 Kaikki kappaleet lähettävät sähkömagneettista säteilyä. Säteily sisältää kaikkia aallonpituuksia, mutta aallonpituusjakauma riippuu kappaleen lämpötilasta. 
 
@@ -89,7 +89,7 @@ $\Phi=0.99\cdot 5.7\cdot 10^{-8}~\frac{\text{W}}{\text{m}^2 \text{K}^4} \cdot 0.
 
 Likiarvokaavalla 
 
-$\Phi=4\dot 0.99\cdot 5.7\cdot 10^{-8}~\frac{\text{W}}{\text{m}^2 \text{K}^4} \cdot 0.03~\text{m}^2 \cdot (309.15~\text{K})^3 \cdot 56~\text{K} = 11.3~\text{W}$
+$\Phi=4\cdot 0.99\cdot 5.7\cdot 10^{-8}~\frac{\text{W}}{\text{m}^2 \text{K}^4} \cdot 0.03~\text{m}^2 \cdot (309.15~\text{K})^3 \cdot 56~\text{K} = 11.3~\text{W}$
 
 :::
 
