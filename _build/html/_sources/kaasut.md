@@ -122,7 +122,7 @@ Koska prosesseissa ei siirry lämpöenergiaa $Q$, niin kaasun sisäenergian muut
 ::::{admonition} Esimerkki
 
 Bensiinimoottori ottaa sylinteriin ulkoilmaa, jonka lämpötila on 10 astetta. Moottorin puristussuhde on 16, siis sylinteritilavuuden maksimin $V_1$ ja minimin $V_2$ suhde on $V_1/V_2=16$. Laske ilman lämpötila, kun ilman tilavuus on pienimmillään. Oletetaan, että puristus on adiabaattinen.
-s
+
 :::{admonition} Ratkaisu
 :class: tip, dropdown
 
