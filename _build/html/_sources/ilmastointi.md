@@ -102,13 +102,13 @@ Kyllästyskosteuden kuvaajasta nähdään, että 10 asteessa SH on noin $7~\text
 
 Huoneilmassa 22 asteen lämpötilassa SH on kuvaajan mukaan noin $17~\text{g/kg}$. Absoluuttisen kosteuden tulee olla 50 % tästä eli  $8.5~\text{g/kg}$. Vesihöyryä pitää siis lisätä noin $6~\text{g/kg}$. Aiemmin laskettiin, että yksi kuutiometri ulkoilmaa vastaa 12.5 kg massaa (tilavuushan muuttuu, kun ilmaa lämmitetään, mutta massa pysyy samana). Minuutissa vesihöyryä pitää siis lisätä
 
-$6~\text{g/kg}^3\cdot 12.5~\text{kg}=75~\text{g}$.
+$6~\text{g/kg}\cdot 12.5~\text{kg}=75~\text{g}$.
 
 b) Lämmitystehon kulutukseksi on laskettu jo aiemmin 2.5 kW.
 
 Höyrystimen tehonkulutus saadaan kaavalla
 
-$P=\frac{mr}{t}=\frac{0.075~\text{kg}\cdot 2280000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=2850~\text{W}$
+$P=\frac{mr}{t}=\frac{0.075~\text{kg}\cdot 2260000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=2850~\text{W}$
 
 Ilman kosteuttamiseen kuluu siis suunnilleen 2.9 kW, eli enemmän verran kuin pelkkään lämmitykseen. Ilmastointilaitteen kokonaisteho on näin ollen noin 5.4 kW.
 
@@ -154,7 +154,7 @@ $m=0.007~\frac{\text{g}}{\text{kg}}\cdot 11.77~\text{kg}=0.082~\text{kg}$.
 
 Tiivistymisestä vapautuva lämpöteho on 
 
-$P=\frac{mr}{t}=\frac{0.082~\text{kg}\cdot 2280000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=3116~\text{W}$
+$P=\frac{mr}{t}=\frac{0.082~\text{kg}\cdot 2260000~\frac{\text{J}}{\text{kg}}}{60~\text{s}}=3116~\text{W}$
 
 eli suunnilleen sama kuin lämmitykseen kuluva teho.
 

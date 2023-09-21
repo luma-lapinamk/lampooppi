@@ -90,7 +90,7 @@ $m=\frac{101300~\text{Pa}\cdot 8~\text{m}^3\cdot 0.029~\frac{\text{kg}}{\text{mo
 
 Ilman lämpötilan muutos saadaan yhtälöstä $Pt=c_p m \Delta T$, eli
 
-$\Delta T = \frac{Pt}{c_p m}=\frac{1200~\text{W}\cdot 60~\text{s}}{1003~\frac{\text{J}}{\text{kg K}}\dot 9.66~\text{kg}}=7.4~\text{K}$
+$\Delta T = \frac{Pt}{c_p m}=\frac{1200~\text{W}\cdot 60~\text{s}}{1003~\frac{\text{J}}{\text{kg K}}\cdot 9.66~\text{kg}}=7.4~\text{K}$
 
 Lämpötilan muutos on siis 7.4 astetta, joten poistuvan ilman lämpötila on 27.4 astetta.
 
